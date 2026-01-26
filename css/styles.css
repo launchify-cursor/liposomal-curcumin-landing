@@ -1508,7 +1508,7 @@ ul, ol {
     flex: 1;
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-2xl) var(--spacing-lg);
     text-align: center;
 }
 
