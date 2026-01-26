@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileCarousel();
     initReviewsCarousel();
     initClinicalSidebar();
+    initBlendAccordions();
 });
 
 /**
@@ -407,4 +408,33 @@ function initClinicalSidebar() {
             }
         });
     }
+}
+
+/**
+ * Blend Ingredient Accordions
+ */
+function initBlendAccordions() {
+    const blendItems = document.querySelectorAll('.blend-accordion-item');
+    
+    if (!blendItems || blendItems.length === 0) return;
+    
+    blendItems.forEach(function(item) {
+        const header = item.querySelector('.blend-item');
+        
+        if (header) {
+            header.addEventListener('click', function() {
+                const isOpen = item.classList.contains('active');
+                
+                // Close all blend accordions
+                blendItems.forEach(function(otherItem) {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Open clicked accordion if it was closed
+                if (!isOpen) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
 }

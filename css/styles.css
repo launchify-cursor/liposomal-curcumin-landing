@@ -1275,6 +1275,59 @@ ul, ol {
     cursor: pointer;
     width: 24px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.blend-accordion-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.blend-accordion-item:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+.blend-accordion-item .blend-item {
+    border: none;
+    cursor: pointer;
+}
+
+.blend-accordion-item.active .blend-toggle {
+    transform: rotate(45deg);
+}
+
+.blend-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 0 0 0;
+}
+
+.blend-accordion-item.active .blend-content {
+    max-height: 400px;
+    padding: 0 0 var(--spacing-md) 0;
+}
+
+.blend-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.blend-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.benefit-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+    border-radius: var(--radius-full);
 }
 
 .certifications-grid {
