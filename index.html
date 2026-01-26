@@ -168,7 +168,7 @@
                                     <li>Promotes radiant, healthy skin</li>
                                     <li>Enhances mental clarity and focus</li>
                                 </ul>
-                                <a href="javascript:void(0)" class="clinical-trials-link">View Clinical Research →</a>
+                                <a href="#" class="clinical-trials-link" id="openClinicalSidebar">View Clinical Research →</a>
                             </div>
                         </div>
                         <div class="hero-accordion-item">
@@ -671,7 +671,7 @@
                 </div>
                 
                 <div class="faq-content">
-                    <div class="faq-list">
+                    <div class="faq-list" id="faqList">
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span>When will I feel something?</span>
@@ -1984,6 +1984,23 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=4"></script>
+    <script src="js/main.js?v=5"></script>
+    <script>
+        // Clinical Research Sidebar - Direct Handler
+        document.addEventListener('DOMContentLoaded', function() {
+            var openBtn = document.getElementById('openClinicalSidebar');
+            var sidebar = document.getElementById('clinicalSidebar');
+            var overlay = document.getElementById('clinicalSidebarOverlay');
+            
+            if (openBtn && sidebar && overlay) {
+                openBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sidebar.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

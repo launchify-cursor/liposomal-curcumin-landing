@@ -145,22 +145,20 @@ function initFaqAccordions() {
  */
 function initFaqViewAll() {
     const viewAllBtn = document.getElementById('faqViewAll');
-    const faqList = document.querySelector('.faq-list');
+    const faqList = document.getElementById('faqList');
     
     if (!viewAllBtn || !faqList) return;
     
     viewAllBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         
         // Toggle expanded state
-        faqList.classList.toggle('expanded');
+        const isExpanded = faqList.classList.contains('expanded');
         
-        // Update button text
-        const textSpan = viewAllBtn.querySelector('.faq-view-all-text');
-        if (faqList.classList.contains('expanded')) {
-            textSpan.textContent = 'View Less';
-        } else {
-            textSpan.textContent = 'View All';
+        if (isExpanded) {
+            faqList.classList.remove('expanded');
+            viewAllBtn.querySelector('.faq-view-all-text').textContent = 'View All';
             
             // Close any open hidden FAQs when collapsing
             const hiddenItems = faqList.querySelectorAll('.faq-item-hidden');
@@ -169,6 +167,9 @@ function initFaqViewAll() {
                 const answer = item.querySelector('.faq-answer');
                 if (answer) answer.style.maxHeight = null;
             });
+        } else {
+            faqList.classList.add('expanded');
+            viewAllBtn.querySelector('.faq-view-all-text').textContent = 'View Less';
         }
     });
 }
