@@ -1,0 +1,17 @@
+# Reference files (not needed for production)
+RIP/
+
+# Temp/cache files
+.tmp_img/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Manna Photos source folder
+Manna Photos/
