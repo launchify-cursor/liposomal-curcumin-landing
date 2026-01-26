@@ -3055,7 +3055,7 @@ ul, ol {
     width: 480px;
     max-width: 100%;
     height: 100%;
-    background-color: var(--color-background);
+    background-color: var(--color-background-alt);
     z-index: 9999;
     transform: translateX(100%);
     transition: transform 0.3s ease;
@@ -3070,12 +3070,28 @@ ul, ol {
 .clinical-sidebar-header {
     position: sticky;
     top: 0;
-    background-color: var(--color-background);
+    background-color: var(--color-background-alt);
     padding: 16px 24px;
     display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primary);
     z-index: 10;
+}
+
+.clinical-sidebar-product-name {
+    display: flex;
+    align-items: center;
+}
+
+.clinical-sidebar-product-name span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.clinical-sidebar-product-name sup {
+    font-size: 10px;
 }
 
 .clinical-sidebar-close {
@@ -3093,197 +3109,152 @@ ul, ol {
 
 .clinical-sidebar-content {
     padding: 24px;
-}
-
-.clinical-product-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    margin-bottom: 24px;
-}
-
-.clinical-product-image {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border-radius: var(--radius-md);
     background-color: var(--color-background-alt);
 }
 
-.clinical-product-info h3 {
-    font-size: 20px;
-    font-weight: 500;
+/* Main Title */
+.clinical-main-title {
+    font-size: 24px;
+    font-weight: 600;
     color: var(--color-text);
-    margin-bottom: 4px;
+    margin-bottom: 20px;
 }
 
-.clinical-product-info h3 sup {
-    font-size: 12px;
+/* Intro Section */
+.clinical-intro-section {
+    margin-bottom: 28px;
 }
 
-.clinical-product-info p {
+.clinical-intro-section p {
     font-size: 14px;
-    color: var(--color-text-light);
-}
-
-.clinical-intro {
-    margin-bottom: 24px;
-}
-
-.clinical-intro p {
-    font-size: 15px;
     line-height: 1.6;
     color: var(--color-text);
-}
-
-/* Clinical Accordion Styles */
-.clinical-accordion {
-    margin-bottom: 24px;
-}
-
-.clinical-accordion-item {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius-md);
     margin-bottom: 12px;
-    overflow: hidden;
 }
 
-.clinical-accordion-header {
-    width: 100%;
-    padding: 16px 20px;
-    background-color: var(--color-background-alt);
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--color-text);
-    transition: background-color 0.2s ease;
-    text-align: left;
-}
-
-.clinical-accordion-header:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.clinical-accordion-icon {
-    font-size: 20px;
-    font-weight: 300;
-    transition: transform 0.3s ease;
-}
-
-.clinical-accordion-item.active .clinical-accordion-icon {
-    transform: rotate(45deg);
-}
-
-.clinical-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding: 0 20px;
-    background-color: var(--color-background);
-}
-
-.clinical-accordion-item.active .clinical-accordion-content {
-    max-height: 500px;
-    padding: 16px 20px;
-}
-
-.ingredient-item {
-    margin-bottom: 16px;
-}
-
-.ingredient-item:last-child {
+.clinical-intro-section p:last-child {
     margin-bottom: 0;
 }
 
-.ingredient-item strong {
-    display: block;
-    font-size: 14px;
+/* Clinical Proof Section */
+.clinical-proof-section {
+    margin-bottom: 32px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.clinical-section-title {
+    font-size: 16px;
     font-weight: 600;
     color: var(--color-text);
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }
 
-.ingredient-item p {
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--color-text-light);
-}
-
-/* Clinical Studies Section */
-.clinical-studies-section {
-    margin-top: 32px;
-}
-
-.clinical-studies-section h4 {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--color-text);
-    margin-bottom: 8px;
-}
-
-.clinical-studies-intro {
-    font-size: 14px;
-    color: var(--color-text-light);
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.study-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-}
-
-.study-title {
-    font-weight: 500;
-}
-
-.study-year {
-    font-size: 12px;
-    color: var(--color-text-light);
-    font-weight: 400;
-}
-
-.study-source {
-    font-size: 12px;
-    color: var(--color-primary);
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.clinical-accordion-content p {
+.clinical-proof-section > p {
     font-size: 14px;
     line-height: 1.6;
     color: var(--color-text);
     margin-bottom: 12px;
 }
 
-.study-link {
-    font-size: 13px;
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+.clinical-proof-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
 }
 
-.study-link:hover {
+.clinical-proof-list li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.clinical-proof-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Health Sections */
+.clinical-health-section {
+    margin-bottom: 32px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.clinical-health-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.clinical-health-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.clinical-results-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.clinical-results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clinical-results-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-text);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.clinical-results-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.clinical-results-list li:last-child {
+    margin-bottom: 0;
+}
+
+.clinical-results-list li a {
+    color: var(--color-primary);
     text-decoration: underline;
+    font-weight: 500;
+}
+
+.clinical-results-list li a:hover {
+    opacity: 0.8;
+}
+
+.clinical-results-list li strong {
+    font-weight: 600;
+    color: var(--color-text);
 }
 
 /* Disclaimer */
 .clinical-disclaimer {
     margin-top: 32px;
     padding-top: 24px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
 }
 
 .clinical-disclaimer p {
@@ -3302,13 +3273,12 @@ ul, ol {
         padding: 16px;
     }
     
-    .clinical-product-header {
-        flex-direction: column;
-        text-align: center;
+    .clinical-main-title {
+        font-size: 20px;
     }
     
-    .clinical-accordion-item.active .clinical-accordion-content {
-        max-height: 800px;
+    .clinical-health-section {
+        margin-bottom: 24px;
     }
 }
 /* Fixed section height 627px, equal padding, larger pill, bottom callout */
@@ -3856,4 +3826,656 @@ ul, ol {
 /* Move strains-left section slightly to the right */
 .strains-left {
     margin-left: 20px !important;
+}
+
+/* ========================================
+   Technology Sidebar (Liposomal Absorption)
+   ======================================== */
+.tech-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tech-sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tech-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 480px;
+    max-width: 100%;
+    height: 100%;
+    background-color: var(--color-background-alt);
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.tech-sidebar.active {
+    transform: translateX(0);
+}
+
+.tech-sidebar-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background-alt);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primary);
+    z-index: 10;
+}
+
+.tech-sidebar-product-name {
+    display: flex;
+    align-items: center;
+}
+
+.tech-sidebar-product-name span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.tech-sidebar-product-name sup {
+    font-size: 10px;
+}
+
+.tech-sidebar-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
+}
+
+.tech-sidebar-close:hover {
+    opacity: 0.7;
+}
+
+.tech-sidebar-content {
+    padding: 24px;
+    background-color: var(--color-background-alt);
+}
+
+/* Technology Sections */
+.tech-section {
+    margin-bottom: 32px;
+}
+
+.tech-section:last-of-type {
+    margin-bottom: 24px;
+}
+
+.tech-section-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.tech-subsection-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.tech-section:first-child .tech-subsection-title {
+    border-top: none;
+    padding-top: 0;
+}
+
+.tech-section-intro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 0;
+}
+
+.tech-section-text {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+/* Capsule Visual */
+.tech-capsule-visual {
+    background-color: var(--color-primary);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.tech-capsule-visual img {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Feature List */
+.tech-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tech-feature-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    padding-left: 20px;
+    position: relative;
+}
+
+.tech-feature-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.tech-feature-list li strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* Testing Section */
+.tech-testing-section {
+    background-color: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+/* Stats Grid */
+.tech-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.tech-stat-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(120, 53, 15, 0.1);
+    border-radius: var(--radius-md);
+    padding: 16px 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tech-stat-number {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.1;
+}
+
+.tech-stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+.tech-stat-desc {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.3;
+}
+
+/* Disclaimer */
+.tech-disclaimer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.tech-disclaimer p {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+/* Technology Sidebar Mobile */
+@media (max-width: 520px) {
+    .tech-sidebar {
+        width: 100%;
+    }
+    
+    .tech-sidebar-content {
+        padding: 16px;
+    }
+    
+    .tech-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .tech-stat-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .tech-stat-number {
+        font-size: 24px;
+    }
+    
+    .tech-testing-section {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    
+    .tech-section-title {
+        font-size: 24px;
+    }
+    
+    .tech-capsule-visual {
+        min-height: 160px;
+        padding: 20px;
+    }
+    
+    .tech-capsule-visual img {
+        max-width: 140px;
+    }
+}
+
+/* ========================================
+   Ingredients Sidebar
+   ======================================== */
+.ingredients-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.ingredients-sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ingredients-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 480px;
+    max-width: 100%;
+    height: 100%;
+    background-color: var(--color-background-alt);
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.ingredients-sidebar.active {
+    transform: translateX(0);
+}
+
+.ingredients-sidebar-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background-alt);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primary);
+    z-index: 10;
+}
+
+.ingredients-sidebar-product-name {
+    display: flex;
+    align-items: center;
+}
+
+.ingredients-sidebar-product-name span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.ingredients-sidebar-product-name sup {
+    font-size: 10px;
+}
+
+.ingredients-sidebar-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
+}
+
+.ingredients-sidebar-close:hover {
+    opacity: 0.7;
+}
+
+.ingredients-sidebar-content {
+    padding: 24px;
+    background-color: var(--color-background-alt);
+}
+
+/* Main Title */
+.ingredients-main-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+/* Intro Section */
+.ingredients-intro-section {
+    margin-bottom: 28px;
+}
+
+.ingredients-intro-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.ingredients-intro-section p:last-child {
+    margin-bottom: 0;
+}
+
+.ingredients-potency {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+/* Section Titles */
+.ingredients-section {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.ingredients-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+/* Product Image */
+.ingredients-product-image {
+    background-color: var(--color-primary);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+}
+
+.ingredients-product-image img {
+    max-width: 160px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Ingredient Item Sections */
+.ingredients-item-section {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.ingredients-item-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.ingredients-item-spec {
+    font-size: 13px;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ingredients-item-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Other Ingredients */
+.ingredients-other-section {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.ingredients-other-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.ingredients-other-list {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Safety + Testing */
+.ingredients-safety-section {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.ingredients-safety-desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.ingredients-certs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.ingredients-cert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.ingredients-cert-item img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+}
+
+.ingredients-cert-item span {
+    font-size: 11px;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+/* Supplement Facts */
+.ingredients-facts-section {
+    margin-bottom: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.supplement-facts-box {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-text);
+    border-radius: var(--radius-md);
+    padding: 16px;
+}
+
+.supplement-facts-header {
+    border-bottom: 8px solid var(--color-text);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.supplement-facts-header strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.supplement-facts-header span {
+    font-size: 12px;
+    color: var(--color-text);
+}
+
+.supplement-facts-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.supplement-facts-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(120, 53, 15, 0.2);
+    font-size: 12px;
+    color: var(--color-text);
+}
+
+.supplement-facts-row.header-row {
+    border-bottom: 2px solid var(--color-text);
+    font-weight: 600;
+}
+
+.supplement-facts-row.indent .fact-name {
+    padding-left: 16px;
+    font-size: 11px;
+}
+
+.fact-name {
+    font-weight: 500;
+}
+
+.fact-amount {
+    text-align: right;
+    min-width: 60px;
+}
+
+.fact-dv {
+    text-align: right;
+    min-width: 40px;
+}
+
+.supplement-facts-footer {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(120, 53, 15, 0.2);
+}
+
+.supplement-facts-footer p {
+    font-size: 10px;
+    line-height: 1.4;
+    color: var(--color-text-light);
+    margin-bottom: 6px;
+}
+
+.supplement-facts-footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Disclaimer */
+.ingredients-disclaimer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(120, 53, 15, 0.15);
+}
+
+.ingredients-disclaimer p {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+/* Ingredients Sidebar Mobile */
+@media (max-width: 520px) {
+    .ingredients-sidebar {
+        width: 100%;
+    }
+    
+    .ingredients-sidebar-content {
+        padding: 16px;
+    }
+    
+    .ingredients-main-title {
+        font-size: 20px;
+    }
+    
+    .ingredients-certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .ingredients-product-image {
+        min-height: 140px;
+        padding: 20px;
+    }
+    
+    .ingredients-product-image img {
+        max-width: 120px;
+    }
 }

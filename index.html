@@ -184,7 +184,7 @@
                                     <li>Vegan-friendly, no artificial fillers or preservatives</li>
                                     <li>Liquid soft gel format for easy daily use</li>
                                 </ul>
-                                <a href="javascript:void(0)" class="clinical-trials-link">View Full Ingredient List →</a>
+                                <a href="#" class="clinical-trials-link" id="openIngredientsSidebarAlt">View Full Ingredient List →</a>
                             </div>
                         </div>
                     </div>
@@ -261,7 +261,7 @@
                     <div class="viacap-text">
                         <h2 class="viacap-title">Unlike standard turmeric, Liposomal Curcumin+<sup>®</sup> actually reaches your bloodstream.</h2>
                         <p class="viacap-description">Our liposomal phospholipid technology protects curcumin through digestion and delivers it directly to your cells—where it can finally do its job.</p>
-                        <a href="#" class="learn-more-link">
+                        <a href="#" class="learn-more-link" id="openTechSidebar">
                             <span>Learn More</span>
                             <img src="images/Icons_1661565512276879.svg" alt="" class="link-icon">
                         </a>
@@ -291,7 +291,7 @@
                 <div class="benefits-header">
                     <h2 class="section-title"><span style="white-space: nowrap;">The Liposomal Curcumin+<sup>®</sup> difference:</span><br>Benefits that build over time</h2>
                     <p class="section-subtitle">Results you can feel in as little as <strong>7 days.</strong><sup>*</sup></p>
-                    <a href="#" class="evidence-link">
+                    <a href="#" class="evidence-link" id="openClinicalSidebarAlt">
                         <img src="images/Icons_6139599470106576.png" alt="" class="link-icon">
                         <span>See Clinical Evidence</span>
                     </a>
@@ -400,7 +400,7 @@
                     </div>
                 </div>
                 <div class="strains-right">
-                    <a href="#" class="strains-link">View Full Ingredient Breakdown →</a>
+                    <a href="#" class="strains-link" id="openIngredientsSidebar">View Full Ingredient Breakdown →</a>
                     
                     <div class="strains-blends">
                         <div class="blend-accordion-item">
@@ -1817,6 +1817,9 @@
     <div class="clinical-sidebar-overlay" id="clinicalSidebarOverlay"></div>
     <div class="clinical-sidebar" id="clinicalSidebar">
         <div class="clinical-sidebar-header">
+            <div class="clinical-sidebar-product-name">
+                <span>Liposomal Curcumin+<sup>®</sup></span>
+            </div>
             <button class="clinical-sidebar-close" id="clinicalSidebarClose" aria-label="Close sidebar">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1826,145 +1829,341 @@
         </div>
         
         <div class="clinical-sidebar-content">
-            <!-- Product Header -->
-            <div class="clinical-product-header">
-                <img src="images/DS-01_Jar_Alpha_New_Lid5_33453761820586647.png" alt="Liposomal Curcumin+" class="clinical-product-image">
-                <div class="clinical-product-info">
-                    <h3>Liposomal Curcumin+<sup>®</sup></h3>
-                    <p>500mg · 95% Pure Curcuminoids</p>
+            <!-- Main Title -->
+            <h2 class="clinical-main-title">Clinical Trials</h2>
+            
+            <!-- Intro -->
+            <div class="clinical-intro-section">
+                <p>Only about 10% of supplements are clinically tested. Liposomal Curcumin+ has been clinically proven at gold-standard, double-blind placebo-controlled clinical trials.</p>
+                <p>In addition, our liposomal delivery system has been validated in 15 peer-reviewed gold-standard clinical trials.</p>
+            </div>
+
+            <!-- The Impact of Clinical Proof -->
+            <div class="clinical-proof-section">
+                <h3 class="clinical-section-title">The Impact of Clinical Proof</h3>
+                <p>Double-blind, randomized, placebo-controlled trials (DBRCTs) are the gold standard in scientific research for various reasons, including:</p>
+                <ul class="clinical-proof-list">
+                    <li>Bias elimination</li>
+                    <li>Control for placebo effect</li>
+                    <li>Validated efficacy</li>
+                    <li>Regulatory compliance</li>
+                </ul>
+                <p>By testing Liposomal Curcumin+ as a full formulation, the entire product is meticulously inspected and validated for safety, tolerability, and efficacy.</p>
+            </div>
+
+            <!-- Joint Health -->
+            <div class="clinical-health-section">
+                <h3 class="clinical-health-title">Joint Health</h3>
+                <p class="clinical-health-desc">Liposomal Curcumin+ is formulated to reduce joint stiffness and discomfort, as well as support mobility, flexibility, and comfort during movement.</p>
+                
+                <h4 class="clinical-results-title">Clinical Trial Results</h4>
+                <ul class="clinical-results-list">
+                    <li>In a <a href="https://pubmed.ncbi.nlm.nih.gov/30975196/" target="_blank">139-person study</a> on select curcumin strains, adults experiencing joint discomfort saw <strong>significant improvements in knee function</strong>, pain scores, and ease of daily activities, compared to placebo.</li>
+                    <li>Curcumin supplementation also demonstrated improvements in <strong>recovery after physical activity</strong>, reduced morning stiffness, and enhanced joint comfort.</li>
+                </ul>
+            </div>
+
+            <!-- Inflammation & Recovery -->
+            <div class="clinical-health-section">
+                <h3 class="clinical-health-title">Inflammation & Recovery</h3>
+                <p class="clinical-health-desc">Liposomal Curcumin+ promotes a healthy inflammatory response. Curcuminoids are known to modulate key inflammatory pathways and support the body's natural recovery processes.</p>
+                
+                <h4 class="clinical-results-title">Clinical Trial Results</h4>
+                <ul class="clinical-results-list">
+                    <li>In a <a href="https://pubmed.ncbi.nlm.nih.gov/31121255/" target="_blank">meta-analysis</a> of randomized controlled trials, curcumin supplementation <strong>significantly reduced inflammatory markers</strong> including CRP, IL-6, and TNF-α.</li>
+                    <li>Additionally, the studies demonstrated enhanced recovery and reduced oxidative stress markers in participants taking curcumin vs. placebo groups.</li>
+                </ul>
+            </div>
+
+            <!-- Brain & Cognitive Health -->
+            <div class="clinical-health-section">
+                <h3 class="clinical-health-title">Brain & Cognitive Health</h3>
+                <p class="clinical-health-desc">Liposomal Curcumin+ is formulated to help maintain healthy cognitive function. Curcumin crosses the blood-brain barrier to support memory, focus, and mental clarity.</p>
+                
+                <h4 class="clinical-results-title">Clinical Trial Results</h4>
+                <ul class="clinical-results-list">
+                    <li>In an <a href="https://pubmed.ncbi.nlm.nih.gov/29246725/" target="_blank">18-month UCLA study</a>, curcumin supplementation produced a <strong>28% improvement in memory tests</strong> and reduced brain amyloid accumulation in regions associated with memory and emotional functions.</li>
+                    <li>Liposomal Curcumin+ daily participants also reported <strong>improved mood and mental clarity</strong> compared to placebo groups.</li>
+                </ul>
+            </div>
+
+            <!-- Heart Health -->
+            <div class="clinical-health-section">
+                <h3 class="clinical-health-title">Heart Health</h3>
+                <p class="clinical-health-desc">Liposomal Curcumin+ is formulated to help maintain healthy cholesterol and blood pressure levels. Curcumin supports the production of beneficial endothelium function in the cardiovascular system.</p>
+                
+                <h4 class="clinical-results-title">Clinical Trial Results</h4>
+                <ul class="clinical-results-list">
+                    <li>In a <a href="https://pubmed.ncbi.nlm.nih.gov/28290264/" target="_blank">12-week study</a>, curcumin supplementation helped <strong>improve cardiovascular function markers</strong> and support healthy circulation.</li>
+                    <li>Additionally, the probiotic group demonstrated <strong>improved endothelial function</strong> and maintained healthy triglyceride management within the 8-12 week timeframe.</li>
+                </ul>
+            </div>
+
+            <!-- Skin Health -->
+            <div class="clinical-health-section">
+                <h3 class="clinical-health-title">Skin Health</h3>
+                <p class="clinical-health-desc">Liposomal Curcumin+ is formulated with curcuminoids that support skin health through antioxidant protection and anti-inflammatory pathways, enhancing overall skin radiance and clarity.</p>
+                
+                <h4 class="clinical-results-title">Clinical Trial Results</h4>
+                <ul class="clinical-results-list">
+                    <li>A <a href="https://pubmed.ncbi.nlm.nih.gov/27213821/" target="_blank">systematic review</a> found curcumin's antioxidant and anti-inflammatory properties <strong>improved skin health outcomes</strong> across multiple dermatological conditions.</li>
+                    <li>A clinical study with curcumin showed enhanced skin elasticity, hydration, and <strong>reduced appearance of skin aging markers</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- Digestive Health -->
+            <div class="clinical-health-section">
+                <h3 class="clinical-health-title">Digestive Health</h3>
+                <p class="clinical-health-desc">Liposomal Curcumin+ is formulated to support digestive comfort and a healthy gut barrier. Curcumin helps rebuild microbiota balance in the gut in order to help support a well-functioning digestive system.</p>
+                
+                <h4 class="clinical-results-title">Clinical Trial Results</h4>
+                <ul class="clinical-results-list">
+                    <li>In an <a href="https://pubmed.ncbi.nlm.nih.gov/33478482/" target="_blank">8-week study</a> using curcumin strains, adults experiencing gastrointestinal discomfort showed <strong>significantly greater reductions in symptoms</strong> compared to the placebo group.</li>
+                    <li>Liposomal Curcumin+ significantly improved intestinal microbiota balance and <strong>enhanced gut barrier function</strong> compared to the placebo group.</li>
+                </ul>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="clinical-disclaimer">
+                <p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Sidebar (Liposomal Absorption) -->
+    <div class="tech-sidebar-overlay" id="techSidebarOverlay"></div>
+    <div class="tech-sidebar" id="techSidebar">
+        <div class="tech-sidebar-header">
+            <div class="tech-sidebar-product-name">
+                <span>Liposomal Curcumin+<sup>®</sup></span>
+            </div>
+            <button class="tech-sidebar-close" id="techSidebarClose" aria-label="Close sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="tech-sidebar-content">
+            <!-- Main Section: Bioavailability -->
+            <div class="tech-section">
+                <h2 class="tech-section-title">Bioavailability</h2>
+                <p class="tech-section-intro">Most curcumin supplements—powders, capsules, and tablets—are poorly absorbed during digestion, with up to 95% excreted before reaching your bloodstream. Our proprietary Liposomal Delivery System is engineered to protect curcumin from stomach acid, digestive enzymes, and bile.</p>
+            </div>
+
+            <!-- Technology Section -->
+            <div class="tech-section">
+                <h3 class="tech-subsection-title">Liposomal Technology</h3>
+                <p class="tech-section-text">Our advanced phospholipid encapsulation system creates nanoscale lipid vesicles that protect curcumin through the harsh digestive environment: the phospholipid outer layer shields the curcuminoid core through the stomach and upper GI tract, while the liquid soft gel format ensures precise dosing and maximum stability.</p>
+                
+                <!-- Capsule Visual -->
+                <div class="tech-capsule-visual">
+                    <img src="images/Pill Explosion Transparent.png" alt="Liposomal Soft Gel Structure">
+                </div>
+
+                <!-- Feature List -->
+                <ul class="tech-feature-list">
+                    <li><strong>Phospholipid outer layer</strong> made from sunflower lecithin protects curcuminoids as they travel through the GI tract.</li>
+                    <li><strong>No synthetic coatings</strong>—plant-based liposomal formula unlike piperine or pepper extract delivery systems.</li>
+                    <li><strong>Engineered for precision delivery</strong> directly to cells, where curcumin is needed to work effectively.</li>
+                </ul>
+            </div>
+
+            <!-- Absorption Testing Section -->
+            <div class="tech-section tech-testing-section">
+                <h3 class="tech-subsection-title">Absorption Comparison Testing</h3>
+                <p class="tech-section-text">To evaluate the absorption of our liposomal curcumin, we use validated pharmacokinetic studies—the gold standard for measuring bioavailability. These studies measure plasma curcumin concentrations over time, comparing liposomal delivery to standard curcumin formulations.</p>
+                
+                <!-- Absorption Stats -->
+                <div class="tech-stats-grid">
+                    <div class="tech-stat-item">
+                        <span class="tech-stat-number">10x</span>
+                        <span class="tech-stat-label">Higher Absorption</span>
+                        <span class="tech-stat-desc">vs. standard curcumin</span>
+                    </div>
+                    <div class="tech-stat-item">
+                        <span class="tech-stat-number">95%</span>
+                        <span class="tech-stat-label">Curcuminoid Purity</span>
+                        <span class="tech-stat-desc">standardized concentration</span>
+                    </div>
+                    <div class="tech-stat-item">
+                        <span class="tech-stat-number">6-8h</span>
+                        <span class="tech-stat-label">Sustained Release</span>
+                        <span class="tech-stat-desc">prolonged plasma levels</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Clinical Intro -->
-            <div class="clinical-intro">
-                <p>Curcumin, the active compound in turmeric, has been extensively studied in clinical research. Our liposomal delivery system enhances bioavailability by up to 10x compared to standard formulations.</p>
+            <!-- Why It Matters Section -->
+            <div class="tech-section">
+                <h3 class="tech-subsection-title">Why Absorption Matters</h3>
+                <p class="tech-section-text">Curcumin's therapeutic potential is limited by its naturally poor bioavailability. Standard curcumin supplements require massive doses (8-12 capsules) to achieve meaningful blood levels. Our liposomal technology delivers clinically-relevant concentrations in just 2 soft gels daily—no more pill burden, no wasted ingredients.</p>
             </div>
 
-            <!-- Ingredients Accordion -->
-            <div class="clinical-accordion">
-                <div class="clinical-accordion-item">
-                    <button class="clinical-accordion-header">
-                        <span>Key Ingredients</span>
-                        <span class="clinical-accordion-icon">+</span>
-                    </button>
-                    <div class="clinical-accordion-content">
-                        <div class="ingredient-item">
-                            <strong>Curcuminoids (95%)</strong>
-                            <p>Standardized extract containing curcumin, demethoxycurcumin, and bisdemethoxycurcumin for maximum efficacy.</p>
-                        </div>
-                        <div class="ingredient-item">
-                            <strong>Liposomal Complex</strong>
-                            <p>Phospholipid delivery system (MCT oil, sunflower lecithin) that protects curcumin through digestion for superior absorption.</p>
-                        </div>
-                        <div class="ingredient-item">
-                            <strong>Vitamin E (d-alpha tocopherol)</strong>
-                            <p>Natural antioxidant that enhances stability and provides additional cellular protection.</p>
-                        </div>
+            <!-- Disclaimer -->
+            <div class="tech-disclaimer">
+                <p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ingredients Sidebar -->
+    <div class="ingredients-sidebar-overlay" id="ingredientsSidebarOverlay"></div>
+    <div class="ingredients-sidebar" id="ingredientsSidebar">
+        <div class="ingredients-sidebar-header">
+            <div class="ingredients-sidebar-product-name">
+                <span>Liposomal Curcumin+<sup>®</sup></span>
+            </div>
+            <button class="ingredients-sidebar-close" id="ingredientsSidebarClose" aria-label="Close sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="ingredients-sidebar-content">
+            <!-- Main Title -->
+            <h2 class="ingredients-main-title">Ingredients + Formula</h2>
+            
+            <!-- Intro -->
+            <div class="ingredients-intro-section">
+                <p>Liposomal Curcumin+ is formulated with 500mg of scientifically-validated, 95% pure curcuminoids, probiotic strains and a patented liposomal phospholipid delivery system.</p>
+                <p class="ingredients-potency"><strong>500mg curcuminoids per serving, 10x absorption vs. standard curcumin.</strong></p>
+            </div>
+
+            <!-- Soft Gel Section -->
+            <div class="ingredients-section">
+                <h3 class="ingredients-section-title">Soft Gel</h3>
+                <div class="ingredients-product-image">
+                    <img src="images/Manna_Twopilldose_transparent.png" alt="Liposomal Curcumin+ Soft Gels">
+                </div>
+            </div>
+
+            <!-- Liposomal Curcuminoid Complex -->
+            <div class="ingredients-item-section">
+                <h4 class="ingredients-item-title">Liposomal Curcuminoid Complex</h4>
+                <p class="ingredients-item-spec">500mg · 95% Curcuminoids</p>
+                <p class="ingredients-item-desc">Premium curcuminoid complex standardized to 95% concentration of three synergistic compounds: curcumin, demethoxycurcumin, and bisdemethoxycurcumin—encapsulated in our proprietary liposomal phospholipid matrix for maximum bioavailability and cellular uptake.</p>
+            </div>
+
+            <!-- Phospholipid Delivery System -->
+            <div class="ingredients-item-section">
+                <h4 class="ingredients-item-title">Phospholipid Delivery System</h4>
+                <p class="ingredients-item-spec">Liposomal Encapsulation Technology</p>
+                <p class="ingredients-item-desc">Our advanced phospholipid encapsulation uses pharmaceutical-grade sunflower lecithin and medium-chain triglycerides (MCT) from coconut to create nanoscale lipid vesicles. This dual-lipid matrix protects curcumin from gastric degradation and facilitates direct cellular absorption—bypassing first-pass metabolism for 10x superior bioavailability.</p>
+            </div>
+
+            <!-- Vitamin E -->
+            <div class="ingredients-item-section">
+                <h4 class="ingredients-item-title">Vitamin E (d-alpha Tocopherol)</h4>
+                <p class="ingredients-item-spec">Natural Antioxidant Stabilizer</p>
+                <p class="ingredients-item-desc">Natural d-alpha tocopherol serves a dual function: it acts as a potent lipid-soluble antioxidant that protects curcumin molecules from oxidative degradation while providing complementary cellular protection. This synergistic pairing extends both shelf stability and biological efficacy.</p>
+            </div>
+
+            <!-- Other Ingredients -->
+            <div class="ingredients-other-section">
+                <h4 class="ingredients-other-title">Other Ingredients</h4>
+                <p class="ingredients-other-list">Soft gel capsule (gelatin, glycerin, purified water), medium-chain triglycerides (MCT oil from coconut), sunflower lecithin, mixed tocopherols.</p>
+            </div>
+
+            <!-- Safety + Testing -->
+            <div class="ingredients-safety-section">
+                <h3 class="ingredients-section-title">Safety + Testing</h3>
+                <p class="ingredients-safety-desc">Liposomal Curcumin+ is held to the highest standards of quality and safety, undergoing third-party testing that goes well above industry requirements for purity, potency, and contaminant-free verification.</p>
+                
+                <div class="ingredients-certs-grid">
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331795_6583801130592067.png" alt="Non-GMO">
+                        <span>Non-GMO</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331796_856830911405595.png" alt="Gluten-Free">
+                        <span>Gluten-Free</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331797_02884256895587911.png" alt="Dairy-Free">
+                        <span>Dairy-Free</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331798_2492152183858577.png" alt="Soy-Free">
+                        <span>Soy-Free</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331799_5358582136160982.png" alt="No Fillers">
+                        <span>No Fillers</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331800_2309776777388718.png" alt="No Artificial Colors">
+                        <span>No Colors</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331801_22536482045935935.png" alt="Third-Party Tested">
+                        <span>3rd Party Tested</span>
+                    </div>
+                    <div class="ingredients-cert-item">
+                        <img src="images/Group1739331802_24001446662742731.png" alt="Heavy Metal Tested">
+                        <span>Heavy Metal Free</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Clinical Studies Section -->
-            <div class="clinical-studies-section">
-                <h4>Clinical Research</h4>
-                <p class="clinical-studies-intro">The following peer-reviewed studies support the efficacy of curcumin and liposomal delivery systems.</p>
-
-                <!-- Study Accordions -->
-                <div class="clinical-accordion">
-                    <div class="clinical-accordion-item">
-                        <button class="clinical-accordion-header">
-                            <div class="study-header">
-                                <span class="study-title">Liposomal Curcumin Pharmacokinetics</span>
-                                <span class="study-year">2015</span>
-                            </div>
-                            <span class="clinical-accordion-icon">+</span>
-                        </button>
-                        <div class="clinical-accordion-content">
-                            <p class="study-source">Cancer Chemotherapy and Pharmacology</p>
-                            <p>A phase 1 clinical study evaluated the safety, tolerability, and pharmacokinetics of liposomal curcumin in healthy humans, demonstrating <strong>significantly improved plasma concentrations</strong> compared to standard curcumin formulations with excellent safety profile.</p>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/25500488/" target="_blank" class="study-link">View Study →</a>
+            <!-- Supplement Facts -->
+            <div class="ingredients-facts-section">
+                <h3 class="ingredients-section-title">Supplement Facts</h3>
+                <div class="supplement-facts-box">
+                    <div class="supplement-facts-header">
+                        <strong>Supplement Facts</strong>
+                        <span>Serving Size: 2 Soft Gels</span>
+                        <span>Servings Per Container: 30</span>
+                    </div>
+                    <div class="supplement-facts-table">
+                        <div class="supplement-facts-row header-row">
+                            <span class="fact-name"></span>
+                            <span class="fact-amount">Amount Per Serving</span>
+                            <span class="fact-dv">% DV</span>
+                        </div>
+                        <div class="supplement-facts-row">
+                            <span class="fact-name">Liposomal Curcumin Complex</span>
+                            <span class="fact-amount">500mg</span>
+                            <span class="fact-dv">†</span>
+                        </div>
+                        <div class="supplement-facts-row indent">
+                            <span class="fact-name">Curcuminoids (95%)</span>
+                            <span class="fact-amount">475mg</span>
+                            <span class="fact-dv">†</span>
+                        </div>
+                        <div class="supplement-facts-row">
+                            <span class="fact-name">Phospholipid Complex</span>
+                            <span class="fact-amount">200mg</span>
+                            <span class="fact-dv">†</span>
+                        </div>
+                        <div class="supplement-facts-row indent">
+                            <span class="fact-name">Sunflower Lecithin</span>
+                            <span class="fact-amount">150mg</span>
+                            <span class="fact-dv">†</span>
+                        </div>
+                        <div class="supplement-facts-row indent">
+                            <span class="fact-name">MCT Oil (from Coconut)</span>
+                            <span class="fact-amount">50mg</span>
+                            <span class="fact-dv">†</span>
+                        </div>
+                        <div class="supplement-facts-row">
+                            <span class="fact-name">Vitamin E (d-alpha Tocopherol)</span>
+                            <span class="fact-amount">10mg</span>
+                            <span class="fact-dv">67%</span>
                         </div>
                     </div>
-
-                    <div class="clinical-accordion-item">
-                        <button class="clinical-accordion-header">
-                            <div class="study-header">
-                                <span class="study-title">Curcumin vs. Diclofenac for Joint Health</span>
-                                <span class="study-year">2019</span>
-                            </div>
-                            <span class="clinical-accordion-icon">+</span>
-                        </button>
-                        <div class="clinical-accordion-content">
-                            <p class="study-source">Trials (BioMed Central)</p>
-                            <p>A randomized clinical trial with 139 participants found curcumin (500mg 3x daily) showed <strong>similar pain relief and knee function improvement</strong> compared to diclofenac, with significantly fewer adverse effects (13% vs. 38%) and superior gastrointestinal safety.</p>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/30975196/" target="_blank" class="study-link">View Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="clinical-accordion-item">
-                        <button class="clinical-accordion-header">
-                            <div class="study-header">
-                                <span class="study-title">Anti-Inflammatory Effects Meta-Analysis</span>
-                                <span class="study-year">2019</span>
-                            </div>
-                            <span class="clinical-accordion-icon">+</span>
-                        </button>
-                        <div class="clinical-accordion-content">
-                            <p class="study-source">Pharmacological Research</p>
-                            <p>A systematic review and meta-analysis of randomized controlled trials confirmed that oral turmeric/curcumin <strong>significantly reduces inflammatory markers</strong> including CRP, IL-6, and TNF-α in chronic inflammatory diseases.</p>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/31121255/" target="_blank" class="study-link">View Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="clinical-accordion-item">
-                        <button class="clinical-accordion-header">
-                            <div class="study-header">
-                                <span class="study-title">Memory & Brain Amyloid Effects (UCLA)</span>
-                                <span class="study-year">2018</span>
-                            </div>
-                            <span class="clinical-accordion-icon">+</span>
-                        </button>
-                        <div class="clinical-accordion-content">
-                            <p class="study-source">American Journal of Geriatric Psychiatry</p>
-                            <p>An 18-month double-blind, placebo-controlled UCLA study found curcumin supplementation produced <strong>28% improvement in memory tests</strong> and reduced brain amyloid and tau accumulation in regions associated with memory and emotional functions.</p>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/29246725/" target="_blank" class="study-link">View Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="clinical-accordion-item">
-                        <button class="clinical-accordion-header">
-                            <div class="study-header">
-                                <span class="study-title">Turmeric & Skin Health Review</span>
-                                <span class="study-year">2016</span>
-                            </div>
-                            <span class="clinical-accordion-icon">+</span>
-                        </button>
-                        <div class="clinical-accordion-content">
-                            <p class="study-source">Phytotherapy Research</p>
-                            <p>A systematic review of clinical evidence demonstrated that turmeric/curcumin supplementation <strong>improved skin health outcomes</strong> through its potent antioxidant and anti-inflammatory mechanisms, showing promise for various dermatological conditions.</p>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/27213821/" target="_blank" class="study-link">View Study →</a>
-                        </div>
-                    </div>
-
-                    <div class="clinical-accordion-item">
-                        <button class="clinical-accordion-header">
-                            <div class="study-header">
-                                <span class="study-title">Digestive Health & Microbiota</span>
-                                <span class="study-year">2021</span>
-                            </div>
-                            <span class="clinical-accordion-icon">+</span>
-                        </button>
-                        <div class="clinical-accordion-content">
-                            <p class="study-source">BMC Complementary Medicine and Therapies</p>
-                            <p>A randomized, double-blind, placebo-controlled study showed curcumin extract (500mg) produced <strong>significantly greater reductions in gastrointestinal symptoms</strong> over 8 weeks, with positive effects on intestinal microbiota composition.</p>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/33478482/" target="_blank" class="study-link">View Study →</a>
-                        </div>
+                    <div class="supplement-facts-footer">
+                        <p>† Daily Value not established.</p>
+                        <p>Other Ingredients: Soft gel capsule (gelatin, glycerin, purified water), medium-chain triglycerides, sunflower lecithin, mixed tocopherols.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Disclaimer -->
-            <div class="clinical-disclaimer">
+            <div class="ingredients-disclaimer">
                 <p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
             </div>
         </div>
@@ -1989,15 +2188,112 @@
         // Clinical Research Sidebar - Direct Handler
         document.addEventListener('DOMContentLoaded', function() {
             var openBtn = document.getElementById('openClinicalSidebar');
+            var openBtnAlt = document.getElementById('openClinicalSidebarAlt');
             var sidebar = document.getElementById('clinicalSidebar');
             var overlay = document.getElementById('clinicalSidebarOverlay');
-            
-            if (openBtn && sidebar && overlay) {
-                openBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    sidebar.classList.add('active');
-                    overlay.classList.add('active');
-                    document.body.style.overflow = 'hidden';
+            var closeBtn = document.getElementById('clinicalSidebarClose');
+
+            function openClinicalSidebar(e) {
+                e.preventDefault();
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeClinicalSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (sidebar && overlay) {
+                if (openBtn) {
+                    openBtn.addEventListener('click', openClinicalSidebar);
+                }
+                if (openBtnAlt) {
+                    openBtnAlt.addEventListener('click', openClinicalSidebar);
+                }
+                overlay.addEventListener('click', closeClinicalSidebar);
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', closeClinicalSidebar);
+                }
+                // Close on Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                        closeClinicalSidebar();
+                    }
+                });
+            }
+
+            // Technology Sidebar (Liposomal Absorption) - Direct Handler
+            var techOpenBtn = document.getElementById('openTechSidebar');
+            var techSidebar = document.getElementById('techSidebar');
+            var techOverlay = document.getElementById('techSidebarOverlay');
+            var techCloseBtn = document.getElementById('techSidebarClose');
+
+            function openTechSidebar(e) {
+                e.preventDefault();
+                techSidebar.classList.add('active');
+                techOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeTechSidebar() {
+                techSidebar.classList.remove('active');
+                techOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (techOpenBtn && techSidebar && techOverlay) {
+                techOpenBtn.addEventListener('click', openTechSidebar);
+                techOverlay.addEventListener('click', closeTechSidebar);
+                if (techCloseBtn) {
+                    techCloseBtn.addEventListener('click', closeTechSidebar);
+                }
+                // Close on Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && techSidebar.classList.contains('active')) {
+                        closeTechSidebar();
+                    }
+                });
+            }
+
+            // Ingredients Sidebar - Direct Handler
+            var ingredientsOpenBtn = document.getElementById('openIngredientsSidebar');
+            var ingredientsOpenBtnAlt = document.getElementById('openIngredientsSidebarAlt');
+            var ingredientsSidebar = document.getElementById('ingredientsSidebar');
+            var ingredientsOverlay = document.getElementById('ingredientsSidebarOverlay');
+            var ingredientsCloseBtn = document.getElementById('ingredientsSidebarClose');
+
+            function openIngredientsSidebar(e) {
+                e.preventDefault();
+                ingredientsSidebar.classList.add('active');
+                ingredientsOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeIngredientsSidebar() {
+                ingredientsSidebar.classList.remove('active');
+                ingredientsOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (ingredientsSidebar && ingredientsOverlay) {
+                if (ingredientsOpenBtn) {
+                    ingredientsOpenBtn.addEventListener('click', openIngredientsSidebar);
+                }
+                if (ingredientsOpenBtnAlt) {
+                    ingredientsOpenBtnAlt.addEventListener('click', openIngredientsSidebar);
+                }
+                ingredientsOverlay.addEventListener('click', closeIngredientsSidebar);
+                if (ingredientsCloseBtn) {
+                    ingredientsCloseBtn.addEventListener('click', closeIngredientsSidebar);
+                }
+                // Close on Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && ingredientsSidebar.classList.contains('active')) {
+                        closeIngredientsSidebar();
+                    }
                 });
             }
         });
