@@ -1515,7 +1515,8 @@ ul, ol {
 .testing-card img {
     width: 48px;
     height: 48px;
-    margin-bottom: var(--spacing-md);
+    margin: 0 auto var(--spacing-md) auto;
+    display: block;
 }
 
 .testing-card p {
