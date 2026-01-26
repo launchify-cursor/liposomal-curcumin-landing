@@ -1442,6 +1442,9 @@ ul, ol {
 .delivery-item img {
     width: 64px;
     height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    flex-shrink: 0;
     object-fit: cover;
     border-radius: var(--radius-md);
 }
