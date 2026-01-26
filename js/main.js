@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initAccordions();
     initHeroAccordions();
     initFaqAccordions();
+    initFaqViewAll();
+    initReviewsFilters();
     initStickyHeader();
     initStickyCta();
     initMobileCarousel();
@@ -136,6 +138,278 @@ function initFaqAccordions() {
             }
         });
     });
+}
+
+/**
+ * FAQ View All Toggle - Expands to show hidden FAQ items
+ */
+function initFaqViewAll() {
+    const viewAllBtn = document.getElementById('faqViewAll');
+    const faqList = document.querySelector('.faq-list');
+    
+    if (!viewAllBtn || !faqList) return;
+    
+    viewAllBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Toggle expanded state
+        faqList.classList.toggle('expanded');
+        
+        // Update button text
+        const textSpan = viewAllBtn.querySelector('.faq-view-all-text');
+        if (faqList.classList.contains('expanded')) {
+            textSpan.textContent = 'View Less';
+        } else {
+            textSpan.textContent = 'View All';
+            
+            // Close any open hidden FAQs when collapsing
+            const hiddenItems = faqList.querySelectorAll('.faq-item-hidden');
+            hiddenItems.forEach(function(item) {
+                item.classList.remove('active');
+                const answer = item.querySelector('.faq-answer');
+                if (answer) answer.style.maxHeight = null;
+            });
+        }
+    });
+}
+
+/**
+ * Reviews Filters, Sort, Search, and Pagination functionality
+ */
+function initReviewsFilters() {
+    const reviewsList = document.getElementById('reviewsList');
+    const searchInput = document.querySelector('.search-input');
+    const sortSelect = document.querySelector('.sort-select');
+    const topicPills = document.querySelectorAll('.topic-pill');
+    const noResultsMessage = document.querySelector('.no-reviews-message');
+    const pagination = document.getElementById('reviewsPagination');
+    
+    if (!reviewsList) return;
+    
+    let activeTopics = [];
+    let currentSearch = '';
+    let currentSort = 'highest';
+    let currentPage = 1;
+    const reviewsPerPage = 5;
+    const totalPages = 10;
+    
+    // Get all review items
+    function getReviewItems() {
+        return Array.from(reviewsList.querySelectorAll('.review-item'));
+    }
+    
+    // Get filtered reviews
+    function getFilteredReviews() {
+        const reviews = getReviewItems();
+        return reviews.filter(function(review) {
+            const text = review.querySelector('.review-text').textContent.toLowerCase();
+            const topics = (review.dataset.topics || '').toLowerCase().split(',');
+            
+            const matchesSearch = currentSearch === '' || text.includes(currentSearch.toLowerCase());
+            const matchesTopics = activeTopics.length === 0 || 
+                activeTopics.some(function(topic) {
+                    return topics.includes(topic.toLowerCase()) || text.includes(topic.toLowerCase());
+                });
+            
+            return matchesSearch && matchesTopics;
+        });
+    }
+    
+    // Sort reviews array
+    function sortReviewsArray(reviews) {
+        return reviews.sort(function(a, b) {
+            switch (currentSort) {
+                case 'highest':
+                    return parseInt(b.dataset.rating) - parseInt(a.dataset.rating);
+                case 'lowest':
+                    return parseInt(a.dataset.rating) - parseInt(b.dataset.rating);
+                case 'recent':
+                    return new Date(b.dataset.date) - new Date(a.dataset.date);
+                case 'helpful':
+                    return parseInt(b.dataset.helpful) - parseInt(a.dataset.helpful);
+                default:
+                    return 0;
+            }
+        });
+    }
+    
+    // Update pagination display
+    function updatePagination(filteredCount) {
+        if (!pagination) return;
+        
+        const totalFilteredPages = Math.ceil(filteredCount / reviewsPerPage);
+        const pageNums = pagination.querySelectorAll('.page-num');
+        const prevBtn = pagination.querySelector('.page-arrow.prev');
+        const nextBtn = pagination.querySelector('.page-arrow.next');
+        const ellipsis = pagination.querySelector('.page-ellipsis');
+        
+        // Update prev/next buttons
+        if (prevBtn) prevBtn.disabled = currentPage === 1;
+        if (nextBtn) nextBtn.disabled = currentPage >= totalFilteredPages;
+        
+        // Update page numbers
+        pageNums.forEach(function(btn) {
+            const page = parseInt(btn.dataset.page);
+            btn.classList.toggle('active', page === currentPage);
+            
+            // Hide pages beyond filtered results
+            if (page > totalFilteredPages) {
+                btn.style.display = 'none';
+            } else {
+                btn.style.display = '';
+            }
+        });
+        
+        // Handle ellipsis visibility
+        if (ellipsis) {
+            ellipsis.style.display = totalFilteredPages > 6 ? '' : 'none';
+        }
+    }
+    
+    // Filter, sort, and paginate reviews
+    function filterAndSortReviews() {
+        const allReviews = getReviewItems();
+        const filteredReviews = getFilteredReviews();
+        const sortedReviews = sortReviewsArray(filteredReviews);
+        
+        // Calculate pagination
+        const startIndex = (currentPage - 1) * reviewsPerPage;
+        const endIndex = startIndex + reviewsPerPage;
+        
+        // Hide all reviews first
+        allReviews.forEach(function(review) {
+            review.style.display = 'none';
+        });
+        
+        // Show only reviews for current page
+        sortedReviews.forEach(function(review, index) {
+            if (index >= startIndex && index < endIndex) {
+                review.style.display = '';
+            }
+        });
+        
+        // Reorder in DOM
+        sortedReviews.forEach(function(review) {
+            reviewsList.appendChild(review);
+        });
+        
+        // Keep no results message at end
+        if (noResultsMessage) {
+            reviewsList.appendChild(noResultsMessage);
+            noResultsMessage.style.display = sortedReviews.length === 0 ? 'block' : 'none';
+        }
+        
+        // Update pagination
+        updatePagination(sortedReviews.length);
+    }
+    
+    // Go to specific page
+    function goToPage(page) {
+        const filteredCount = getFilteredReviews().length;
+        const maxPage = Math.ceil(filteredCount / reviewsPerPage);
+        
+        currentPage = Math.max(1, Math.min(page, maxPage));
+        filterAndSortReviews();
+        
+        // Scroll to reviews section
+        reviewsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    // Search input handler
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            currentSearch = e.target.value;
+            currentPage = 1; // Reset to first page on search
+            filterAndSortReviews();
+        });
+    }
+    
+    // Sort select handler
+    if (sortSelect) {
+        sortSelect.addEventListener('change', function(e) {
+            const value = e.target.value.toLowerCase();
+            if (value.includes('highest')) {
+                currentSort = 'highest';
+            } else if (value.includes('lowest')) {
+                currentSort = 'lowest';
+            } else if (value.includes('recent')) {
+                currentSort = 'recent';
+            } else if (value.includes('helpful')) {
+                currentSort = 'helpful';
+            }
+            currentPage = 1; // Reset to first page on sort change
+            filterAndSortReviews();
+        });
+    }
+    
+    // Topic pills handler
+    topicPills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+            const topic = pill.textContent.trim().toLowerCase();
+            
+            if (pill.classList.contains('active')) {
+                pill.classList.remove('active');
+                activeTopics = activeTopics.filter(function(t) {
+                    return t !== topic;
+                });
+            } else {
+                pill.classList.add('active');
+                activeTopics.push(topic);
+            }
+            
+            currentPage = 1; // Reset to first page on filter change
+            filterAndSortReviews();
+        });
+    });
+    
+    // Pagination handlers
+    if (pagination) {
+        // Page number buttons
+        pagination.querySelectorAll('.page-num').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                goToPage(parseInt(btn.dataset.page));
+            });
+        });
+        
+        // Prev button
+        const prevBtn = pagination.querySelector('.page-arrow.prev');
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                if (currentPage > 1) {
+                    goToPage(currentPage - 1);
+                }
+            });
+        }
+        
+        // Next button
+        const nextBtn = pagination.querySelector('.page-arrow.next');
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                goToPage(currentPage + 1);
+            });
+        }
+    }
+    
+    // Helpful button handlers
+    const helpfulBtns = reviewsList.querySelectorAll('.helpful-btn');
+    helpfulBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const countSpan = btn.querySelector('.helpful-count');
+            if (countSpan && !btn.classList.contains('clicked')) {
+                const currentCount = parseInt(countSpan.textContent);
+                countSpan.textContent = currentCount + 1;
+                btn.classList.add('clicked');
+                
+                const reviewItem = btn.closest('.review-item');
+                if (reviewItem && btn.dataset.type === 'up') {
+                    reviewItem.dataset.helpful = parseInt(reviewItem.dataset.helpful) + 1;
+                }
+            }
+        });
+    });
+    
+    // Initial render
+    filterAndSortReviews();
 }
 
 /**
@@ -322,13 +596,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /**
- * Option buttons toggle
+ * Option buttons toggle with price update
  */
 document.querySelectorAll('.option-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         const siblings = this.parentElement.querySelectorAll('.option-btn');
         siblings.forEach(sib => sib.classList.remove('active'));
         this.classList.add('active');
+        
+        // Update price based on selected option
+        const newPrice = this.getAttribute('data-price');
+        if (newPrice) {
+            const priceElement = document.querySelector('.price-amount');
+            if (priceElement) {
+                priceElement.textContent = newPrice;
+            }
+        }
     });
 });
 

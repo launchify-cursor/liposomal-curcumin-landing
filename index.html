@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=13">
+    <link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body>
     <!-- Announcement Banner -->
@@ -104,36 +104,55 @@
 
                 <!-- Right: Product Info -->
                 <div class="hero-info">
-                    <span class="product-badge">#1 Advanced Absorption Curcumin‡</span>
-                    <h1 class="product-title">Liposomal Curcumin+</h1>
+                    <div class="product-title-row">
+                        <span class="product-code">LC+<sup>®</sup></span>
+                        <h1 class="product-title">Liposomal Curcumin+</h1>
+                    </div>
                     
-                    <div class="product-rating">
-                        <div class="stars">
-                            <img src="images/StarsContainer_05532408302473979.png" alt="4.9 stars" class="stars-img">
+                    <div class="product-meta-row">
+                        <div class="product-ranking">
+                            <span class="ranking-number">#1</span>
+                            <span class="ranking-text">Absorbing Curcumin<br>Supplement<sup>‡</sup></span>
                         </div>
-                        <span class="rating-text">11,923 Reviews</span>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <img src="images/StarsContainer_05532408302473979.png" alt="4.9 stars" class="stars-img">
+                            </div>
+                            <span class="rating-text"><span class="rating-score">4.9</span> • 11,923 Reviews</span>
+                        </div>
                     </div>
 
                     <p class="product-description">A breakthrough liposomal soft gel delivering 10x the absorption of standard turmeric—clinically formulated to reduce inflammation, support joint comfort, and promote heart and brain health.<sup>*</sup></p>
 
+                    <span class="bestseller-badge">Bestseller</span>
                     <div class="product-price">
-                        <span class="price-amount">$49.99/mo</span>
-                        <span class="price-note">Subscribe & Save</span>
+                        <span class="price-amount">$39.96</span><span class="price-unit">/bottle</span>
                     </div>
+                    <p class="supply-text">30-day supply delivered monthly.<br>Pause or cancel anytime.</p>
 
-                    <div class="subscription-options">
+                    <div class="subscription-options" id="productSelector">
                         <div class="option-group">
                             <label class="option-label">Frequency</label>
                             <div class="option-buttons">
-                                <button class="option-btn active">Monthly</button>
-                                <button class="option-btn">Every 2 Months</button>
+                                <button class="option-btn active" data-price="$39.96">
+                                    <span class="option-title">Monthly</span>
+                                    <span class="option-savings">Save $9.99</span>
+                                </button>
+                                <button class="option-btn" data-price="$38.36">
+                                    <span class="option-title">Every 2 Months</span>
+                                    <span class="option-savings">Save $23.18</span>
+                                </button>
+                                <button class="option-btn" data-price="$35.96">
+                                    <span class="option-title">Every 3 Months</span>
+                                    <span class="option-savings">Save $41.97</span>
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <button class="cta-button">Subscribe Now</button>
+                    <button class="cta-button">Start Now</button>
                     
-                    <a href="#" class="reviews-link">See All Reviews</a>
+                    <p class="guarantee-text">90-day risk-free guarantee. Free U.S. shipping.</p>
 
                     <!-- Benefits & Ingredients Accordion -->
                     <div class="hero-accordion">
@@ -203,7 +222,7 @@
                             <img src="images/GutImmuneHealth_40941000741621136.png" alt="Pure Curcuminoids" class="feature-icon">
                             <div class="feature-content">
                                 <h3 class="feature-title">95% Pure Curcuminoids</h3>
-                                <p class="feature-text">Premium extraction delivers maximum potency—equivalent to 250,000mg of raw turmeric.</p>
+                                <p class="feature-text">Premium extraction delivers maximum potency—10x more bioavailable than standard curcumin supplements.</p>
                             </div>
                         </div>
                         <div class="feature-card">
@@ -431,15 +450,15 @@
                         </div>
                         <div class="blend-accordion-item">
                             <div class="blend-item">
-                                <span class="blend-name">Raw Turmeric Equivalency</span>
-                                <span class="blend-value">250,000MG PER SERVING</span>
+                                <span class="blend-name">Superior Absorption</span>
+                                <span class="blend-value">10X VS. STANDARD CURCUMIN</span>
                                 <span class="blend-toggle">+</span>
                             </div>
                             <div class="blend-content">
-                                <p>Each serving delivers curcuminoid concentrations equivalent to consuming over 250,000mg of raw turmeric root—an amount virtually impossible to achieve through diet alone. Our extraction and liposomal delivery system concentrates the bioactive compounds while eliminating the fibrous plant material that limits absorption.</p>
+                                <p>Our liposomal delivery system provides 10x better absorption compared to standard curcumin supplements. This means one serving of Liposomal Curcumin+ delivers the same bioavailable curcuminoids as 10 capsules of regular curcumin—without the pill burden or wasted ingredients.</p>
                                 <div class="blend-benefits">
-                                    <span class="benefit-tag">95% vs 3% curcuminoid content</span>
-                                    <span class="benefit-tag">Eliminates digestive burden</span>
+                                    <span class="benefit-tag">10x better absorption</span>
+                                    <span class="benefit-tag">Equivalent to 10 standard capsules</span>
                                     <span class="benefit-tag">Consistent therapeutic dosing</span>
                                 </div>
                             </div>
@@ -535,9 +554,9 @@
                             <div class="comparison-cell other-cell"><span class="other-text">Hard pills or powders</span></div>
                         </div>
                         <div class="comparison-row">
-                            <div class="comparison-cell label-cell">Equivalent to 250,000mg raw turmeric</div>
+                            <div class="comparison-cell label-cell">10x absorption vs. standard curcumin</div>
                             <div class="comparison-cell ds01-cell"><span class="check-mark">●</span></div>
-                            <div class="comparison-cell other-cell"><span class="other-text">Would require 500+ capsules</span></div>
+                            <div class="comparison-cell other-cell"><span class="other-text">Would require 10 capsules daily</span></div>
                         </div>
                     </div>
                 </div>
@@ -560,21 +579,21 @@
                             <p class="delivery-subtitle">Complimentary with your first order.</p>
                             
                             <div class="delivery-item">
-                                <img src="images/Generated Image January 25, 2026 - 4_30PM.jpeg" alt="Glass Bottle">
+                                <img src="images/Mini Mixer.png" alt="Manna Mini Mixer">
                                 <div class="delivery-item-text">
-                                    <span class="item-title">Premium Glass Bottle</span>
+                                    <span class="item-title">Manna Mini Mixer</span>
                                     <span class="item-subtitle">Bonus gift</span>
                                 </div>
                             </div>
                             <div class="delivery-item">
-                                <img src="images/Generated Image January 25, 2026 - 4_30PM.jpeg" alt="Travel Case">
+                                <img src="images/Measuring Spoon.png" alt="Measuring Spoon">
                                 <div class="delivery-item-text">
-                                    <span class="item-title">Travel Case</span>
+                                    <span class="item-title">Measuring Spoon</span>
                                     <span class="item-subtitle">Bonus gift</span>
                                 </div>
                             </div>
                             <div class="delivery-item no-border">
-                                <img src="images/Generated Image January 25, 2026 - 4_30PM.jpeg" alt="Curcumin+">
+                                <img src="images/Manna_Twopilldose_transparent.png" alt="Curcumin+">
                                 <div class="delivery-item-text">
                                     <span class="item-title">Liposomal Curcumin+<sup>®</sup></span>
                                     <span class="item-subtitle">30-day supply • 60 soft gels</span>
@@ -593,21 +612,21 @@
                             <p class="delivery-subtitle">Recurring orders, on your schedule.</p>
                             
                             <div class="delivery-item">
-                                <img src="images/DS-01_Refill_Pouch_v1_Alpha_726003615197146.png" alt="1 Month">
+                                <img src="images/Curcumin+Bottle_Transparent.png" alt="1 Month">
                                 <div class="delivery-item-text">
                                     <span class="item-title">1 Month Delivery</span>
                                     <span class="item-subtitle">30-day supply • 60 soft gels</span>
                                 </div>
                             </div>
                             <div class="delivery-item">
-                                <img src="images/DS-01_Refill_Pouch_v1_Alpha_726003615197146.png" alt="3 Month">
+                                <img src="images/Curcumin+Bottle_Transparent.png" alt="3 Month">
                                 <div class="delivery-item-text">
                                     <span class="item-title">3 Month Delivery</span>
                                     <span class="item-subtitle">90-day supply • 180 soft gels</span>
                                 </div>
                             </div>
                             <div class="delivery-item no-border">
-                                <img src="images/DS-01_Refill_Pouch_v1_Alpha_726003615197146.png" alt="6 Month">
+                                <img src="images/Curcumin+Bottle_Transparent.png" alt="6 Month">
                                 <div class="delivery-item-text">
                                     <span class="item-title">6 Month Delivery</span>
                                     <span class="item-subtitle">180-day supply • 360 soft gels</span>
@@ -644,112 +663,1091 @@
             </div>
         </section>
 
-        <!-- Reviews Section -->
-        <section class="reviews-section">
-            <div class="reviews-container">
-                <div class="reviews-header">
-                    <h2 class="section-title">What our members are saying</h2>
-                    <div class="reviews-nav">
-                        <button class="nav-arrow prev" aria-label="Previous reviews">
-                            <img src="images/arrow_up_06683608357728676.png" alt="">
-                        </button>
-                        <button class="nav-arrow next" aria-label="Next reviews">
-                            <img src="images/arrow_up_06683608357728676.png" alt="">
-                        </button>
-                    </div>
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-heading">
+                    <h2 class="faq-title">Questions?<br>We're here to help.</h2>
                 </div>
                 
-                <div class="reviews-carousel">
-                    <div class="reviews-track">
-                        <div class="review-card">
-                            <div class="review-rating">★★★★★</div>
-                            <p class="review-text">"I've tried dozens of turmeric supplements over the years—nothing compared to this. Within 2 weeks, my knee pain had significantly decreased and I'm back to my morning walks without stiffness."</p>
-                            <div class="review-author">
-                                <span class="author-name">Robert K.</span>
-                                <span class="verified-badge">Verified Buyer</span>
+                <div class="faq-content">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>When will I feel something?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Many users notice initial improvements in joint stiffness and comfort within 1-2 weeks. Optimal benefits for inflammation response, heart health, skin quality, and mental clarity typically develop over 4-8 weeks of consistent daily use.</p>
                             </div>
                         </div>
-                        <div class="review-card">
-                            <div class="review-rating">★★★★★</div>
-                            <p class="review-text">"The liposomal technology is a game-changer. I can actually feel the difference. My joints feel better, my skin is clearer, and I have more mental clarity throughout the day."</p>
-                            <div class="review-author">
-                                <span class="author-name">Jennifer L.</span>
-                                <span class="verified-badge">Verified Buyer</span>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How do I take Liposomal Curcumin+<sup>®</sup>?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Take 2 soft gels daily with a meal for optimal absorption. The healthy fats in your meal work synergistically with our liposomal delivery system to enhance bioavailability. Morning or evening—whatever fits your routine best.</p>
                             </div>
                         </div>
-                        <div class="review-card">
-                            <div class="review-rating">★★★★★</div>
-                            <p class="review-text">"As a fitness enthusiast, recovery is everything. This curcumin supplement has noticeably reduced my post-workout inflammation and soreness. The absorption really does make a difference."</p>
-                            <div class="review-author">
-                                <span class="author-name">Marcus D.</span>
-                                <span class="verified-badge">Verified Buyer</span>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Why should I take Liposomal Curcumin+<sup>®</sup>?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Liposomal Curcumin+® delivers 500mg of 95% pure curcuminoids using advanced liposomal technology for 10x better absorption than standard turmeric. It supports healthy inflammation response, joint comfort, heart health, skin quality, and mental clarity.</p>
+                            </div>
+                        </div>
+                        <!-- Hidden FAQ items - revealed on View All click -->
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>Can I take this with other supplements? What about medications?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Liposomal Curcumin+® can be taken with most supplements. However, curcumin may interact with blood thinners and certain medications. We recommend consulting with your healthcare provider before starting any new supplement regimen, especially if you're on medication.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>What does Liposomal Curcumin+<sup>®</sup> do?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Our formula supports healthy inflammation response, joint comfort and mobility, heart health and circulation, skin quality and radiance, and mental clarity and focus—all through advanced liposomal delivery for maximum absorption.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>Do I need to refrigerate my Liposomal Curcumin+<sup>®</sup>?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>No refrigeration required. Store in a cool, dry place away from direct sunlight. Our liposomal formula is shelf-stable and maintains potency at room temperature.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>Do I have to sign up for a subscription?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>No, subscriptions are optional. You can make a one-time purchase or subscribe to save and ensure you never run out. Subscribers enjoy exclusive pricing and can pause, skip, or cancel anytime.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>What does my subscription to Liposomal Curcumin+<sup>®</sup> include?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Subscribers receive their preferred supply delivered automatically at a discounted price, free shipping on every order, flexibility to pause, skip, or cancel anytime, and priority access to new products and exclusive offers.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>Is Liposomal Curcumin+<sup>®</sup> compatible with my diet or dietary restrictions?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! Our formula is vegan, gluten-free, soy-free, non-GMO, and contains no artificial colors or preservatives. It's compatible with most dietary lifestyles including keto, paleo, and plant-based diets.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>What is your 90 day risk-free guarantee? Do you accept returns?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We offer a 90-day risk-free guarantee. If you're not completely satisfied, contact us within 90 days of receiving your order for a full refund—no questions asked. We accept returns of both opened and unopened products.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>Is Liposomal Curcumin+<sup>®</sup> safe to take while I'm pregnant or breastfeeding?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>While curcumin is generally considered safe, we recommend consulting with your healthcare provider before taking any supplements during pregnancy or while breastfeeding.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item faq-item-hidden">
+                            <button class="faq-question">
+                                <span>Do you ship internationally?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Currently, we ship within the United States with free shipping on all orders. International shipping is coming soon—sign up for our newsletter to be notified when we expand.</p>
                             </div>
                         </div>
                     </div>
+                    <button class="faq-view-all" id="faqViewAll">
+                        <span class="faq-view-all-icon"></span>
+                        <span class="faq-view-all-text">View All</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <div class="faq-container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
+        <!-- Member Reviews Section -->
+        <section class="reviews-section">
+            <div class="reviews-container">
+                <h2 class="reviews-title">Member<br>Reviews</h2>
                 
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What does Liposomal Curcumin+ do?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Liposomal Curcumin+® delivers 500mg of 95% pure curcuminoids using advanced liposomal technology for 10x better absorption than standard turmeric. It supports healthy inflammation response, joint comfort, heart health, skin quality, and mental clarity.</p>
+                <!-- Rating Summary -->
+                <div class="reviews-summary">
+                    <div class="reviews-score">
+                        <span class="score-number">4.9</span>
+                        <div class="score-details">
+                            <div class="score-stars">★★★★★</div>
+                            <span class="score-count">Based on 11,952 reviews</span>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Why is liposomal better than regular turmeric supplements?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Standard turmeric has notoriously poor bioavailability—only 1-2% actually reaches your bloodstream. Our liposomal technology encapsulates curcumin in phospholipid spheres that protect it through digestion and deliver it directly to your cells, resulting in 10x superior absorption.</p>
+                    <div class="reviews-breakdown">
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">5</span>
+                            <span class="breakdown-star">★</span>
+                            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 89%"></div></div>
+                            <span class="breakdown-count">10,667</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">4</span>
+                            <span class="breakdown-star">★</span>
+                            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 8%"></div></div>
+                            <span class="breakdown-count">985</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">3</span>
+                            <span class="breakdown-star">★</span>
+                            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 2%"></div></div>
+                            <span class="breakdown-count">181</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">2</span>
+                            <span class="breakdown-star">★</span>
+                            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 0.5%"></div></div>
+                            <span class="breakdown-count">56</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">1</span>
+                            <span class="breakdown-star">★</span>
+                            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 0.5%"></div></div>
+                            <span class="breakdown-count">63</span>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Can I take this with other supplements or medications?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Liposomal Curcumin+® can be taken with most supplements. However, curcumin may interact with blood thinners and certain medications. We recommend consulting with your healthcare provider before starting any new supplement regimen, especially if you're on medication.</p>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="reviews-filters">
+                    <div class="reviews-search">
+                        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" placeholder="Search reviews" class="search-input">
+                    </div>
+                    <div class="reviews-topics">
+                        <span class="topics-label">Popular topics</span>
+                        <div class="topics-pills">
+                            <button class="topic-pill">joint pain</button>
+                            <button class="topic-pill">inflammation</button>
+                            <button class="topic-pill">absorption</button>
+                            <button class="topic-pill">energy</button>
+                            <button class="topic-pill">skin</button>
+                            <button class="topic-pill">recovery</button>
+                            <button class="topic-pill">digestion</button>
+                            <button class="topic-pill-more">Show more</button>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How long until I see results?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Many users notice initial improvements in joint stiffness and comfort within 1-2 weeks. Optimal benefits for inflammation response, heart health, skin quality, and mental clarity typically develop over 4-8 weeks of consistent daily use.</p>
+                    <div class="reviews-sort">
+                        <span>Sort by:</span>
+                        <select class="sort-select">
+                            <option>Highest rating</option>
+                            <option>Lowest rating</option>
+                            <option>Most recent</option>
+                            <option>Most helpful</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Reviews List -->
+                <div class="reviews-list" id="reviewsList">
+                    <div class="review-item" data-rating="5" data-date="2026-01-26" data-helpful="3" data-topics="joint pain,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Robert K. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/26/26</span>
+                        </div>
+                        <p class="review-text">I've tried dozens of turmeric supplements over the years—nothing compared to this. Within 2 weeks, my knee pain had significantly decreased and I'm back to my morning walks without stiffness.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What's the best time to take Liposomal Curcumin+?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Take 2 soft gels daily with a meal for optimal absorption. The healthy fats in your meal work synergistically with our liposomal delivery system to enhance bioavailability. Morning or evening—whatever fits your routine best.</p>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-25" data-helpful="1" data-topics="absorption,skin,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Jennifer L. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/25/26</span>
+                        </div>
+                        <p class="review-text">The liposomal technology is a game-changer. I can actually feel the difference. My joints feel better, my skin is clearer, and I have more mental clarity throughout the day. I absolutely recommend this to anyone looking for a quality curcumin supplement... <span class="read-more">Read more</span></p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What is your satisfaction guarantee?</span>
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>We offer a 30-day risk-free guarantee. If you're not completely satisfied with Liposomal Curcumin+®, contact us within 30 days of receiving your order for a full refund—no questions asked.</p>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-24" data-helpful="3" data-topics="recovery,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Marcus D. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/24/26</span>
+                        </div>
+                        <p class="review-text">As a fitness enthusiast, recovery is everything. This curcumin supplement has noticeably reduced my post-workout inflammation and soreness.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
                         </div>
                     </div>
+
+                    <div class="review-item" data-rating="4" data-date="2026-01-23" data-helpful="1" data-topics="energy,digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Sarah M. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">01/23/26</span>
+                        </div>
+                        <p class="review-text">Excellent product! I've noticed a significant improvement in my overall well-being since starting this supplement.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-22" data-helpful="3" data-topics="inflammation,skin,joint pain">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">David H. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/22/26</span>
+                        </div>
+                        <p class="review-text">I'm perimenopausal, 52, and I've noticed that my hair is becoming smooth again. A departure from what it used to be, silky smooth and shiny. The anti-inflammatory benefits have been remarkable for my joints as well... <span class="read-more">Read more</span></p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 2 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2026-01-21" data-helpful="5" data-topics="joint pain,recovery">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Michael T. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/21/26</span>
+                        </div>
+                        <p class="review-text">After years of dealing with chronic joint pain, this supplement has been life-changing. The liposomal delivery really does make a difference in absorption.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">5</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-20" data-helpful="2" data-topics="energy,digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Linda P. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/20/26</span>
+                        </div>
+                        <p class="review-text">I have so much more energy throughout the day and my digestion has improved noticeably. Highly recommend!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2026-01-19" data-helpful="1" data-topics="inflammation,skin">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Patricia W. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">01/19/26</span>
+                        </div>
+                        <p class="review-text">My skin looks so much better since I started taking this. The anti-inflammatory effects are real!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-18" data-helpful="4" data-topics="absorption,joint pain">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">James R. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/18/26</span>
+                        </div>
+                        <p class="review-text">I've tried many curcumin supplements, but this one actually works. You can feel the difference with the liposomal technology.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-17" data-helpful="2" data-topics="recovery,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Emily S. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/17/26</span>
+                        </div>
+                        <p class="review-text">As a runner, post-workout recovery is crucial. This supplement has cut my recovery time significantly.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 3 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2026-01-16" data-helpful="3" data-topics="inflammation,digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">William B. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/16/26</span>
+                        </div>
+                        <p class="review-text">My gut health has improved tremendously. No more bloating and I feel less inflamed overall.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2026-01-15" data-helpful="1" data-topics="skin,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Nancy C. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">01/15/26</span>
+                        </div>
+                        <p class="review-text">Good product! My skin is clearer and I have more energy. Would give 5 stars but it took about 3 weeks to notice effects.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-14" data-helpful="6" data-topics="joint pain,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">George M. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/14/26</span>
+                        </div>
+                        <p class="review-text">At 68, I thought joint pain was just part of life. This supplement proved me wrong. I can garden again without wincing!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">6</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-13" data-helpful="2" data-topics="recovery,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Susan K. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/13/26</span>
+                        </div>
+                        <p class="review-text">I'm a yoga instructor and this helps me stay flexible and recover quickly between classes. Love it!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-12" data-helpful="4" data-topics="digestion,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Richard L. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/12/26</span>
+                        </div>
+                        <p class="review-text">Been taking this for two months now. My energy levels are consistent and my stomach issues have disappeared.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 4 Reviews -->
+                    <div class="review-item" data-rating="3" data-date="2026-01-11" data-helpful="0" data-topics="absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Barbara A. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="3">★★★☆☆</div>
+                            <span class="review-date">01/11/26</span>
+                        </div>
+                        <p class="review-text">Decent product. I can tell the absorption is better than regular turmeric, but I'm still waiting to see major results.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">0</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-10" data-helpful="7" data-topics="joint pain,skin,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Thomas J. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/10/26</span>
+                        </div>
+                        <p class="review-text">Triple threat - my joints feel great, my skin is glowing, and inflammation markers improved at my last checkup. Doctor was impressed!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">7</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-09" data-helpful="3" data-topics="recovery,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Karen F. 🇨🇦</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/09/26</span>
+                        </div>
+                        <p class="review-text">I'm 55 and feeling better than I did at 40! More energy, faster recovery from my workouts. This is now a staple in my routine.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2026-01-08" data-helpful="1" data-topics="digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Daniel G. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">01/08/26</span>
+                        </div>
+                        <p class="review-text">Great for digestion! My stomach feels so much better since starting this supplement.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-07" data-helpful="2" data-topics="joint pain,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Mary E. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/07/26</span>
+                        </div>
+                        <p class="review-text">Finally, a turmeric supplement that actually works! My knees don't ache anymore after my morning walks.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 5 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2026-01-06" data-helpful="4" data-topics="inflammation,skin">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Christopher N. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/06/26</span>
+                        </div>
+                        <p class="review-text">My eczema has significantly improved since I started taking this. The anti-inflammatory properties are incredible.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-05" data-helpful="5" data-topics="recovery,joint pain">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Jessica H. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/05/26</span>
+                        </div>
+                        <p class="review-text">CrossFit athlete here. This has been a game-changer for my training recovery and joint health. Absolutely worth every penny!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">5</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2026-01-04" data-helpful="1" data-topics="energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Anthony D. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">01/04/26</span>
+                        </div>
+                        <p class="review-text">More sustained energy throughout the day without the crash I used to get. Good quality product.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-03" data-helpful="3" data-topics="digestion,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Michelle R. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/03/26</span>
+                        </div>
+                        <p class="review-text">I have IBS and this has made a noticeable difference in my symptoms. Less bloating, less discomfort. Thank you!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2026-01-02" data-helpful="2" data-topics="skin,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Steven W. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/02/26</span>
+                        </div>
+                        <p class="review-text">My wife says my skin looks healthier. I just know I feel better overall. The liposomal formula is definitely superior.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 6 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2026-01-01" data-helpful="8" data-topics="joint pain,recovery,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Laura B. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">01/01/26</span>
+                        </div>
+                        <p class="review-text">Started the new year with this supplement and it's been amazing! Joint pain reduced, recovery improved, and I feel less inflamed overall. Best health decision I've made!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">8</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2025-12-31" data-helpful="1" data-topics="energy,skin">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Kevin O. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">12/31/25</span>
+                        </div>
+                        <p class="review-text">Good supplement. Noticed more energy and my skin seems clearer. Taking off one star because shipping took a bit long.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-30" data-helpful="4" data-topics="inflammation,digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Angela T. 🇨🇦</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/30/25</span>
+                        </div>
+                        <p class="review-text">As someone with autoimmune issues, this has been incredibly helpful for managing inflammation. My gut health has also improved!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-29" data-helpful="2" data-topics="joint pain,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Brian C. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/29/25</span>
+                        </div>
+                        <p class="review-text">Ex-football player with bad knees. This supplement has given me relief I haven't felt in years. The absorption is noticeably better than other brands.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-28" data-helpful="3" data-topics="recovery,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Rachel S. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/28/25</span>
+                        </div>
+                        <p class="review-text">Marathon training was taking a toll on my body. Since starting this, my recovery between runs is so much faster. More energy too!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 7 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2025-12-27" data-helpful="5" data-topics="skin,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Nicole M. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/27/25</span>
+                        </div>
+                        <p class="review-text">My dermatologist asked what I changed because my skin looks so much better. This supplement is the only thing I added to my routine!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">5</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2025-12-26" data-helpful="1" data-topics="digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Edward P. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">12/26/25</span>
+                        </div>
+                        <p class="review-text">Helps with my digestion issues. The soft gels are easy to swallow and don't upset my stomach like other turmeric products did.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-25" data-helpful="6" data-topics="joint pain,recovery">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Cynthia L. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/25/25</span>
+                        </div>
+                        <p class="review-text">Got this as a Christmas gift to myself and it's the best present ever! My chronic knee pain has improved dramatically. I can play with my grandkids again!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">6</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-24" data-helpful="2" data-topics="energy,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Frank V. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/24/25</span>
+                        </div>
+                        <p class="review-text">The difference in absorption is real. I've tried regular turmeric for years with minimal results. This works!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-23" data-helpful="3" data-topics="inflammation,skin">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Diane K. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/23/25</span>
+                        </div>
+                        <p class="review-text">I've struggled with inflammation and skin issues for years. This supplement has helped more than prescription medications ever did!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 8 Reviews -->
+                    <div class="review-item" data-rating="3" data-date="2025-12-22" data-helpful="2" data-topics="absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Harold J. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="3">★★★☆☆</div>
+                            <span class="review-date">12/22/25</span>
+                        </div>
+                        <p class="review-text">Still early days for me - only been taking it for 2 weeks. Haven't noticed dramatic changes yet but I'll keep going.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-21" data-helpful="4" data-topics="joint pain,digestion">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Gloria N. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/21/25</span>
+                        </div>
+                        <p class="review-text">Arthritis has plagued me for a decade. This supplement has given me my life back. My stomach tolerates it perfectly too!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-20" data-helpful="2" data-topics="recovery,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Peter Q. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/20/25</span>
+                        </div>
+                        <p class="review-text">I'm a personal trainer and recommend this to all my clients now. The recovery benefits are undeniable.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-19" data-helpful="5" data-topics="skin,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Victoria R. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/19/25</span>
+                        </div>
+                        <p class="review-text">At 62, I've tried everything for my skin and inflammation. This is the only thing that's made a real, visible difference. My friends keep asking what my secret is!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">5</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2025-12-18" data-helpful="1" data-topics="energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Scott U. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">12/18/25</span>
+                        </div>
+                        <p class="review-text">Solid product. I feel more energized and alert. Would be 5 stars if it was a bit more affordable.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 9 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2025-12-17" data-helpful="3" data-topics="joint pain,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Catherine Y. 🇨🇦</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/17/25</span>
+                        </div>
+                        <p class="review-text">My rheumatologist noticed improvement in my joint health. She was curious about what I changed and now recommends this to other patients!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-16" data-helpful="2" data-topics="digestion,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Andrew Z. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/16/25</span>
+                        </div>
+                        <p class="review-text">Chronic gut inflammation has been a struggle. This supplement has made a world of difference. Highly recommend!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-15" data-helpful="4" data-topics="recovery,skin">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Samantha A. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/15/25</span>
+                        </div>
+                        <p class="review-text">I'm a dancer and the recovery benefits have been incredible. Bonus: my skin is glowing! Love this product.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="4" data-date="2025-12-14" data-helpful="1" data-topics="energy,joint pain">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Gregory I. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="4">★★★★☆</div>
+                            <span class="review-date">12/14/25</span>
+                        </div>
+                        <p class="review-text">Good results so far. More energy and less joint stiffness. Will update my review after a few more months.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">1</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-13" data-helpful="6" data-topics="inflammation,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Elizabeth F. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/13/25</span>
+                        </div>
+                        <p class="review-text">I'm a nurse and understand the science behind liposomal delivery. This is the real deal. My inflammation markers have improved significantly!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">6</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Page 10 Reviews -->
+                    <div class="review-item" data-rating="5" data-date="2025-12-12" data-helpful="3" data-topics="joint pain,recovery">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Timothy X. 🇨🇦</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/12/25</span>
+                        </div>
+                        <p class="review-text">Hockey player here. My joints have never felt better and I recover faster between games. Teammates are now ordering too!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">3</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-11" data-helpful="2" data-topics="skin,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Amanda G. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/11/25</span>
+                        </div>
+                        <p class="review-text">My energy is through the roof and people keep complimenting my skin. This is now a non-negotiable in my daily routine!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">2</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-10" data-helpful="4" data-topics="digestion,inflammation">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Joseph W. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/10/25</span>
+                        </div>
+                        <p class="review-text">I've struggled with digestive issues my whole life. This supplement has been a game-changer. Less bloating, less discomfort, more comfortable overall.</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">4</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-09" data-helpful="5" data-topics="joint pain,absorption">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Rebecca H. 🇺🇸</span>
+                                <span class="verified-badge">Verified Reviewer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/09/25</span>
+                        </div>
+                        <p class="review-text">I was skeptical about the absorption claims, but the results speak for themselves. My joint pain has decreased by at least 70%!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">5</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="review-item" data-rating="5" data-date="2025-12-08" data-helpful="7" data-topics="recovery,inflammation,energy">
+                        <div class="review-meta">
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">Charles M. 🇺🇸</span>
+                                <span class="verified-badge">Verified Buyer</span>
+                            </div>
+                            <div class="review-stars" data-stars="5">★★★★★</div>
+                            <span class="review-date">12/08/25</span>
+                        </div>
+                        <p class="review-text">At 71, I didn't expect to feel this good again. My inflammation is down, energy is up, and I recover from my daily walks without any issues. Truly a remarkable product!</p>
+                        <div class="review-helpful">
+                            <span>Was this review helpful?</span>
+                            <button class="helpful-btn" data-type="up">👍 <span class="helpful-count">7</span></button>
+                            <button class="helpful-btn" data-type="down">👎 <span class="helpful-count">0</span></button>
+                        </div>
+                    </div>
+
+                    <div class="no-reviews-message" style="display: none;">
+                        <p>No reviews match your search criteria. Try adjusting your filters.</p>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="reviews-pagination" id="reviewsPagination">
+                    <button class="page-arrow prev" disabled>‹</button>
+                    <button class="page-num active" data-page="1">1</button>
+                    <button class="page-num" data-page="2">2</button>
+                    <button class="page-num" data-page="3">3</button>
+                    <button class="page-num" data-page="4">4</button>
+                    <button class="page-num" data-page="5">5</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-num" data-page="10">10</button>
+                    <button class="page-arrow next">›</button>
                 </div>
             </div>
         </section>
@@ -805,13 +1803,13 @@
     <div class="sticky-cta" id="stickyCta">
         <div class="sticky-cta-container">
             <div class="sticky-product-info">
-                <img src="images/DS-01_Refill_Pouch_v1_Alpha_726003615197146.png" alt="Liposomal Curcumin+" class="sticky-product-img">
+                <img src="images/Curcumin+Bottle_Transparent.png" alt="Liposomal Curcumin+" class="sticky-product-img">
                 <div class="sticky-product-text">
                     <span class="sticky-product-name">Liposomal Curcumin+</span>
-                    <span class="sticky-product-price">$49.99/mo</span>
+                    <span class="sticky-product-price">$39.96/mo</span>
                 </div>
             </div>
-            <button class="sticky-cta-btn">Subscribe Now</button>
+            <button class="sticky-cta-btn" onclick="document.getElementById('productSelector').scrollIntoView({ behavior: 'smooth', block: 'center' })">Start Now</button>
         </div>
     </div>
 
