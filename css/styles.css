@@ -1667,7 +1667,7 @@ ul, ol {
    ======================================== */
 .reviews-section {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background-color: var(--color-background-alt);
+    background-color: var(--color-background);
 }
 
 .reviews-container {
