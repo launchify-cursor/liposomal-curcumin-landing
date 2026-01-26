@@ -683,10 +683,8 @@ ul, ol {
 .cross-sell-img {
     width: 64px;
     height: 64px;
-    object-fit: contain;
-    background-color: var(--color-accent);
+    object-fit: cover;
     border-radius: var(--radius-md);
-    padding: 8px;
 }
 
 .cross-sell-info {
