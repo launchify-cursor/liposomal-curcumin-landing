@@ -866,7 +866,7 @@ ul, ol {
     color: var(--color-white);
     opacity: 0.8;
     margin-bottom: var(--spacing-lg);
-    max-width: 246px;
+    max-width: 420px;
 }
 
 .learn-more-link {
