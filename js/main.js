@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initStickyCta();
     initMobileCarousel();
     initReviewsCarousel();
+    initClinicalSidebar();
 });
 
 /**
@@ -329,3 +330,64 @@ document.querySelectorAll('.option-btn').forEach(btn => {
         this.classList.add('active');
     });
 });
+
+/**
+ * Clinical Research Sidebar
+ */
+function initClinicalSidebar() {
+    const sidebar = document.getElementById('clinicalSidebar');
+    const overlay = document.getElementById('clinicalSidebarOverlay');
+    const closeBtn = document.getElementById('clinicalSidebarClose');
+    const openLinks = document.querySelectorAll('.clinical-trials-link');
+    const body = document.body;
+
+    // Open sidebar
+    openLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close sidebar
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeSidebar);
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', closeSidebar);
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+            closeSidebar();
+        }
+    });
+
+    // Initialize clinical accordions
+    const clinicalAccordionItems = document.querySelectorAll('.clinical-accordion-item');
+    
+    clinicalAccordionItems.forEach(function(item) {
+        const header = item.querySelector('.clinical-accordion-header');
+        
+        header.addEventListener('click', function() {
+            const isOpen = item.classList.contains('active');
+            
+            // Toggle clicked accordion
+            if (isOpen) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+}

@@ -289,7 +289,7 @@ ul, ol {
     border-radius: var(--radius-lg);
     overflow: hidden;
     width: 464px;
-    height: 248px;
+    height: 280px;
 }
 
 .thumb-item img {
@@ -927,6 +927,7 @@ ul, ol {
     height: 100%;
     object-fit: cover;
     border-radius: var(--radius-2xl);
+    transform: scale(1.15);
 }
 
 /* ========================================
@@ -1211,8 +1212,8 @@ ul, ol {
 
 .strains-image img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 280px;
+    object-fit: cover;
     border-radius: var(--radius-lg);
 }
 
@@ -1327,11 +1328,12 @@ ul, ol {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
+    align-items: flex-start;
 }
 
 .delivery-card {
     flex: 0 0 calc(50% - 8px);
-    max-width: 540px;
+    max-width: 680px;
     display: flex;
     background-color: var(--color-background-alt);
     border-radius: var(--radius-xl);
@@ -1339,7 +1341,7 @@ ul, ol {
 }
 
 .delivery-card-image {
-    flex: 0 0 200px;
+    flex: 0 0 291px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1347,9 +1349,10 @@ ul, ol {
 }
 
 .delivery-card-image img {
-    max-width: 100%;
-    max-height: 280px;
-    object-fit: contain;
+    width: 291px;
+    height: 346px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
 }
 
 .delivery-card-content {
@@ -1362,6 +1365,7 @@ ul, ol {
     font-weight: 500;
     color: var(--color-text);
     margin-bottom: var(--spacing-sm);
+    white-space: nowrap;
 }
 
 .delivery-subtitle {
@@ -1383,8 +1387,8 @@ ul, ol {
 }
 
 .delivery-item img {
-    width: 40px;
-    height: 40px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
 }
 
@@ -1394,14 +1398,16 @@ ul, ol {
 }
 
 .item-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--color-text);
+    white-space: nowrap;
 }
 
 .item-subtitle {
     font-size: 12px;
     color: var(--color-text-light);
+    white-space: nowrap;
 }
 
 /* ========================================
@@ -1506,7 +1512,7 @@ ul, ol {
     -webkit-backdrop-filter: blur(80px);
     border: 1px solid rgba(252, 252, 247, 0.15);
     border-radius: var(--radius-xl);
-    padding: 24px 32px;
+    padding: 28px 40px;
     position: relative;
 }
 
@@ -1520,7 +1526,7 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
 }
 
 .comparison-row.header-row {
@@ -1539,7 +1545,7 @@ ul, ol {
 }
 
 .comparison-cell.ds01-cell {
-    width: 100px;
+    width: 120px;
     height: 76px;
     display: flex;
     align-items: center;
@@ -1563,7 +1569,7 @@ ul, ol {
 }
 
 .comparison-cell.other-cell {
-    width: 100px;
+    width: 120px;
     height: 76px;
     display: flex;
     align-items: center;
@@ -2429,5 +2435,290 @@ ul, ol {
 
     .sticky-cta-btn {
         width: 100%;
+    }
+}
+
+/* ========================================
+   Clinical Research Sidebar
+   ======================================== */
+.clinical-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.clinical-sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.clinical-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 480px;
+    max-width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.clinical-sidebar.active {
+    transform: translateX(0);
+}
+
+.clinical-sidebar-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+.clinical-sidebar-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-text);
+    transition: opacity 0.2s ease;
+}
+
+.clinical-sidebar-close:hover {
+    opacity: 0.7;
+}
+
+.clinical-sidebar-content {
+    padding: 24px;
+}
+
+.clinical-product-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.clinical-product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    background-color: var(--color-background-alt);
+}
+
+.clinical-product-info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.clinical-product-info h3 sup {
+    font-size: 12px;
+}
+
+.clinical-product-info p {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.clinical-intro {
+    margin-bottom: 24px;
+}
+
+.clinical-intro p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* Clinical Accordion Styles */
+.clinical-accordion {
+    margin-bottom: 24px;
+}
+
+.clinical-accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-md);
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.clinical-accordion-header {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: var(--color-background-alt);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: background-color 0.2s ease;
+    text-align: left;
+}
+
+.clinical-accordion-header:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.clinical-accordion-icon {
+    font-size: 20px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.clinical-accordion-item.active .clinical-accordion-icon {
+    transform: rotate(45deg);
+}
+
+.clinical-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+    background-color: var(--color-background);
+}
+
+.clinical-accordion-item.active .clinical-accordion-content {
+    max-height: 500px;
+    padding: 16px 20px;
+}
+
+.ingredient-item {
+    margin-bottom: 16px;
+}
+
+.ingredient-item:last-child {
+    margin-bottom: 0;
+}
+
+.ingredient-item strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.ingredient-item p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
+
+/* Clinical Studies Section */
+.clinical-studies-section {
+    margin-top: 32px;
+}
+
+.clinical-studies-section h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.clinical-studies-intro {
+    font-size: 14px;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.study-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.study-title {
+    font-weight: 500;
+}
+
+.study-year {
+    font-size: 12px;
+    color: var(--color-text-light);
+    font-weight: 400;
+}
+
+.study-source {
+    font-size: 12px;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.clinical-accordion-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 12px;
+}
+
+.study-link {
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.study-link:hover {
+    text-decoration: underline;
+}
+
+/* Disclaimer */
+.clinical-disclaimer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.clinical-disclaimer p {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+/* Clinical Sidebar Mobile */
+@media (max-width: 520px) {
+    .clinical-sidebar {
+        width: 100%;
+    }
+    
+    .clinical-sidebar-content {
+        padding: 16px;
+    }
+    
+    .clinical-product-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .clinical-accordion-item.active .clinical-accordion-content {
+        max-height: 800px;
     }
 }
