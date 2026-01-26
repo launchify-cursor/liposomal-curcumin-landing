@@ -848,7 +848,7 @@ ul, ol {
 .viacap-text {
     display: flex;
     flex-direction: column;
-    max-width: 430px;
+    max-width: 520px;
     margin-left: 80px;
 }
 
