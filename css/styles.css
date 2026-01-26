@@ -1642,7 +1642,10 @@ ul, ol {
    ======================================== */
 .comparison-section {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background-color: var(--color-primary);
+    background-image: url('../images/ribbon section.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0 var(--spacing-md);
     border-radius: var(--radius-2xl);
 }
