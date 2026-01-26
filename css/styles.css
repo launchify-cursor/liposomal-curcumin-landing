@@ -1568,7 +1568,7 @@ ul, ol {
     -webkit-backdrop-filter: blur(80px);
     border: 1px solid rgba(252, 252, 247, 0.15);
     border-radius: var(--radius-xl);
-    padding: 28px 40px;
+    padding: 28px 120px 28px 40px;
     position: relative;
 }
 
@@ -2780,4 +2780,545 @@ ul, ol {
     .clinical-accordion-item.active .clinical-accordion-content {
         max-height: 800px;
     }
+}
+/* Fixed section height 627px, equal padding, larger pill, bottom callout */
+.viacap-content {
+    min-height: 627px !important;
+    height: 627px !important;
+    max-height: 627px !important;
+    overflow: hidden !important;
+}
+
+.viacap-text {
+    padding-top: 48px !important;
+    padding-left: 48px !important;
+    margin-left: 0 !important;
+}
+
+.pill-visual {
+    right: 40px !important;
+}
+
+.pill-visual img {
+    height: 840px !important;
+    max-height: 840px !important;
+}
+
+.viacap-visual-area {
+    height: 627px !important;
+    min-height: 627px !important;
+    overflow: visible !important;
+}
+
+.callout-inner {
+    top: 75% !important;
+    left: -100px !important;
+}
+
+/* Complete layout fix for viacap section */
+.viacap-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.viacap-visual-area {
+    position: relative !important;
+    display: block !important;
+    overflow: visible !important;
+}
+
+.callout-outer {
+    position: absolute !important;
+    top: 20px !important;
+    right: 0 !important;
+    left: auto !important;
+    max-width: 200px !important;
+    z-index: 10 !important;
+    text-align: left !important;
+}
+
+.callout-inner {
+    position: absolute !important;
+    bottom: 80px !important;
+    top: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    max-width: 200px !important;
+    z-index: 10 !important;
+    text-align: left !important;
+}
+
+.pill-visual {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 5 !important;
+}
+
+.pill-visual img {
+    height: 800px !important;
+    width: auto !important;
+    max-height: none !important;
+}
+
+/* Final fixes: aspect ratio pill, callout line above text, text more left */
+.pill-visual img {
+    height: 580px !important;
+    width: auto !important;
+    max-height: 580px !important;
+    object-fit: contain !important;
+}
+
+.viacap-text {
+    padding-top: 48px !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.callout-outer .callout-line,
+.callout-inner .callout-line {
+    display: block !important;
+    margin-bottom: 8px !important;
+}
+
+.callout-outer h4,
+.callout-inner h4 {
+    color: var(--color-white) !important;
+}
+
+.callout-outer p,
+.callout-inner p {
+    color: var(--color-white) !important;
+    opacity: 0.85 !important;
+}
+
+/* Callout line styling - visible white line above text */
+.callout-outer .callout-line,
+.callout-inner .callout-line {
+    display: block !important;
+    width: 100px !important;
+    height: 2px !important;
+    background-color: #fff !important;
+    margin-bottom: 12px !important;
+}
+
+/* Move headline and text further left - flush to section edge */
+.viacap-content {
+    padding-left: 48px !important;
+}
+
+.viacap-text h2,
+.viacap-text p,
+.viacap-text .learn-more-link {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Reduce top padding, move pill left, swap callouts, larger pill */
+.viacap-text {
+    padding-top: 24px !important;
+}
+
+.pill-visual {
+    right: 80px !important;
+}
+
+.pill-visual img {
+    height: 610px !important;
+    max-height: 610px !important;
+}
+
+/* Swap callout positions - outer to bottom, inner to top */
+.callout-outer {
+    top: auto !important;
+    bottom: 80px !important;
+    right: auto !important;
+    left: 0 !important;
+}
+
+.callout-inner {
+    top: 20px !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Larger pill image - maintain aspect ratio */
+.pill-visual img {
+    height: 720px !important;
+    max-height: 720px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* Cropped pill image - display larger */
+.pill-visual img {
+    height: 620px !important;
+    max-height: 620px !important;
+}
+
+/* Double the pill image size */
+.pill-visual img {
+    height: 1200px !important;
+    max-height: 1200px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* Force pill image to display twice as large */
+.pill-visual {
+    transform: translateY(-50%) scale(2) !important;
+    transform-origin: center center !important;
+}
+
+/* Reduce pill image by 35% */
+.pill-visual {
+    transform: translateY(-50%) scale(1.3) !important;
+}
+
+/* Move pill image to the left */
+.pill-visual {
+    right: 120px !important;
+}
+
+/* Move pill more left and increase size by 15% */
+.pill-visual {
+    right: 160px !important;
+    transform: translateY(-50%) scale(1.5) !important;
+}
+
+/* Increase pill size by 30% more height */
+.pill-visual {
+    transform: translateY(-50%) scale(1.95) !important;
+}
+
+/* Increase pill size by 10% more */
+.pill-visual {
+    transform: translateY(-50%) scale(2.15) !important;
+}
+
+/* Move pill image up slightly */
+.pill-visual {
+    transform: translateY(-55%) scale(2.15) !important;
+}
+
+/* Move pill image up more */
+.pill-visual {
+    transform: translateY(-60%) scale(2.15) !important;
+}
+
+/* Adjust pill image position - half adjustment */
+.pill-visual {
+    transform: translateY(-57.5%) scale(2.15) !important;
+}
+
+/* Move pill image down slightly */
+.pill-visual {
+    transform: translateY(-56%) scale(2.15) !important;
+}
+
+/* Move pill image down very slightly */
+.pill-visual {
+    transform: translateY(-55%) scale(2.15) !important;
+}
+
+/* Move pill image to -50% */
+.pill-visual {
+    transform: translateY(-50%) scale(2.15) !important;
+}
+
+/* Move pill image to -53% */
+.pill-visual {
+    transform: translateY(-53%) scale(2.15) !important;
+}
+
+/* Move pill image to -54% */
+.pill-visual {
+    transform: translateY(-54%) scale(2.15) !important;
+}
+
+/* Move pill image down slightly */
+.pill-visual {
+    transform: translateY(-52%) scale(2.15) !important;
+}
+
+/* Adjust Pure Curcumin Core callout - move left and up */
+.callout-outer {
+    bottom: 140px !important;
+    left: -20px !important;
+}
+
+/* Further adjust Pure Curcumin Core callout - align with liquid explosion */
+.callout-outer {
+    bottom: 220px !important;
+    left: -40px !important;
+}
+
+/* Move Pure Curcumin Core callout further left and down */
+.callout-outer {
+    bottom: 180px !important;
+    left: -80px !important;
+}
+
+/* Set product image width to 350px on desktop */
+.viacap-product-image img {
+    width: 350px !important;
+    height: auto !important;
+}
+
+/* Set product image container to 350px wide on desktop */
+.viacap-product-image {
+    width: 350px !important;
+    max-width: 350px !important;
+    flex-shrink: 0 !important;
+}
+
+.viacap-product-image img {
+    width: 100% !important;
+    max-width: 350px !important;
+}
+
+/* Force product image to exactly 350px wide */
+.viacap-section .viacap-container .viacap-product-image {
+    width: 350px !important;
+    max-width: 350px !important;
+    min-width: 350px !important;
+    overflow: hidden !important;
+}
+
+.viacap-section .viacap-container .viacap-product-image img {
+    width: 350px !important;
+    max-width: 350px !important;
+    min-width: 350px !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+/* Remove scale transform from product image */
+.viacap-section .viacap-container .viacap-product-image img {
+    transform: none !important;
+}
+
+/* Align viacap section with edges above */
+.viacap-section .viacap-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 0 !important;
+}
+
+.viacap-section .viacap-container .viacap-product-image {
+    margin-left: 0 !important;
+}
+
+.viacap-section .viacap-container .viacap-content {
+    flex: 1 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+}
+
+/* Restore spacing between product image and viacap content */
+.viacap-section .viacap-container {
+    gap: 24px !important;
+}
+
+/* Move Pure Curcumin Core callout further left and slightly down */
+.callout-outer {
+    bottom: 160px !important;
+    left: -140px !important;
+}
+
+/* Move Pure Curcumin Core callout even further left */
+.callout-outer {
+    left: -200px !important;
+}
+
+/* Move Phospholipid Outer Layer callout slightly down */
+.callout-inner {
+    top: 40px !important;
+}
+
+/* Style callout lines to match reference - opacity, extended length, white circle at end */
+.callout-outer .callout-line,
+.callout-inner .callout-line {
+    position: relative !important;
+    display: block !important;
+    width: 200px !important;
+    height: 1px !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 12px !important;
+}
+
+/* Add solid white circle at the end of lines */
+.callout-outer .callout-line::after,
+.callout-inner .callout-line::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #fff !important;
+    border-radius: 50% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Pure Curcumin Core (callout-outer) - circle on right, line extends right toward pill */
+.callout-outer .callout-line::after {
+    right: 0 !important;
+    left: auto !important;
+}
+
+/* Phospholipid Outer Layer (callout-inner) - circle on left, line extends left toward pill */
+.callout-inner .callout-line::after {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/* Extend callout lines and adjust circle positioning to match reference */
+/* Phospholipid Outer Layer (callout-inner at top right) - line extends left toward pill */
+.callout-inner .callout-line {
+    width: 280px !important;
+}
+
+/* Pure Curcumin Core (callout-outer at bottom left) - line extends right toward pill */
+.callout-outer .callout-line {
+    width: 280px !important;
+}
+
+/* Extend Phospholipid Outer Layer line further left */
+.callout-inner .callout-line {
+    width: 380px !important;
+}
+
+/* Move pill image and callouts slightly to the right, reduce section padding */
+.viacap-visual-area {
+    margin-left: 40px !important;
+}
+
+/* Reduce side padding on viacap section */
+.viacap-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Increase pill image size (larger height) without moving position */
+.pill-visual {
+    transform: translateY(-52%) scale(2.5) !important;
+}
+
+/* Shorten Phospholipid line so it doesn't extend past h4, but extend dot further to touch capsule */
+.callout-inner .callout-line {
+    width: 200px !important;
+}
+
+/* Move the dot further left to touch capsule */
+.callout-inner .callout-line::after {
+    left: -80px !important;
+}
+
+/* Fix Phospholipid line - shorter line that doesn't extend past h4, with dot extending to capsule */
+.callout-inner .callout-line {
+    width: 180px !important;
+    position: relative !important;
+}
+
+/* Extend dot further left toward capsule using negative left positioning */
+.callout-inner .callout-line::after {
+    left: -100px !important;
+    right: auto !important;
+}
+
+/* Ensure callout containers allow overflow for extended elements */
+.callout-inner,
+.callout-outer {
+    overflow: visible !important;
+}
+
+/* Reset and properly position the Phospholipid line and dot */
+.callout-inner .callout-line {
+    width: 280px !important;
+    overflow: visible !important;
+}
+
+/* Position dot at the left end of the line (touching capsule) */
+.callout-inner .callout-line::after {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/* Clean override for Phospholipid line - visible, shorter, with extended dot */
+.viacap-section .callout-inner .callout-line {
+    display: block !important;
+    width: 180px !important;
+    height: 1px !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 12px !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Dot extends left to touch capsule */
+.viacap-section .callout-inner .callout-line::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #fff !important;
+    border-radius: 50% !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: -60px !important;
+    right: auto !important;
+}
+
+/* Ensure all parent containers allow overflow for the line and dot */
+.viacap-visual-area {
+    overflow: visible !important;
+}
+
+.pill-visual {
+    overflow: visible !important;
+}
+
+/* Make the line more visible with stronger styling */
+.viacap-section .callout-inner .callout-line {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    height: 2px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Extend the Phospholipid dot even further left to touch capsule */
+.viacap-section .callout-inner .callout-line::after {
+    left: -120px !important;
+}
+
+/* Fix Phospholipid line - connect line to dot properly */
+.viacap-section .callout-inner .callout-line {
+    width: 240px !important;
+    margin-left: -60px !important;
+}
+
+/* Bring dot back closer and position at left edge of line */
+.viacap-section .callout-inner .callout-line::after {
+    left: 0 !important;
+}
+
+/* Make Phospholipid line transparent and extend to align with title */
+.viacap-section .callout-inner .callout-line {
+    width: 280px !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Shorten Phospholipid line to align with end of title */
+.viacap-section .callout-inner .callout-line {
+    width: 220px !important;
+}
+
+/* Extend Phospholipid line to align with right edge of title */
+.viacap-section .callout-inner .callout-line {
+    width: 260px !important;
 }
