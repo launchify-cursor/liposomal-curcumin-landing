@@ -341,30 +341,42 @@ function initClinicalSidebar() {
     const openLinks = document.querySelectorAll('.clinical-trials-link');
     const body = document.body;
 
-    // Open sidebar
-    openLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            sidebar.classList.add('active');
-            overlay.classList.add('active');
-            body.style.overflow = 'hidden';
-        });
-    });
+    // Exit early if essential elements don't exist
+    if (!sidebar || !overlay) {
+        console.log('Clinical sidebar elements not found');
+        return;
+    }
 
-    // Close sidebar
+    // Close sidebar function
     function closeSidebar() {
         sidebar.classList.remove('active');
         overlay.classList.remove('active');
         body.style.overflow = '';
     }
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeSidebar);
+    // Open sidebar
+    if (openLinks && openLinks.length > 0) {
+        openLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                body.style.overflow = 'hidden';
+            });
+        });
     }
 
-    if (overlay) {
-        overlay.addEventListener('click', closeSidebar);
+    // Close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeSidebar();
+        });
     }
+
+    // Click overlay to close
+    overlay.addEventListener('click', closeSidebar);
 
     // Close on escape key
     document.addEventListener('keydown', function(e) {
@@ -376,18 +388,23 @@ function initClinicalSidebar() {
     // Initialize clinical accordions
     const clinicalAccordionItems = document.querySelectorAll('.clinical-accordion-item');
     
-    clinicalAccordionItems.forEach(function(item) {
-        const header = item.querySelector('.clinical-accordion-header');
-        
-        header.addEventListener('click', function() {
-            const isOpen = item.classList.contains('active');
+    if (clinicalAccordionItems && clinicalAccordionItems.length > 0) {
+        clinicalAccordionItems.forEach(function(item) {
+            const header = item.querySelector('.clinical-accordion-header');
             
-            // Toggle clicked accordion
-            if (isOpen) {
-                item.classList.remove('active');
-            } else {
-                item.classList.add('active');
+            if (header) {
+                header.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const isOpen = item.classList.contains('active');
+                    
+                    // Toggle clicked accordion
+                    if (isOpen) {
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                    }
+                });
             }
         });
-    });
+    }
 }
