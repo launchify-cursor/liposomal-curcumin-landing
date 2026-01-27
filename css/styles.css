@@ -874,7 +874,7 @@ ul, ol {
 .features-section-inner {
     /* Inner container with background image matching hero-images width */
     padding: 80px var(--spacing-lg) var(--spacing-lg);
-    background-image: url('../images/features-bg.jpg');
+    background-image: url('../images/features-bg.png');
     background-size: cover;
     background-position: center 15%;
     border-radius: var(--radius-2xl);
@@ -1702,7 +1702,7 @@ ul, ol {
    ======================================== */
 .comparison-section {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background-image: url('../images/ribbon section.jpeg');
+    background-image: url('../images/ribbon_section.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -6239,13 +6239,19 @@ ul, ol {
     right: auto !important;
 }
 
-/* Ensure all parent containers allow overflow for the line and dot */
-.viacap-visual-area {
-    overflow: visible !important;
-}
+/* Clip pill image within section bounds on desktop */
+@media (min-width: 901px) {
+    .viacap-content {
+        overflow: hidden !important;
+    }
+    
+    .viacap-visual-area {
+        overflow: visible !important;
+    }
 
-.pill-visual {
-    overflow: visible !important;
+    .pill-visual {
+        overflow: visible !important;
+    }
 }
 
 /* Make the line more visible with stronger styling */
