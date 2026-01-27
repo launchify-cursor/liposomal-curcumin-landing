@@ -513,7 +513,7 @@ ul, ol {
     align-items: center;
     gap: 2px;
     padding: 10px 8px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--color-text);
     background-color: var(--color-white);
@@ -524,6 +524,7 @@ ul, ol {
 }
 
 .option-title {
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -886,7 +887,7 @@ ul, ol {
 .features-grid {
     display: flex;
     gap: var(--spacing-xl);
-    padding: var(--spacing-lg) var(--spacing-2xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
     background-color: rgba(252, 252, 247, 0.2);
     backdrop-filter: blur(38px);
     -webkit-backdrop-filter: blur(38px);
@@ -905,7 +906,7 @@ ul, ol {
 .feature-icon {
     width: 48px;
     height: 48px;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 }
 
 .feature-content {
@@ -1192,7 +1193,7 @@ ul, ol {
 }
 
 .how-to-use-content p {
-    font-size: 13px;
+    font-size: 16px;
     color: var(--color-text-light);
     line-height: 1.4;
 }
@@ -1270,7 +1271,7 @@ ul, ol {
 
 .step-benefits li {
     list-style: disc;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--color-text);
     margin-bottom: 4px;
@@ -1288,16 +1289,17 @@ ul, ol {
     max-width: var(--container-max);
     margin: 0 auto;
     display: flex;
-    gap: 180px;
+    gap: 80px;
     align-items: flex-start;
+    justify-content: center;
+    padding-right: 80px;
 }
 
 .strains-left {
-    flex: 0 0 540px;
+    flex: 0 0 560px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 40px;
 }
 
 .strains-title {
@@ -1308,7 +1310,7 @@ ul, ol {
     margin-bottom: var(--spacing-xl);
     font-style: normal;
     font-family: "Seed Sans", Helvetica, sans-serif;
-    max-width: 540px;
+    max-width: 560px;
 }
 
 .strains-image {
@@ -1773,7 +1775,7 @@ ul, ol {
 }
 
 .other-text {
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic;
 }
 
@@ -2056,7 +2058,7 @@ ul, ol {
 }
 
 .review-text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--color-text);
     margin-bottom: var(--spacing-md);
@@ -2265,7 +2267,7 @@ ul, ol {
 
 .faq-answer p {
     padding: 0 0 var(--spacing-md);
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--color-text-light);
 }
@@ -3362,14 +3364,48 @@ ul, ol {
     }
     
     .hero-mobile-carousel {
-        margin: 0 -8px;
-        padding: 0 8px;
+        margin: 0 -8px 0 0 !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        transform: none !important;
+        zoom: 1 !important;
+    }
+    
+    .carousel-track {
+        transform: none !important;
+    }
+    
+    .carousel-slide:first-child {
+        margin-left: 0 !important;
     }
     
     .carousel-slide {
-        width: calc(85vw);
-        height: 220px;
-        flex-shrink: 0;
+        width: 350px !important;
+        height: 262px !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        min-width: 350px !important;
+        max-width: 350px !important;
+        min-height: 262px !important;
+        max-height: 262px !important;
+        transform: none !important;
+        box-sizing: border-box !important;
+    }
+    
+    .carousel-slide img,
+    .carousel-slide video {
+        width: 350px !important;
+        height: 262px !important;
+        min-width: 350px !important;
+        max-width: 350px !important;
+        min-height: 262px !important;
+        max-height: 262px !important;
+        object-fit: cover !important;
+        display: block !important;
+        transform: none !important;
+        box-sizing: border-box !important;
     }
     
     .carousel-slide:first-child {
@@ -3490,7 +3526,7 @@ ul, ol {
     }
     
     .option-title {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .option-savings {
@@ -3597,10 +3633,11 @@ ul, ol {
     
     .features-section-inner {
         padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
-        min-height: auto;
+        min-height: 385px;
         border-radius: var(--radius-xl);
         margin: 0 var(--spacing-sm);
         background-position: center center;
+        background-size: cover;
     }
     
     .features-container {
@@ -3619,16 +3656,16 @@ ul, ol {
     .features-grid {
         flex-direction: row;
         flex-wrap: nowrap;
-        gap: var(--spacing-sm);
-        padding: var(--spacing-md);
-        background-color: rgba(252, 252, 247, 0.2);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-radius: var(--radius-lg);
+        gap: 16px;
+        padding: 0;
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-radius: 0;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        margin: 0 var(--spacing-sm);
+        margin: 24px var(--spacing-sm) 0;
     }
     
     .features-grid::-webkit-scrollbar {
@@ -3636,22 +3673,35 @@ ul, ol {
     }
     
     .feature-card {
-        flex: 0 0 260px;
-        width: 260px;
+        flex: 0 0 300px;
+        width: 300px;
+        height: 216px;
+        min-height: 216px;
+        max-height: 216px;
         flex-direction: column;
         gap: var(--spacing-sm);
         align-items: flex-start;
         scroll-snap-align: start;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: var(--spacing-md);
-        border-radius: var(--radius-md);
+        background-color: rgba(252, 252, 247, 0.15);
+        backdrop-filter: blur(38px);
+        -webkit-backdrop-filter: blur(38px);
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 16px;
+        box-sizing: border-box;
+    }
+    
+    /* Card content should fit within 250px width (accounting for padding) */
+    .feature-card .feature-content {
+        width: 100%;
+        max-width: 250px;
     }
     
     .feature-icon {
         width: 40px;
         height: 40px;
         flex-shrink: 0;
-        margin-bottom: 0;
+        margin-bottom: 12px;
     }
     
     .feature-content {
@@ -4941,8 +4991,26 @@ ul, ol {
 @media (max-width: 375px) {
     /* Hero - Extra Small */
     .carousel-slide {
-        width: calc(90vw);
-        height: 200px;
+        width: 350px !important;
+        height: 262px !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        min-width: 350px !important;
+        max-width: 350px !important;
+        min-height: 262px !important;
+        max-height: 262px !important;
+    }
+    
+    .carousel-slide img,
+    .carousel-slide video {
+        width: 350px !important;
+        height: 262px !important;
+        min-width: 350px !important;
+        max-width: 350px !important;
+        min-height: 262px !important;
+        max-height: 262px !important;
+        object-fit: cover !important;
+        display: block !important;
     }
     
     .product-title {
@@ -5895,10 +5963,6 @@ ul, ol {
 }
 } /* End desktop-only viacap overrides */
 
-/* Move strains-left section slightly to the right */
-.strains-left {
-    margin-left: 20px !important;
-}
 
 /* ========================================
    Technology Sidebar (Liposomal Absorption)
