@@ -573,7 +573,7 @@ ul, ol {
     display: block;
     text-align: center;
     font-size: 13px;
-    font-style: italic;
+    font-style: normal;
     color: var(--color-text-light);
     margin-bottom: var(--spacing-lg);
 }
@@ -1531,6 +1531,7 @@ ul, ol {
 .delivery-card-content {
     flex: 1;
     padding: var(--spacing-lg);
+    opacity: 1;
 }
 
 .delivery-card-content h3 {
@@ -1833,7 +1834,7 @@ ul, ol {
 .score-number {
     font-size: 48px;
     font-weight: 400;
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .score-details {
@@ -1850,7 +1851,7 @@ ul, ol {
 
 .score-count {
     font-size: 14px;
-    color: var(--color-text-light);
+    color: var(--color-text);
 }
 
 .reviews-breakdown {
@@ -1867,7 +1868,7 @@ ul, ol {
 
 .breakdown-label {
     font-size: 14px;
-    color: var(--color-primary);
+    color: var(--color-text);
     width: 12px;
 }
 
@@ -1892,7 +1893,7 @@ ul, ol {
 
 .breakdown-count {
     font-size: 14px;
-    color: var(--color-text-light);
+    color: var(--color-text);
     min-width: 50px;
 }
 
@@ -1928,10 +1929,11 @@ ul, ol {
     font-size: 14px;
     background: transparent;
     width: 140px;
+    color: var(--color-text);
 }
 
 .search-input::placeholder {
-    color: var(--color-text-light);
+    color: var(--color-text);
 }
 
 .reviews-topics {
@@ -1943,7 +1945,7 @@ ul, ol {
 
 .topics-label {
     font-size: 14px;
-    color: var(--color-text-light);
+    color: var(--color-text);
     white-space: nowrap;
 }
 
@@ -1991,7 +1993,11 @@ ul, ol {
     gap: var(--spacing-sm);
     margin-left: auto;
     font-size: 14px;
-    color: var(--color-text-light);
+    color: var(--color-text);
+}
+
+.reviews-sort span {
+    color: var(--color-text);
 }
 
 .sort-select {
@@ -1999,7 +2005,7 @@ ul, ol {
     background: transparent;
     font-size: 14px;
     font-weight: 500;
-    color: var(--color-primary);
+    color: var(--color-text);
     cursor: pointer;
     outline: none;
 }
@@ -2032,7 +2038,7 @@ ul, ol {
 .reviewer-name {
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .verified-badge {
@@ -2040,7 +2046,7 @@ ul, ol {
     align-items: center;
     gap: 4px;
     font-size: 12px;
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .verified-badge::before {
@@ -2065,7 +2071,7 @@ ul, ol {
 
 .review-date {
     font-size: 14px;
-    color: var(--color-text-light);
+    color: var(--color-text);
     margin-left: auto;
 }
 
@@ -2087,7 +2093,7 @@ ul, ol {
     align-items: center;
     gap: var(--spacing-md);
     font-size: 13px;
-    color: var(--color-text-light);
+    color: var(--color-text);
 }
 
 .helpful-btn {
@@ -2098,6 +2104,10 @@ ul, ol {
     cursor: pointer;
     padding: 4px 8px;
     transition: var(--transition-fast);
+}
+
+.helpful-count {
+    color: var(--color-text);
 }
 
 .helpful-btn:hover {
@@ -2354,6 +2364,14 @@ ul, ol {
     letter-spacing: 2px;
     margin-bottom: var(--spacing-md);
     display: block;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .footer-tagline {
@@ -4597,9 +4615,13 @@ ul, ol {
         flex-direction: column;
         width: 100%;
         border-radius: var(--radius-xl);
-        overflow: hidden;
+        overflow: visible;
         position: relative;
         min-height: 600px;
+    }
+    
+    .refills-card {
+        overflow: hidden;
     }
     
     /* Image takes full card with overlay */
@@ -4622,6 +4644,16 @@ ul, ol {
         border-radius: var(--radius-xl);
     }
     
+    /* Show pill bottle above overlay for refills card - extend image upward */
+    .refills-card .delivery-card-image {
+        height: calc(100% + 50px);
+        top: -25px;
+    }
+    
+    .refills-card .delivery-card-image img {
+        object-position: center 18%;
+    }
+    
     /* Overlay content - Seed style with reduced transparency */
     .delivery-card-content {
         position: absolute;
@@ -4629,12 +4661,13 @@ ul, ol {
         left: var(--spacing-md);
         right: var(--spacing-md);
         padding: var(--spacing-lg);
-        background-color: rgba(255, 255, 255, 0.45);
+        background-color: rgba(60, 60, 60, 0.5);
         backdrop-filter: blur(38px);
         -webkit-backdrop-filter: blur(38px);
         color: var(--color-text);
         border-radius: var(--radius-lg);
         z-index: 2;
+        opacity: 1;
     }
     
     .delivery-card-content h3 {
