@@ -953,14 +953,14 @@ ul, ol {
 }
 
 /* ========================================
-   ViaCap Technology Section
+   LipoCap Technology Section
    ======================================== */
-.viacap-section {
+.lipocap-section {
     padding: var(--spacing-md);
     background-color: var(--color-background-alt);
 }
 
-.viacap-container {
+.lipocap-container {
     max-width: var(--container-max);
     margin: 0 auto;
     display: flex;
@@ -969,7 +969,7 @@ ul, ol {
     align-items: stretch;
 }
 
-.viacap-content {
+.lipocap-content {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -979,14 +979,14 @@ ul, ol {
     border-radius: var(--radius-2xl);
 }
 
-.viacap-text {
+.lipocap-text {
     display: flex;
     flex-direction: column;
     max-width: 520px;
     margin-left: 80px;
 }
 
-.viacap-title {
+.lipocap-title {
     font-size: 32px;
     font-weight: 400;
     line-height: 1.1;
@@ -995,7 +995,7 @@ ul, ol {
     margin-bottom: var(--spacing-lg);
 }
 
-.viacap-description {
+.lipocap-description {
     font-size: 16px;
     color: var(--color-white);
     opacity: 0.8;
@@ -1017,7 +1017,7 @@ ul, ol {
     height: 16px;
 }
 
-.viacap-visual {
+.lipocap-visual {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1047,7 +1047,7 @@ ul, ol {
     max-width: 278px;
 }
 
-.viacap-product-image {
+.lipocap-product-image {
     flex: 0 0 350px;
     display: flex;
     align-items: center;
@@ -1056,7 +1056,7 @@ ul, ol {
     overflow: hidden;
 }
 
-.viacap-product-image img {
+.lipocap-product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2745,13 +2745,13 @@ ul, ol {
         flex: 0 0 calc(50% - var(--spacing-lg));
     }
 
-    /* ViaCap Section - Small Desktop */
-    .viacap-container {
+    /* LipoCap Section - Small Desktop */
+    .lipocap-container {
         flex-direction: column;
         gap: var(--spacing-md);
     }
 
-    .viacap-content {
+    .lipocap-content {
         min-height: auto;
         height: auto !important;
         max-height: none !important;
@@ -2759,17 +2759,17 @@ ul, ol {
         flex-direction: column !important;
     }
     
-    .viacap-text {
+    .lipocap-text {
         margin-left: 0;
         padding: var(--spacing-lg) !important;
     }
     
-    .viacap-title {
+    .lipocap-title {
         font-size: 28px;
     }
     
     /* Hide complex pill visual on tablet */
-    .viacap-visual-area {
+    .lipocap-visual-area {
         display: none !important;
     }
     
@@ -2782,7 +2782,7 @@ ul, ol {
         display: none !important;
     }
 
-    .viacap-visual {
+    .lipocap-visual {
         flex-direction: column;
         margin-top: var(--spacing-xl);
     }
@@ -2791,7 +2791,7 @@ ul, ol {
         max-width: 100%;
     }
 
-    .viacap-product-image {
+    .lipocap-product-image {
         flex: none;
         width: 100%;
         height: 380px;
@@ -2800,7 +2800,7 @@ ul, ol {
         min-width: auto !important;
     }
     
-    .viacap-product-image img {
+    .lipocap-product-image img {
         transform: none !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -3116,28 +3116,28 @@ ul, ol {
         font-size: 14px;
     }
 
-    /* ViaCap Section - Tablet */
-    .viacap-section {
+    /* LipoCap Section - Tablet */
+    .lipocap-section {
         padding: var(--spacing-md);
     }
     
-    .viacap-content {
+    .lipocap-content {
         padding: var(--spacing-xl) !important;
         height: auto !important;
         min-height: auto !important;
         max-height: none !important;
     }
     
-    .viacap-title {
+    .lipocap-title {
         font-size: 28px;
     }
     
-    .viacap-description {
+    .lipocap-description {
         font-size: 16px;
         max-width: 100%;
     }
     
-    .viacap-visual-area {
+    .lipocap-visual-area {
         display: none !important;
     }
     
@@ -3150,7 +3150,7 @@ ul, ol {
         display: none !important;
     }
     
-    .viacap-product-image {
+    .lipocap-product-image {
         height: 350px;
         width: 100%;
         max-width: 100% !important;
@@ -3158,7 +3158,7 @@ ul, ol {
         order: -1;
     }
     
-    .viacap-product-image img {
+    .lipocap-product-image img {
         transform: none !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -3898,30 +3898,30 @@ ul, ol {
     }
 
     /* ========================================
-       ViaCap/Technology Section - Mobile (Seed Reference)
+       LipoCap/Technology Section - Mobile (Seed Reference)
        600px tall, rounded corners, orange background, compact layout
        ======================================== */
-    .viacap-section {
-        padding: 12px;
+    .lipocap-section {
+        padding: var(--spacing-xl) var(--spacing-md);
         background-color: var(--color-background-alt);
         min-height: auto;
         overflow: hidden;
     }
     
-    .viacap-container {
+    .lipocap-container {
         flex-direction: column;
         gap: 0;
         padding: 0;
     }
     
     /* Show product image on mobile, positioned under the heading */
-    .viacap-section .viacap-container .viacap-product-image {
+    .lipocap-section .lipocap-container .lipocap-product-image {
         display: flex !important;
         order: 2 !important;
-        width: 358px !important;
+        width: 100% !important;
         height: 400px !important;
-        max-width: 358px !important;
-        min-width: 358px !important;
+        max-width: 100% !important;
+        min-width: auto !important;
         margin: 24px auto 0 auto !important;
         align-items: center;
         justify-content: center;
@@ -3930,16 +3930,16 @@ ul, ol {
         flex: none !important;
     }
     
-    .viacap-section .viacap-container .viacap-product-image img {
-        width: 358px !important;
+    .lipocap-section .lipocap-container .lipocap-product-image img {
+        width: 100% !important;
         height: 400px !important;
-        max-width: 358px !important;
-        min-width: 358px !important;
+        max-width: 100% !important;
+        min-width: auto !important;
         object-fit: cover !important;
         transform: none !important;
     }
     
-    .viacap-content {
+    .lipocap-content {
         height: auto !important;
         min-height: auto !important;
         max-height: none !important;
@@ -3955,20 +3955,20 @@ ul, ol {
     }
     
     /* Inner content wrapper - 310px x 617px */
-    .viacap-text,
-    .viacap-visual-area {
+    .lipocap-text,
+    .lipocap-visual-area {
         max-width: 310px !important;
     }
     
     /* Text area at top - compact */
-    .viacap-text {
+    .lipocap-text {
         padding: 0 !important;
         margin: 0 0 12px 0 !important;
         max-width: 100%;
     }
 
     /* Title - large, bold, left-aligned (32px per SEED reference) */
-    .viacap-title {
+    .lipocap-title {
         font-size: 32px;
         font-weight: 400;
         margin-bottom: 12px;
@@ -3978,7 +3978,7 @@ ul, ol {
     }
     
     /* Reduce line-height for trademark symbol to match other text */
-    .viacap-title sup {
+    .lipocap-title sup {
         line-height: 0 !important;
         font-size: 0.6em !important;
     }
@@ -3999,7 +3999,7 @@ ul, ol {
     }
     
     /* Description text - 16px per SEED reference */
-    .viacap-description {
+    .lipocap-description {
         font-size: 16px;
         margin-bottom: 8px;
         max-width: 100%;
@@ -4009,7 +4009,7 @@ ul, ol {
     }
     
     /* Learn More link with arrow */
-    .viacap-section .learn-more-link {
+    .lipocap-section .learn-more-link {
         font-size: 16px;
         color: #FCFCF7;
         text-decoration: underline;
@@ -4018,14 +4018,14 @@ ul, ol {
         gap: 4px;
     }
     
-    .viacap-section .learn-more-link .link-icon {
+    .lipocap-section .learn-more-link .link-icon {
         filter: brightness(0) invert(1);
         width: 14px;
         height: 14px;
     }
     
     /* Visual area - fills remaining space */
-    .viacap-visual-area {
+    .lipocap-visual-area {
         display: block !important;
         position: relative;
         margin-top: 16px;
@@ -4157,7 +4157,7 @@ ul, ol {
     
     /* Ensure orange container is exactly 600px */
     /* Visual area - 310px wide, keep original height for text positioning */
-    .viacap-visual-area {
+    .lipocap-visual-area {
         width: 310px !important;
         max-width: 310px !important;
         height: 360px !important;
@@ -5376,7 +5376,7 @@ ul, ol {
     }
     
     /* Section Titles - Extra Small (scaled down from 32px) */
-    .viacap-title {
+    .lipocap-title {
         font-size: 26px;
     }
     
@@ -5737,7 +5737,7 @@ ul, ol {
     }
 }
 /* ========================================
-   Desktop-only viacap overrides (min-width: 521px)
+   Desktop-only lipocap overrides (min-width: 521px)
    ======================================== */
 @media (min-width: 521px) {
 /* Fixed section height 627px, equal padding, larger pill, bottom callout */
@@ -5746,14 +5746,14 @@ ul, ol {
     display: none !important;
 }
 
-.viacap-content {
+.lipocap-content {
     min-height: 627px !important;
     height: 627px !important;
     max-height: 627px !important;
     overflow: hidden !important;
 }
 
-.viacap-text {
+.lipocap-text {
     padding-top: 48px !important;
     padding-left: 48px !important;
     margin-left: 0 !important;
@@ -5768,7 +5768,7 @@ ul, ol {
     max-height: 840px !important;
 }
 
-.viacap-visual-area {
+.lipocap-visual-area {
     height: 627px !important;
     min-height: 627px !important;
     overflow: visible !important;
@@ -5779,15 +5779,15 @@ ul, ol {
     left: -100px !important;
 }
 
-/* Complete layout fix for viacap section */
-.viacap-content {
+/* Complete layout fix for lipocap section */
+.lipocap-content {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     position: relative !important;
     overflow: visible !important;
 }
 
-.viacap-visual-area {
+.lipocap-visual-area {
     position: relative !important;
     display: block !important;
     overflow: visible !important;
@@ -5836,7 +5836,7 @@ ul, ol {
     object-fit: contain !important;
 }
 
-.viacap-text {
+.lipocap-text {
     padding-top: 48px !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
@@ -5870,19 +5870,19 @@ ul, ol {
 }
 
 /* Move headline and text further left - flush to section edge */
-.viacap-content {
+.lipocap-content {
     padding-left: 48px !important;
 }
 
-.viacap-text h2,
-.viacap-text p,
-.viacap-text .learn-more-link {
+.lipocap-text h2,
+.lipocap-text p,
+.lipocap-text .learn-more-link {
     margin-left: 0 !important;
     padding-left: 0 !important;
 }
 
 /* Reduce top padding, move pill left, swap callouts, larger pill */
-.viacap-text {
+.lipocap-text {
     padding-top: 24px !important;
 }
 
@@ -6028,32 +6028,32 @@ ul, ol {
 }
 
 /* Set product image width to 350px on desktop */
-.viacap-product-image img {
+.lipocap-product-image img {
     width: 350px !important;
     height: auto !important;
 }
 
 /* Set product image container to 350px wide on desktop */
-.viacap-product-image {
+.lipocap-product-image {
     width: 350px !important;
     max-width: 350px !important;
     flex-shrink: 0 !important;
 }
 
-.viacap-product-image img {
+.lipocap-product-image img {
     width: 100% !important;
     max-width: 350px !important;
 }
 
 /* Force product image to exactly 350px wide */
-.viacap-section .viacap-container .viacap-product-image {
+.lipocap-section .lipocap-container .lipocap-product-image {
     width: 350px !important;
     max-width: 350px !important;
     min-width: 350px !important;
     overflow: hidden !important;
 }
 
-.viacap-section .viacap-container .viacap-product-image img {
+.lipocap-section .lipocap-container .lipocap-product-image img {
     width: 350px !important;
     max-width: 350px !important;
     min-width: 350px !important;
@@ -6062,31 +6062,31 @@ ul, ol {
 }
 
 /* Scale transform to zoom in on model */
-.viacap-section .viacap-container .viacap-product-image img {
+.lipocap-section .lipocap-container .lipocap-product-image img {
     transform: scale(1.4) !important;
     object-position: center center;
 }
 
-/* Align viacap section with edges above */
-.viacap-section .viacap-container {
+/* Align lipocap section with edges above */
+.lipocap-section .lipocap-container {
     padding-left: 0 !important;
     padding-right: 0 !important;
     gap: 0 !important;
 }
 
-.viacap-section .viacap-container .viacap-product-image {
+.lipocap-section .lipocap-container .lipocap-product-image {
     margin-left: 0 !important;
 }
 
-.viacap-section .viacap-container .viacap-content {
+.lipocap-section .lipocap-container .lipocap-content {
     flex: 1 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
     max-width: none !important;
 }
 
-/* Restore spacing between product image and viacap content */
-.viacap-section .viacap-container {
+/* Restore spacing between product image and lipocap content */
+.lipocap-section .lipocap-container {
     gap: 24px !important;
 }
 
@@ -6159,12 +6159,12 @@ ul, ol {
 }
 
 /* Move pill image and callouts slightly to the right, reduce section padding */
-.viacap-visual-area {
+.lipocap-visual-area {
     margin-left: 40px !important;
 }
 
-/* Reduce side padding on viacap section */
-.viacap-section {
+/* Reduce side padding on lipocap section */
+.lipocap-section {
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
@@ -6215,7 +6215,7 @@ ul, ol {
 }
 
 /* Clean override for Phospholipid line - visible, shorter, with extended dot */
-.viacap-section .callout-inner .callout-line {
+.lipocap-section .callout-inner .callout-line {
     display: block !important;
     width: 180px !important;
     height: 1px !important;
@@ -6226,7 +6226,7 @@ ul, ol {
 }
 
 /* Dot extends left to touch capsule */
-.viacap-section .callout-inner .callout-line::after {
+.lipocap-section .callout-inner .callout-line::after {
     content: '' !important;
     position: absolute !important;
     width: 8px !important;
@@ -6241,11 +6241,11 @@ ul, ol {
 
 /* Clip pill image within section bounds on desktop */
 @media (min-width: 901px) {
-    .viacap-content {
+    .lipocap-content {
         overflow: hidden !important;
     }
     
-    .viacap-visual-area {
+    .lipocap-visual-area {
         overflow: visible !important;
     }
 
@@ -6255,7 +6255,7 @@ ul, ol {
 }
 
 /* Make the line more visible with stronger styling */
-.viacap-section .callout-inner .callout-line {
+.lipocap-section .callout-inner .callout-line {
     background-color: rgba(255, 255, 255, 0.6) !important;
     height: 2px !important;
     visibility: visible !important;
@@ -6263,37 +6263,37 @@ ul, ol {
 }
 
 /* Extend the Phospholipid dot even further left to touch capsule */
-.viacap-section .callout-inner .callout-line::after {
+.lipocap-section .callout-inner .callout-line::after {
     left: -120px !important;
 }
 
 /* Fix Phospholipid line - connect line to dot properly */
-.viacap-section .callout-inner .callout-line {
+.lipocap-section .callout-inner .callout-line {
     width: 240px !important;
     margin-left: -60px !important;
 }
 
 /* Bring dot back closer and position at left edge of line */
-.viacap-section .callout-inner .callout-line::after {
+.lipocap-section .callout-inner .callout-line::after {
     left: 0 !important;
 }
 
 /* Make Phospholipid line transparent and extend to align with title */
-.viacap-section .callout-inner .callout-line {
+.lipocap-section .callout-inner .callout-line {
     width: 280px !important;
     background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* Shorten Phospholipid line to align with end of title */
-.viacap-section .callout-inner .callout-line {
+.lipocap-section .callout-inner .callout-line {
     width: 220px !important;
 }
 
 /* Extend Phospholipid line to align with right edge of title */
-.viacap-section .callout-inner .callout-line {
+.lipocap-section .callout-inner .callout-line {
     width: 260px !important;
 }
-} /* End desktop-only viacap overrides */
+} /* End desktop-only lipocap overrides */
 
 
 /* ========================================
