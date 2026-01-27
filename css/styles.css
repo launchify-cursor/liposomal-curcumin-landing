@@ -258,7 +258,7 @@ ul, ol {
 .hero-images-grid {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: 16px;
     border-radius: var(--radius-xl);
 }
 
@@ -281,14 +281,15 @@ ul, ol {
 /* Hero Thumbnails Grid - 2x2 layout */
 .hero-thumbnails-row {
     display: grid;
-    grid-template-columns: repeat(2, 464px);
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(2, 460px);
+    gap: 16px;
+    width: 936px;
 }
 
 .thumb-item {
     border-radius: var(--radius-lg);
     overflow: hidden;
-    width: 464px;
+    width: 460px;
     height: 280px;
 }
 
@@ -1257,12 +1258,17 @@ ul, ol {
     border-radius: 25px;
     letter-spacing: 1px;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 .step-title {
     font-size: 16px;
     font-weight: 500;
     color: var(--color-text);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 .step-benefits {
@@ -1299,7 +1305,7 @@ ul, ol {
     flex: 0 0 560px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .strains-title {
