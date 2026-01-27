@@ -728,7 +728,7 @@ ul, ol {
 
 .benefits-list li {
     list-style: disc;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--color-text);
     margin-bottom: 6px;
@@ -782,7 +782,7 @@ ul, ol {
 }
 
 .cross-sell-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -1578,7 +1578,7 @@ ul, ol {
 }
 
 .item-subtitle {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--color-text-light);
     white-space: nowrap;
 }
@@ -1637,6 +1637,7 @@ ul, ol {
     height: 48px;
     margin: 0 auto var(--spacing-md) auto;
     display: block;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(45%) saturate(2500%) hue-rotate(10deg) brightness(95%) contrast(90%);
 }
 
 .testing-card p {
@@ -1799,11 +1800,12 @@ ul, ol {
 }
 
 .reviews-title {
-    font-family: var(--font-serif);
-    font-size: 42px;
+    font-family: "Seed Sans", Helvetica, sans-serif;
+    font-size: 48px;
     font-weight: 400;
-    line-height: 1.2;
-    color: var(--color-primary);
+    line-height: 1.1;
+    letter-spacing: -0.96px;
+    color: var(--color-text);
     text-align: center;
     margin-bottom: var(--spacing-2xl);
 }
@@ -2193,12 +2195,13 @@ ul, ol {
 }
 
 .faq-title {
-    font-family: var(--font-serif);
-    font-size: 42px;
+    font-family: "Seed Sans", Helvetica, sans-serif;
+    font-size: 48px;
     font-weight: 400;
-    font-style: italic;
-    line-height: 1.2;
-    color: var(--color-primary);
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -0.96px;
+    color: var(--color-text);
     margin: 0;
 }
 
@@ -2231,7 +2234,7 @@ ul, ol {
     text-align: left;
     background-color: transparent;
     transition: opacity var(--transition-fast);
-    color: var(--color-primary);
+    color: var(--color-text);
     gap: var(--spacing-md);
 }
 
@@ -2285,7 +2288,7 @@ ul, ol {
     margin-top: var(--spacing-lg);
     font-size: 14px;
     font-weight: 500;
-    color: var(--color-primary);
+    color: var(--color-text);
     text-decoration: none;
     transition: opacity var(--transition-fast);
 }
@@ -2297,7 +2300,7 @@ ul, ol {
 .faq-view-all-icon {
     width: 20px;
     height: 20px;
-    border: 1.5px solid var(--color-primary);
+    border: 1.5px solid var(--color-text);
     border-radius: 50%;
     display: flex;
     align-items: center;
