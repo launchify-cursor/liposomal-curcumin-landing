@@ -427,6 +427,7 @@ ul, ol {
 
 .stars-img {
     max-width: 88px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(1500%) hue-rotate(5deg) brightness(0.8);
 }
 
 .rating-text {
@@ -793,8 +794,8 @@ ul, ol {
 }
 
 .cross-sell-img {
-    width: 64px;
-    height: 64px;
+    width: 112px;
+    height: 112px;
     object-fit: cover;
     border-radius: var(--radius-md);
 }
@@ -809,16 +810,36 @@ ul, ol {
 .cross-sell-name {
     font-size: 14px;
     font-weight: 500;
-}
-
-.cross-sell-price {
-    font-size: 14px;
     color: var(--color-text-light);
 }
 
+.cross-sell-price {
+    font-size: 16px;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.cross-sell-price-original {
+    font-size: 16px;
+    color: var(--color-text-light);
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+.cross-sell-prices {
+    display: flex;
+    align-items: center;
+}
+
+.cross-sell-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .add-btn {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 5px 16px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
@@ -835,6 +856,7 @@ ul, ol {
     font-size: 12px;
     color: var(--color-text-light);
     line-height: 1.4;
+    max-width: 320px;
 }
 
 /* ========================================
@@ -1068,6 +1090,11 @@ ul, ol {
     font-family: "Seed Sans", Helvetica, sans-serif;
     max-width: 800px;
     margin: 0 auto var(--spacing-lg);
+}
+
+.section-title sup {
+    font-size: 0.5em;
+    line-height: 0;
 }
 
 .section-subtitle {
@@ -1540,6 +1567,10 @@ ul, ol {
     height: 346px;
     object-fit: cover;
     border-radius: var(--radius-lg);
+}
+
+.refills-img-mobile {
+    display: none;
 }
 
 .delivery-card-content {
@@ -3527,6 +3558,7 @@ ul, ol {
     
     .stars-img {
         max-width: 72px;
+        filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(1500%) hue-rotate(5deg) brightness(0.8);
     }
     
     .rating-text {
@@ -3847,9 +3879,29 @@ ul, ol {
         padding: 0;
     }
     
-    /* Hide product image on mobile */
-    .viacap-product-image {
-        display: none !important;
+    /* Show product image on mobile, positioned under the heading */
+    .viacap-section .viacap-container .viacap-product-image {
+        display: flex !important;
+        order: 2 !important;
+        width: 358px !important;
+        height: 400px !important;
+        max-width: 358px !important;
+        min-width: 358px !important;
+        margin: 24px auto 0 auto !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-2xl);
+        overflow: hidden;
+        flex: none !important;
+    }
+    
+    .viacap-section .viacap-container .viacap-product-image img {
+        width: 358px !important;
+        height: 400px !important;
+        max-width: 358px !important;
+        min-width: 358px !important;
+        object-fit: cover !important;
+        transform: none !important;
     }
     
     .viacap-content {
@@ -3864,6 +3916,7 @@ ul, ol {
         position: relative;
         background-color: var(--color-primary);
         color: #FCFCF7;
+        order: 1;
     }
     
     /* Inner content wrapper - 310px x 617px */
@@ -3892,7 +3945,6 @@ ul, ol {
     /* Reduce line-height for trademark symbol to match other text */
     .viacap-title sup {
         line-height: 0 !important;
-        vertical-align: baseline !important;
         font-size: 0.6em !important;
     }
     
@@ -4703,6 +4755,16 @@ ul, ol {
         object-position: center 18%;
     }
     
+    .refills-img-desktop {
+        display: none;
+    }
+    
+    .refills-img-mobile {
+        display: block;
+        transform: scale(1.15);
+        object-position: center 22%;
+    }
+    
     /* Overlay content - Seed style with reduced transparency */
     .delivery-card-content {
         position: absolute;
@@ -5119,7 +5181,8 @@ ul, ol {
     }
     
     .copyright {
-        font-size: 11px;
+        font-size: 9px;
+        line-height: 1;
     }
     
     .footer-legal {
@@ -5963,9 +6026,10 @@ ul, ol {
     object-fit: cover !important;
 }
 
-/* Remove scale transform from product image */
+/* Scale transform to zoom in on model */
 .viacap-section .viacap-container .viacap-product-image img {
-    transform: none !important;
+    transform: scale(1.4) !important;
+    object-position: center center;
 }
 
 /* Align viacap section with edges above */
