@@ -1227,7 +1227,7 @@ ul, ol {
 
 .how-to-use-content p {
     font-size: 16px;
-    color: var(--color-text-light);
+    color: var(--color-text);
     line-height: 1.4;
 }
 
