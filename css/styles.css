@@ -2540,6 +2540,7 @@ ul, ol {
 
 /* Desktop Small (900px and below) */
 @media (max-width: 900px) {
+    /* Hero Section - Small Desktop/Tablet */
     .hero-container {
         flex-direction: column;
     }
@@ -2556,33 +2557,63 @@ ul, ol {
     .hero-mobile-carousel {
         display: block;
     }
+    
+    .carousel-slide {
+        width: 340px;
+        height: 255px;
+    }
 
     .hero-info {
         flex: none;
         width: 100%;
         max-width: 100%;
-        padding: 0 var(--spacing-md);
+        padding: var(--spacing-md);
     }
     
+    /* Product code and title same row like Seed */
+    .product-title-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .product-title {
+        font-size: 26px;
+    }
+    
+    /* Ranking and stars same row like Seed */
     .product-meta-row {
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-lg);
     }
     
     .product-ranking {
-        padding-right: var(--spacing-md);
+        border-right: 1px solid var(--color-border);
+        padding-right: var(--spacing-lg);
+        width: auto;
     }
     
     .ranking-number {
-        font-size: 24px;
+        font-size: 26px;
     }
     
     .price-amount {
-        font-size: 24px;
+        font-size: 26px;
+    }
+    
+    /* Cross-sell inline */
+    .cross-sell-product {
+        flex-wrap: nowrap;
+    }
+    
+    .add-btn {
+        width: auto;
     }
 
+    /* Features Section - Small Desktop */
     .features-section-inner {
-        min-height: 500px;
+        min-height: 450px;
     }
 
     .features-grid {
@@ -2595,51 +2626,41 @@ ul, ol {
         flex: 0 0 calc(50% - var(--spacing-lg));
     }
 
+    /* ViaCap Section - Small Desktop */
     .viacap-container {
         flex-direction: column;
+        gap: var(--spacing-md);
     }
 
     .viacap-content {
         min-height: auto;
+        height: auto !important;
+        max-height: none !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     
     .viacap-text {
         margin-left: 0;
+        padding: var(--spacing-lg) !important;
     }
     
-    .strains-section {
-        padding: 56px 16px;
+    .viacap-title {
+        font-size: 28px;
     }
     
-    .strains-container {
-        flex-direction: column;
-        gap: 32px;
+    /* Hide complex pill visual on tablet */
+    .viacap-visual-area {
+        display: none !important;
     }
     
-    .strains-left {
-        flex: 1;
-        width: 100%;
-        max-width: 100%;
-        align-items: center;
+    .pill-visual {
+        display: none !important;
     }
     
-    .strains-title {
-        font-size: 32px;
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    .strains-image img {
-        max-width: 280px;
-    }
-    
-    .strains-right {
-        max-width: 100%;
-        margin-left: 0;
-    }
-    
-    .certifications-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .callout-outer,
+    .callout-inner {
+        display: none !important;
     }
 
     .viacap-visual {
@@ -2654,7 +2675,73 @@ ul, ol {
     .viacap-product-image {
         flex: none;
         width: 100%;
-        height: 400px;
+        height: 380px;
+        order: -1;
+        max-width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .viacap-product-image img {
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Strains Section - Small Desktop */
+    .strains-section {
+        padding: 56px 16px;
+    }
+    
+    .strains-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .strains-left {
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
+        align-items: flex-start;
+        margin-left: 0 !important;
+    }
+    
+    .strains-title {
+        font-size: 32px;
+        max-width: 100%;
+        text-align: left;
+    }
+    
+    .strains-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .strains-image img {
+        max-width: 100%;
+        width: 100%;
+        height: 240px;
+    }
+    
+    .strains-right {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Benefits Section - Small Desktop */
+    .benefits-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .benefits-section .section-title {
+        font-size: 36px;
+    }
+    
+    .benefits-section .section-title span {
+        white-space: normal !important;
     }
 
     .benefits-content {
@@ -2674,16 +2761,22 @@ ul, ol {
         flex: 1;
         width: 100%;
         max-width: 100%;
+        margin-top: var(--spacing-xl);
     }
     
     .benefits-video {
         width: 100%;
         height: auto;
-        aspect-ratio: 620/348;
+        aspect-ratio: 16/9;
+    }
+    
+    .benefits-images img {
+        height: 200px;
     }
     
     .how-to-use {
-        margin-left: 34px;
+        margin-left: 0;
+        margin-top: var(--spacing-xl);
     }
     
     .step-dot {
@@ -2693,7 +2786,12 @@ ul, ol {
     .timeline-step {
         gap: 0;
     }
+    
+    .timeline-step::before {
+        display: none;
+    }
 
+    /* Delivery Section - Small Desktop */
     .delivery-cards {
         flex-direction: column;
         align-items: center;
@@ -2705,6 +2803,7 @@ ul, ol {
         max-width: 100%;
     }
 
+    /* Testing Section - Small Desktop */
     .testing-container {
         flex-direction: column;
     }
@@ -2719,6 +2818,7 @@ ul, ol {
         width: 100%;
     }
 
+    /* Comparison Section - Small Desktop */
     .comparison-container {
         flex-direction: column;
         gap: var(--spacing-xl);
@@ -2734,6 +2834,7 @@ ul, ol {
         min-width: 180px;
     }
 
+    /* Reviews Section - Small Desktop */
     .reviews-summary {
         flex-direction: column;
         align-items: center;
@@ -2769,6 +2870,7 @@ ul, ol {
         --container-padding: 16px;
     }
 
+    /* Header - Tablet */
     .header-container {
         padding: 14px var(--spacing-md);
     }
@@ -2785,10 +2887,60 @@ ul, ol {
         display: flex;
     }
 
+    /* Hero Section - Tablet - Match Seed layout */
+    .hero-section {
+        padding: var(--spacing-md);
+    }
+    
+    .hero-info {
+        padding: var(--spacing-md) 0;
+    }
+
+    /* Product code and title on same row */
+    .product-title-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
     .product-title {
         font-size: 24px;
     }
+    
+    /* Ranking and stars on same row */
+    .product-meta-row {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .product-ranking {
+        border-right: 1px solid var(--color-border);
+        border-bottom: none;
+        padding-right: var(--spacing-lg);
+        padding-bottom: 0;
+        width: auto;
+    }
+    
+    .product-description {
+        font-size: 15px;
+    }
+    
+    .carousel-slide {
+        width: 320px;
+        height: 240px;
+    }
+    
+    /* Cross-sell inline add button */
+    .cross-sell-product {
+        flex-wrap: nowrap;
+    }
+    
+    .add-btn {
+        width: auto;
+    }
 
+    /* Features Section - Tablet */
     .features-section {
         padding: 0;
     }
@@ -2796,29 +2948,43 @@ ul, ol {
     .features-section-inner {
         padding: var(--spacing-2xl) var(--spacing-md);
         min-height: auto;
-        border-radius: 0;
+        border-radius: var(--radius-xl);
+        margin: 0 var(--spacing-sm);
     }
 
     .features-section .section-title {
-        font-size: 32px;
+        font-size: 28px;
+        white-space: normal;
     }
 
     .features-grid {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
         gap: var(--spacing-md);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .features-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .feature-card {
-        flex: none;
-        width: 100%;
-        flex-direction: row;
-        gap: var(--spacing-md);
+        flex: 0 0 280px;
+        width: 280px;
+        flex-direction: column;
+        gap: var(--spacing-sm);
         align-items: flex-start;
+        scroll-snap-align: start;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
     }
 
     .feature-icon {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         flex-shrink: 0;
         margin-bottom: 0;
     }
@@ -2831,15 +2997,300 @@ ul, ol {
         font-size: 14px;
     }
 
-    .benefits-section .section-title,
-    .comparison-header .section-title,
-    .delivery-section .section-title,
-    .testing-section .section-title {
-        font-size: 32px;
+    /* ViaCap Section - Tablet */
+    .viacap-section {
+        padding: var(--spacing-md);
+    }
+    
+    .viacap-content {
+        padding: var(--spacing-xl) !important;
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+    }
+    
+    .viacap-title {
+        font-size: 28px;
+    }
+    
+    .viacap-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    
+    .viacap-visual-area {
+        display: none !important;
+    }
+    
+    .pill-visual {
+        display: none !important;
+    }
+    
+    .callout-outer,
+    .callout-inner {
+        display: none !important;
+    }
+    
+    .viacap-product-image {
+        height: 350px;
+        width: 100%;
+        max-width: 100% !important;
+        min-width: auto !important;
+        order: -1;
+    }
+    
+    .viacap-product-image img {
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    .reviews-title {
+    /* Benefits Section - Tablet - Left aligned like Seed */
+    .benefits-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .benefits-header {
+        text-align: left;
+    }
+    
+    .benefits-section .section-title {
         font-size: 28px;
+        text-align: left;
+    }
+    
+    .benefits-section .section-title span {
+        white-space: normal !important;
+    }
+    
+    .section-subtitle {
+        text-align: left;
+    }
+    
+    .evidence-link {
+        justify-content: flex-start;
+    }
+    
+    /* Move media up after evidence link */
+    .benefits-media {
+        width: 100%;
+        order: -1;
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .benefits-content {
+        gap: var(--spacing-xl);
+    }
+    
+    .benefits-left {
+        width: 100%;
+    }
+    
+    .benefits-video {
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    
+    .benefits-images img {
+        height: 160px;
+    }
+    
+    /* Timeline with vertical bar */
+    .benefits-timeline {
+        padding-left: 0;
+        position: relative;
+    }
+    
+    .benefits-timeline::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 18px;
+        bottom: 18px;
+        width: 2px;
+        background-color: var(--color-border);
+        z-index: 1;
+    }
+    
+    .step-dot {
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        margin-top: 8px;
+    }
+    
+    /* Week badge and title same row */
+    .step-header {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .how-to-use {
+        margin-left: 0;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .how-to-use-icon img {
+        margin: 0;
+    }
+    
+    .how-to-use-content {
+        text-align: left;
+    }
+    
+    .step-badge {
+        font-size: 12px;
+    }
+    
+    .step-title {
+        font-size: 14px;
+    }
+
+    /* Strains Section - Tablet - Center aligned */
+    .strains-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .strains-left {
+        align-items: center;
+        margin-left: 0 !important;
+    }
+    
+    .strains-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .strains-image img {
+        max-width: 100%;
+        height: 220px;
+    }
+    
+    /* Two-column cert badges like Seed */
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 20px;
+    }
+    
+    .cert-item {
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .cert-item img {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+    
+    .cert-item span {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    /* Comparison Section - Tablet */
+    .comparison-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .comparison-header {
+        text-align: left;
+    }
+    
+    .comparison-header .section-title {
+        font-size: 28px;
+        text-align: left;
+    }
+    
+    .comparison-table {
+        padding: var(--spacing-md);
+    }
+    
+    .comparison-cell.label-cell {
+        min-width: auto;
+        flex: 1;
+        font-size: 13px;
+    }
+    
+    /* Consistent highlight column */
+    .comparison-cell.ds01-cell {
+        background-color: rgba(254, 243, 199, 0.3) !important;
+    }
+
+    /* Delivery Section - Tablet */
+    .delivery-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .delivery-section .section-title {
+        font-size: 28px;
+    }
+
+    .delivery-card {
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .delivery-card-image {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .delivery-card-image img {
+        height: 260px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Testing Section - Tablet - Left aligned */
+    .testing-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .testing-content {
+        text-align: left;
+    }
+    
+    .testing-section .section-title {
+        font-size: 28px;
+        text-align: left;
+    }
+    
+    .testing-description {
+        text-align: left;
+    }
+
+    .testing-cards {
+        flex-direction: column;
+    }
+
+    .testing-card {
+        flex: none;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        text-align: left;
+    }
+    
+    .testing-card img {
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    .testing-card p {
+        text-align: left;
+    }
+
+    /* Reviews Section - Tablet */
+    .reviews-title {
+        font-size: 32px;
     }
 
     .score-number {
@@ -2847,11 +3298,12 @@ ul, ol {
     }
 
     .breakdown-bar {
-        width: 100px;
+        width: 120px;
     }
 
     .topics-pills {
         max-width: 100%;
+        flex-wrap: wrap;
     }
 
     .review-meta {
@@ -2863,33 +3315,21 @@ ul, ol {
         margin-left: 0;
     }
 
-    .delivery-card {
-        flex-direction: column;
-    }
-
-    .delivery-card-image {
-        flex: none;
-        width: 100%;
-        padding: var(--spacing-md);
-    }
-
-    .delivery-card-image img {
-        max-height: 200px;
-    }
-
-    .testing-cards {
-        flex-direction: column;
-    }
-
-    .testing-card {
-        flex: none;
-    }
-
     .review-card {
         flex: 0 0 320px;
         min-height: auto;
     }
 
+    /* FAQ Section - Tablet */
+    .faq-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .faq-title {
+        font-size: 36px;
+    }
+
+    /* Footer - Tablet */
     .footer-main {
         flex-direction: column;
         gap: var(--spacing-xl);
@@ -2898,6 +3338,7 @@ ul, ol {
     .footer-links {
         flex-wrap: wrap;
         gap: var(--spacing-xl);
+        justify-content: center;
     }
 
     .footer-bottom {
@@ -2913,90 +3354,1276 @@ ul, ol {
         font-size: 12px;
     }
 
+    /* ========================================
+       Hero Section - Mobile Enhanced (Seed Reference)
+       ======================================== */
+    .hero-section {
+        padding: var(--spacing-sm);
+    }
+    
+    .hero-mobile-carousel {
+        margin: 0 -8px;
+        padding: 0 8px;
+    }
+    
     .carousel-slide {
-        width: 350px;
+        width: calc(85vw);
+        height: 220px;
+        flex-shrink: 0;
+    }
+    
+    .carousel-slide:first-child {
+        margin-left: 0;
+    }
+    
+    .hero-info {
+        padding: var(--spacing-md) var(--spacing-sm);
     }
 
+    /* Product code and title on SAME LINE like Seed */
     .product-title-row {
+        flex-direction: row;
+        align-items: center;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 10px;
+        margin-bottom: var(--spacing-sm);
     }
     
     .product-code {
-        padding: 5px 10px;
-        font-size: 12px;
+        padding: 4px 10px;
+        font-size: 11px;
+        order: 0;
     }
     
     .product-title {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.2;
     }
     
+    /* Ranking and stars on SAME ROW like Seed */
     .product-meta-row {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
         gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        flex-wrap: nowrap;
     }
     
     .product-ranking {
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px solid var(--color-border);
-        padding-bottom: var(--spacing-md);
-        width: 100%;
+        border-right: 1px solid var(--color-border);
+        border-bottom: none;
+        padding-right: var(--spacing-md);
+        padding-bottom: 0;
+        width: auto;
+        flex-shrink: 0;
+    }
+    
+    .ranking-number {
+        font-size: 24px;
+    }
+    
+    .ranking-text {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    
+    .product-rating {
+        width: auto;
+        flex: 1;
+    }
+    
+    .stars-img {
+        max-width: 72px;
+    }
+    
+    .rating-text {
+        font-size: 11px;
+    }
+    
+    .product-description {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .bestseller-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .product-price {
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .price-amount {
+        font-size: 24px;
+    }
+    
+    .price-unit {
+        font-size: 14px;
+    }
+    
+    .supply-text {
+        font-size: 14px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .subscription-options {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .option-label {
+        font-size: 14px;
     }
 
     .option-buttons {
         flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .option-btn {
+        padding: 12px 16px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .option-title {
+        font-size: 14px;
+    }
+    
+    .option-savings {
+        font-size: 11px;
+    }
+    
+    .cta-button {
+        padding: 14px 20px;
+        font-size: 15px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .reviews-link {
+        font-size: 13px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .guarantee-text {
+        font-size: 12px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Hero Accordion Mobile */
+    .hero-accordion {
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-accordion-header {
+        font-size: 14px;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .benefits-list li {
+        font-size: 16px;
+    }
+    
+    .clinical-trials-link {
+        font-size: 13px;
+    }
+    
+    /* Cross-sell Mobile - Match Seed design */
+    .cross-sell {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: var(--radius-md);
+    }
+    
+    .cross-sell-header {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .cross-sell-badge {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+    
+    .cross-sell-title {
+        font-size: 13px;
     }
 
     .cross-sell-product {
-        flex-wrap: wrap;
-    }
-
-    .viacap-title {
-        font-size: 24px;
-    }
-
-    .step-header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: nowrap;
         gap: var(--spacing-sm);
+        align-items: center;
+    }
+    
+    .cross-sell-img {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+    }
+    
+    .cross-sell-info {
+        flex: 1;
+    }
+    
+    .cross-sell-name {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    
+    .cross-sell-price {
+        font-size: 12px;
+    }
+    
+    /* Add button inline, not full width */
+    .add-btn {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+    
+    .disclaimer {
+        font-size: 11px;
     }
 
+    /* ========================================
+       Features Section - Mobile Horizontal Carousel (Seed Reference)
+       ======================================== */
+    .features-section {
+        padding: 0;
+    }
+    
+    .features-section-inner {
+        padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+        min-height: auto;
+        border-radius: var(--radius-xl);
+        margin: 0 var(--spacing-sm);
+        background-position: center center;
+    }
+    
+    .features-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .features-section .section-title {
+        font-size: 32px;
+        white-space: normal;
+        margin-bottom: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
+        text-align: left;
+    }
+    
+    /* Horizontal scrolling carousel for feature cards */
+    .features-grid {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md);
+        background-color: rgba(252, 252, 247, 0.2);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: var(--radius-lg);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .features-grid::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .feature-card {
+        flex: 0 0 260px;
+        width: 260px;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-start;
+        scroll-snap-align: start;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+    }
+    
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+    
+    .feature-content {
+        gap: 6px;
+    }
+    
+    .feature-title {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    
+    .feature-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* ========================================
+       ViaCap/Technology Section - Mobile (Seed Reference)
+       600px tall, rounded corners, orange background, compact layout
+       ======================================== */
+    .viacap-section {
+        padding: 12px;
+        background-color: var(--color-background-alt);
+        min-height: auto;
+        overflow: hidden;
+    }
+    
+    .viacap-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    /* Hide product image on mobile */
+    .viacap-product-image {
+        display: none !important;
+    }
+    
+    .viacap-content {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 48px 24px 16px 24px !important;
+        border-radius: 20px;
+        position: relative;
+        background-color: var(--color-primary);
+        color: #FCFCF7;
+    }
+    
+    /* Inner content wrapper - 310px x 617px */
+    .viacap-text,
+    .viacap-visual-area {
+        max-width: 310px !important;
+    }
+    
+    /* Text area at top - compact */
+    .viacap-text {
+        padding: 0 !important;
+        margin: 0 0 12px 0 !important;
+        max-width: 100%;
+    }
+
+    /* Title - large, bold, left-aligned (32px per SEED reference) */
+    .viacap-title {
+        font-size: 32px;
+        font-weight: 400;
+        margin-bottom: 12px;
+        line-height: 1.15;
+        color: #FCFCF7;
+        letter-spacing: -0.02em;
+    }
+    
+    /* Reduce line-height for trademark symbol to match other text */
+    .viacap-title sup {
+        line-height: 0 !important;
+        vertical-align: baseline !important;
+        font-size: 0.6em !important;
+    }
+    
+    /* Hide "standard" word on mobile */
+    .hide-on-mobile {
+        display: none !important;
+    }
+    
+    /* Show line break on mobile */
+    .mobile-break {
+        display: inline !important;
+    }
+    
+    /* Keep "Liposomal Curcumin+®" together on one line */
+    .no-break {
+        white-space: nowrap !important;
+    }
+    
+    /* Description text - 16px per SEED reference */
+    .viacap-description {
+        font-size: 16px;
+        margin-bottom: 8px;
+        max-width: 100%;
+        opacity: 0.9;
+        color: #FCFCF7;
+        line-height: 1.45;
+    }
+    
+    /* Learn More link with arrow */
+    .viacap-section .learn-more-link {
+        font-size: 14px;
+        color: #FCFCF7;
+        text-decoration: underline;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .viacap-section .learn-more-link .link-icon {
+        filter: brightness(0) invert(1);
+        width: 14px;
+        height: 14px;
+    }
+    
+    /* Visual area - fills remaining space */
+    .viacap-visual-area {
+        display: block !important;
+        position: relative;
+        margin-top: 16px;
+        flex: 1;
+        min-height: 0;
+        overflow: visible;
+    }
+    
+    /* Callouts container on left side */
+    .callout-outer,
+    .callout-inner {
+        display: block !important;
+        position: absolute !important;
+        left: 0;
+        width: 50%;
+        padding: 12px 0;
+        text-align: left;
+        z-index: 2;
+    }
+    
+    /* First callout - upper position with top border line */
+    .callout-outer {
+        top: 0;
+        border-top: 1px solid rgba(252, 252, 247, 0.4);
+    }
+    
+    /* Second callout - lower position with top border line */
+    .callout-inner {
+        bottom: 20px;
+        border-top: 1px solid rgba(252, 252, 247, 0.4);
+    }
+    
+    /* Callout titles */
+    .callout-outer h4,
+    .callout-inner h4 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 4px;
+        color: #FCFCF7;
+        line-height: 1.3;
+    }
+    
+    /* Callout descriptions - 14px per SEED reference */
+    .callout-outer p,
+    .callout-inner p {
+        font-size: 14px;
+        line-height: 1.45;
+        opacity: 0.85;
+        color: #FCFCF7;
+        max-width: 160px;
+    }
+    
+    /* Horizontal line extending from callout to pill - outer callout */
+    .callout-outer .callout-line {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: calc(100% + 80px);
+        height: 1px;
+        background-color: rgba(252, 252, 247, 0.4);
+    }
+    
+    /* Dot at end of outer callout line */
+    .callout-outer .callout-line::after {
+        content: '';
+        position: absolute;
+        right: -4px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #FCFCF7;
+        border-radius: 50%;
+    }
+    
+    /* Horizontal line for inner callout */
+    .callout-inner .callout-line {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: calc(100% + 100px);
+        height: 1px;
+        background-color: rgba(252, 252, 247, 0.4);
+    }
+    
+    /* Dot at end of inner callout line */
+    .callout-inner .callout-line::after {
+        content: '';
+        position: absolute;
+        right: -4px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #FCFCF7;
+        border-radius: 50%;
+    }
+    
+    /* Pill visual - large, positioned on right side */
+    .pill-visual {
+        display: block !important;
+        position: absolute !important;
+        right: -20px !important;
+        top: -40px !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 60%;
+        text-align: right;
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    .pill-visual img {
+        height: 480px !important;
+        max-height: 480px !important;
+        width: auto !important;
+        max-width: none;
+        object-fit: contain;
+        object-position: right center;
+    }
+    
+    /* ========================================
+       Fix: Callout overlap and pill containment
+       ======================================== */
+    
+    /* Ensure orange container is exactly 600px */
+    /* Visual area - 310px wide, keep original height for text positioning */
+    .viacap-visual-area {
+        width: 310px !important;
+        max-width: 310px !important;
+        height: 360px !important;
+        min-height: 360px !important;
+        position: relative !important;
+        overflow: visible !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Pure Curcumin Core - now positioned at bottom, moved up */
+    .callout-outer {
+        top: auto !important;
+        bottom: 85px !important;
+        left: 0px !important;
+        width: 60% !important;
+        padding-top: 16px !important;
+    }
+    
+    /* Phospholipid Outer Layer - now positioned at top */
+    .callout-inner {
+        top: 0 !important;
+        bottom: auto !important;
+        left: 0px !important;
+        width: 60% !important;
+        padding-top: 16px !important;
+    }
+    
+    /* Callout lines - horizontal lines extending toward pill */
+    .callout-outer .callout-line,
+    .callout-inner .callout-line {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 220px !important;
+        height: 1px !important;
+        background-color: rgba(252, 252, 247, 0.5) !important;
+        overflow: visible !important;
+    }
+    
+    /* Circle at the end of lines - like desktop */
+    .callout-outer .callout-line::after,
+    .callout-inner .callout-line::after {
+        content: '' !important;
+        display: block !important;
+        position: absolute !important;
+        right: -4px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 8px !important;
+        height: 8px !important;
+        background-color: #FCFCF7 !important;
+        border-radius: 50% !important;
+    }
+    
+    /* Pill image - moved left and slightly smaller */
+    .pill-visual {
+        right: 80px !important;
+        top: 37% !important;
+        transform: translateY(-50%) !important;
+        width: 60% !important;
+    }
+    
+    .pill-visual img {
+        height: 360px !important;
+        max-height: 360px !important;
+        margin-right: 0 !important;
+    }
+
+    /* ========================================
+       Benefits Timeline Section - Mobile (Seed Reference)
+       Left-aligned, vertical timeline bar, image after evidence link
+       ======================================== */
+    .benefits-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .benefits-header {
+        margin-bottom: var(--spacing-lg);
+        text-align: left;
+    }
+    
+    /* Left-aligned title like Seed - 32px per SEED reference */
+    .benefits-section .section-title {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: var(--spacing-md);
+        text-align: left;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+    
+    .benefits-section .section-title span {
+        white-space: normal !important;
+    }
+    
+    .section-subtitle {
+        font-size: 15px;
+        text-align: left;
+        font-weight: 400;
+    }
+    
+    /* Evidence link - prominent like Seed */
+    .evidence-link {
+        font-size: 15px;
+        font-weight: 500;
+        justify-content: flex-start;
+    }
+    
+    /* Use Grid for precise ordering: video → timeline → how-to-use → images */
+    .benefits-content {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "video"
+            "timeline"
+            "howtouse"
+            "images";
+        gap: var(--spacing-lg);
+    }
+    
+    .benefits-media {
+        display: contents !important;
+    }
+    
+    .benefits-video {
+        grid-area: video;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: var(--radius-lg);
+    }
+    
+    .benefits-images {
+        grid-area: images;
+        gap: var(--spacing-sm);
+        display: flex;
+        margin-top: var(--spacing-md);
+    }
+    
+    .benefits-images img {
+        height: 140px;
+    }
+    
+    .benefits-left {
+        display: contents !important;
+    }
+    
+    .benefits-timeline {
+        grid-area: timeline;
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+    }
+    
+    .how-to-use {
+        grid-area: howtouse;
+    }
+    
+    /* Vertical timeline bar aligned with dots */
+    .benefits-timeline::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 18px;
+        bottom: 18px;
+        width: 2px;
+        background-color: var(--color-border);
+        z-index: 1;
+    }
+    
+    .timeline-steps {
+        gap: var(--spacing-xl);
+    }
+    
+    /* Timeline step: dot and content side by side */
+    .timeline-step {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: var(--spacing-sm) !important;
+        padding-left: 0;
+        position: relative;
+    }
+    
+    /* Show timeline dot on mobile - aligned with badge */
+    .step-dot {
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 10px;
+        height: 10px;
+        min-width: 10px;
+        min-height: 10px;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        z-index: 2;
+        margin-top: 8px;
+        flex-shrink: 0;
+    }
+    
+    .step-content {
+        flex: 1;
+    }
+    
+    .timeline-step::before {
+        display: none;
+    }
+
+    /* Week badge and title on SAME LINE, vertically centered */
+    .step-header {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: var(--spacing-sm);
+        flex-wrap: nowrap;
+    }
+    
+    .step-badge {
+        padding: 8px 12px;
+        font-size: 14px;
+        flex-shrink: 0;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .step-title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2;
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .step-benefits {
+        padding-left: 1.25em;
+    }
+    
+    .step-benefits li {
+        font-size: 16px;
+        margin-bottom: 4px;
+        line-height: 1.5;
+    }
+    
+    /* How to Use - pill icon on LEFT like Seed */
+    .how-to-use {
+        margin-left: 0;
+        margin-top: var(--spacing-xl);
+        padding: var(--spacing-md);
+        flex-direction: row;
+        text-align: left;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+    
+    .how-to-use-icon {
+        flex-shrink: 0;
+    }
+    
+    .how-to-use-icon img {
+        width: 82px;
+        height: 88px;
+        margin: 0;
+    }
+    
+    .how-to-use-content {
+        text-align: left;
+        flex: 1;
+    }
+    
+    .how-to-use-content h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .how-to-use-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* ========================================
+       Strains/Ingredient Science - Mobile (Seed Reference)
+       Center-aligned title, smaller badges
+       ======================================== */
+    .strains-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .strains-section {
+        padding: var(--spacing-xl) var(--spacing-md) !important;
+    }
+    
+    .strains-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-lg) !important;
+        align-items: center !important;
+    }
+    
+    .strains-left {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* LEFT-ALIGNED title - 32px per SEED reference */
+    .strains-title {
+        font-size: 32px;
+        font-weight: 500;
+        text-align: left !important;
+        margin: 0 0 var(--spacing-md) 0 !important;
+        padding: 0 !important;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        width: 100%;
+    }
+    
+    /* Image CENTERED */
+    .strains-image {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: var(--spacing-md) 0 !important;
+    }
+    
+    .strains-image img {
+        max-width: 260px !important;
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+    
+    .strains-right {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* View link left-aligned - prominent like Seed */
+    .strains-link {
+        text-align: left !important;
+        display: inline-block !important;
+        margin-bottom: var(--spacing-lg) !important;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .strains-right {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .blend-item {
+        padding: 16px 0;
+    }
+    
+    /* Blend names - larger and bolder like Seed */
+    .blend-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-text);
+    }
+    
+    .blend-value {
+        font-size: 11px;
+        min-width: auto;
+        margin-right: var(--spacing-sm);
+        font-weight: 500;
+    }
+    
+    .blend-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .blend-benefits {
+        gap: 6px;
+    }
+    
+    .benefit-tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    /* TWO-COLUMN certification badges like Seed reference */
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 24px;
+        margin-top: var(--spacing-lg);
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .cert-item {
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .cert-item img {
+        width: 32px;
+        height: 32px;
+        opacity: 0.6;
+        flex-shrink: 0;
+    }
+    
+    .cert-item span {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* ========================================
+       Comparison Section - Mobile (Seed Reference)
+       Consistent highlight column
+       ======================================== */
     .comparison-section {
         margin: 0;
-        border-radius: 0;
+        border-radius: var(--radius-xl);
+        padding: var(--spacing-xl) var(--spacing-md);
+        margin: var(--spacing-sm);
     }
-
+    
+    .comparison-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .comparison-header {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .comparison-header .section-title {
+        font-size: 32px;
+        text-align: left;
+        line-height: 1.2;
+    }
+    
     .comparison-table {
-        padding: var(--spacing-md);
+        padding: var(--spacing-md) var(--spacing-sm);
+        overflow-x: visible;
+    }
+    
+    .comparison-rows {
+        min-width: auto;
+        width: 100%;
     }
 
     .comparison-row {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 0;
+        align-items: stretch;
+    }
+    
+    .comparison-row.header-row {
+        margin-bottom: 0;
     }
 
     .comparison-cell.label-cell {
-        width: 100%;
+        flex: 1;
         min-width: auto;
         max-width: none;
-        margin-bottom: var(--spacing-sm);
+        font-size: 14px;
+        margin-bottom: 0;
+        padding: 12px 8px 12px 0;
     }
 
-    .comparison-cell.ds01-cell,
-    .comparison-cell.other-cell {
+    /* Consistent highlight column for Curcumin+ */
+    .comparison-cell.ds01-cell {
+        width: 80px;
+        min-width: 80px;
         height: auto;
-        padding: 12px;
+        padding: 12px 8px;
+        background-color: rgba(254, 243, 199, 0.3) !important;
+    }
+    
+    .comparison-cell.other-cell {
+        width: 80px;
+        min-width: 80px;
+        height: auto;
+        padding: 12px 8px;
+        background-color: transparent;
+    }
+    
+    /* Remove individual row background to get consistent column */
+    .comparison-row .ds01-cell {
+        background-color: rgba(254, 243, 199, 0.3) !important;
+    }
+    
+    .ds01-badge {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+    
+    .check-mark {
+        font-size: 16px;
+    }
+    
+    .other-text {
+        font-size: 10px;
+    }
+
+    /* ========================================
+       Delivery Section - Mobile (Seed Reference)
+       Taller image with overlay text
+       ======================================== */
+    .delivery-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .delivery-section .section-title {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: var(--spacing-lg);
+        text-align: left;
+    }
+    
+    .delivery-cards {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .delivery-card {
+        flex-direction: column;
+        width: 100%;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        position: relative;
+        min-height: 600px;
+    }
+    
+    /* Image takes full card with overlay */
+    .delivery-card-image {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .delivery-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        border-radius: var(--radius-xl);
+    }
+    
+    /* Overlay content - Seed style with reduced transparency */
+    .delivery-card-content {
+        position: absolute;
+        bottom: var(--spacing-md);
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        padding: var(--spacing-lg);
+        background-color: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(38px);
+        -webkit-backdrop-filter: blur(38px);
+        color: var(--color-text);
+        border-radius: var(--radius-lg);
+        z-index: 2;
+    }
+    
+    .delivery-card-content h3 {
+        font-size: 22px;
+        font-weight: 500;
+        white-space: normal;
+        color: #FFFFFF;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .delivery-subtitle {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Delivery items styled as list - white text */
+    .delivery-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .delivery-item {
+        padding: var(--spacing-sm) 0;
+        border-bottom: none;
+    }
+    
+    .delivery-item:last-child {
+        border-bottom: none;
+    }
+    
+    .delivery-item img {
+        display: none;
+    }
+    
+    .item-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .item-title {
+        font-size: 16px;
+        font-weight: 600;
+        white-space: normal;
+        color: #FFFFFF;
+    }
+    
+    .item-subtitle {
+        font-size: 14px;
+        white-space: normal;
+        color: rgba(255, 255, 255, 0.75);
+    }
+    
+    .delivery-item.no-border {
+        border-bottom: none;
+    }
+    
+    /* Ensure delivery card has proper stacking */
+    .delivery-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ========================================
+       Testing Section - Mobile (Seed Reference)
+       LEFT-aligned, icons inline with text
+       ======================================== */
+    .testing-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .testing-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    /* LEFT-ALIGNED like Seed */
+    .testing-content {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .testing-section .section-title {
+        font-size: 32px;
+        margin-bottom: var(--spacing-sm);
+        text-align: left;
+    }
+    
+    .testing-description {
+        font-size: 14px;
+        text-align: left;
+    }
+    
+    .testing-cards {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
+    }
+    
+    /* Cards with icon INLINE with text like Seed */
+    .testing-card {
+        padding: var(--spacing-md);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        text-align: left;
+    }
+    
+    .testing-card img {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        margin: 0;
+    }
+    
+    .testing-card p {
+        font-size: 16px;
+        margin: 0;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    /* ========================================
+       FAQ Section - Mobile Enhanced
+       ======================================== */
+    .faq-section {
+        padding: var(--spacing-xl) var(--spacing-md);
     }
 
     .faq-container {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-lg);
     }
 
     .faq-heading {
         padding-right: 0;
+        text-align: left;
     }
 
     .faq-title {
@@ -3008,25 +4635,457 @@ ul, ol {
     }
 
     .faq-question {
-        font-size: 15px;
+        font-size: 14px;
         padding: var(--spacing-md) 0;
+    }
+    
+    .faq-icon {
+        font-size: 18px;
     }
 
     .faq-answer p {
+        font-size: 16px;
         padding: 0 0 var(--spacing-md);
+        line-height: 1.5;
+    }
+    
+    .faq-view-all {
+        font-size: 13px;
+    }
+
+    /* ========================================
+       Reviews Section - Mobile Enhanced
+       ======================================== */
+    .reviews-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .reviews-title {
+        font-size: 32px;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .reviews-summary {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    .reviews-score {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .score-number {
+        font-size: 42px;
+    }
+    
+    .score-details {
+        align-items: center;
+    }
+    
+    .score-stars {
+        font-size: 18px;
+    }
+    
+    .score-count {
+        font-size: 14px;
+    }
+    
+    .reviews-breakdown {
+        width: 100%;
+    }
+    
+    .breakdown-row {
+        gap: 6px;
+    }
+    
+    .breakdown-label {
+        font-size: 14px;
+    }
+    
+    .breakdown-star {
+        font-size: 14px;
+    }
+    
+    .breakdown-bar {
+        width: 100%;
+        flex: 1;
+    }
+    
+    .breakdown-count {
+        font-size: 12px;
+        min-width: 40px;
+    }
+    
+    .reviews-filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md) 0;
+    }
+    
+    .reviews-search {
+        width: 100%;
+    }
+    
+    .search-input {
+        width: 100%;
+        flex: 1;
+    }
+    
+    .reviews-topics {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+        width: 100%;
+    }
+    
+    .topics-label {
+        font-size: 14px;
+    }
+    
+    .topics-pills {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--spacing-sm);
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .topic-pill {
+        flex-shrink: 0;
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+    
+    .reviews-sort {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .review-item {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .review-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    .reviewer-info {
+        min-width: auto;
+    }
+    
+    .reviewer-name {
+        font-size: 14px;
+    }
+    
+    .verified-badge {
+        font-size: 11px;
+    }
+    
+    .review-stars {
+        font-size: 14px;
+    }
+    
+    .review-date {
+        font-size: 12px;
+        margin-left: 0;
+    }
+    
+    .review-text {
+        font-size: 14px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .review-helpful {
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .helpful-btn {
+        font-size: 12px;
+    }
+    
+    .reviews-pagination {
+        margin-top: var(--spacing-lg);
+        padding-top: var(--spacing-md);
+    }
+    
+    .page-num {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+    
+    .page-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    /* ========================================
+       Footer - Mobile Enhanced
+       ======================================== */
+    .site-footer {
+        padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-logo {
+        font-size: 20px;
+    }
+    
+    .footer-tagline {
+        font-size: 13px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        width: 100%;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-column h4 {
+        font-size: 13px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .footer-column ul {
+        align-items: center;
+    }
+    
+    .footer-column a {
+        font-size: 13px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .copyright {
+        font-size: 11px;
+    }
+    
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    .footer-legal a {
+        font-size: 11px;
+    }
+
+    /* ========================================
+       Sticky CTA - Mobile Enhanced
+       ======================================== */
+    .sticky-cta {
+        padding: var(--spacing-sm);
     }
 
     .sticky-cta-container {
         flex-direction: column;
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xs);
     }
 
     .sticky-product-info {
         width: 100%;
+        justify-content: center;
+    }
+    
+    .sticky-product-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .sticky-product-name {
+        font-size: 13px;
+    }
+    
+    .sticky-product-price {
+        font-size: 13px;
     }
 
     .sticky-cta-btn {
         width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile (375px and below) */
+@media (max-width: 375px) {
+    /* Hero - Extra Small */
+    .carousel-slide {
+        width: calc(90vw);
+        height: 200px;
+    }
+    
+    .product-title {
+        font-size: 20px;
+    }
+    
+    .product-code {
+        font-size: 10px;
+    }
+    
+    .ranking-number {
+        font-size: 20px;
+    }
+    
+    .price-amount {
+        font-size: 20px;
+    }
+    
+    .option-btn {
+        padding: 10px 12px;
+    }
+    
+    .option-title {
+        font-size: 13px;
+    }
+    
+    .cta-button {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    /* Features - Extra Small (scaled from 32px) */
+    .features-section .section-title {
+        font-size: 26px;
+    }
+    
+    .feature-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .feature-title {
+        font-size: 13px;
+    }
+    
+    .feature-text {
+        font-size: 11px;
+    }
+    
+    /* Section Titles - Extra Small (scaled down from 32px) */
+    .viacap-title {
+        font-size: 26px;
+    }
+    
+    .benefits-section .section-title,
+    .strains-title,
+    .comparison-header .section-title,
+    .delivery-section .section-title,
+    .testing-section .section-title {
+        font-size: 26px;
+    }
+    
+    .faq-title {
+        font-size: 26px;
+    }
+    
+    .reviews-title {
+        font-size: 26px;
+    }
+    
+    /* Benefits - Extra Small */
+    .step-badge {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .step-title {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .step-benefits li {
+        font-size: 14px;
+    }
+    
+    /* Strains - Extra Small */
+    .blend-name {
+        font-size: 13px;
+    }
+    
+    .blend-value {
+        font-size: 10px;
+    }
+    
+    .benefit-tag {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    .cert-item span {
+        font-size: 11px;
+    }
+    
+    /* Comparison - Extra Small */
+    .comparison-cell.label-cell {
+        min-width: 120px;
+        max-width: 120px;
+        font-size: 12px;
+    }
+    
+    .comparison-cell.ds01-cell,
+    .comparison-cell.other-cell {
+        width: 70px;
+        min-width: 70px;
+        padding: 8px 6px;
+    }
+    
+    .ds01-badge {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+    
+    .other-text {
+        font-size: 10px;
+    }
+    
+    /* Reviews - Extra Small */
+    .score-number {
+        font-size: 36px;
+    }
+    
+    .topic-pill {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    
+    /* Footer - Extra Small */
+    .footer-column h4 {
+        font-size: 12px;
+    }
+    
+    .footer-column a {
+        font-size: 12px;
     }
 }
 
@@ -3284,7 +5343,16 @@ ul, ol {
         margin-bottom: 24px;
     }
 }
+/* ========================================
+   Desktop-only viacap overrides (min-width: 521px)
+   ======================================== */
+@media (min-width: 521px) {
 /* Fixed section height 627px, equal padding, larger pill, bottom callout */
+/* Hide mobile line break on desktop */
+.mobile-break {
+    display: none !important;
+}
+
 .viacap-content {
     min-height: 627px !important;
     height: 627px !important;
@@ -3825,6 +5893,7 @@ ul, ol {
 .viacap-section .callout-inner .callout-line {
     width: 260px !important;
 }
+} /* End desktop-only viacap overrides */
 
 /* Move strains-left section slightly to the right */
 .strains-left {
