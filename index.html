@@ -132,7 +132,6 @@
 
                     <div class="subscription-options" id="productSelector">
                         <div class="option-group">
-                            <label class="option-label">Frequency</label>
                             <div class="option-buttons">
                                 <button class="option-btn active" data-price="$39.96">
                                     <span class="option-title">Monthly</span>
@@ -191,17 +190,16 @@
 
                     <!-- Cross-sell Product -->
                     <div class="cross-sell">
-                        <div class="cross-sell-header">
-                            <span class="cross-sell-badge">BEST VALUE</span>
-                            <span class="cross-sell-title">Bundle + Save 25%</span>
-                        </div>
                         <div class="cross-sell-product">
-                            <img src="images/ProductImage_04572617722704664.png" alt="Joint Support Bundle" class="cross-sell-img">
+                            <img src="images/cross sell image.png" alt="Joint Support Bundle" class="cross-sell-img">
                             <div class="cross-sell-info">
+                                <span class="cross-sell-title">Bundle + Save 25%</span>
                                 <span class="cross-sell-name">Add Liposomal Multivitamin to your routine and save on your first order.</span>
-                                <span class="cross-sell-price">$79.99/mo</span>
+                                <div class="cross-sell-price-row">
+                                    <span class="cross-sell-price">$79.99/mo</span>
+                                    <button class="add-btn">Add</button>
+                                </div>
                             </div>
-                            <button class="add-btn">Add</button>
                         </div>
                     </div>
 
@@ -394,9 +392,10 @@
         <section class="strains-section">
             <div class="strains-container">
                 <div class="strains-left">
-                    <h2 class="strains-title">Premium ingredients for<br>results you can feel</h2>
+                    <h2 class="strains-title">Premium ingredients for transformative health benefits.</h2>
+                    <a href="#" class="strains-link strains-link-mobile" id="openIngredientsSidebarMobile">View Full Ingredient Breakdown →</a>
                     <div class="strains-image">
-                        <img src="images/hero-row2-left.png" alt="Liposomal Curcumin Soft Gel">
+                        <img src="images/Generated Image January 25, 2026 - 8_46AM.jpeg" alt="Liposomal Curcumin Soft Gel">
                     </div>
                 </div>
                 <div class="strains-right">
@@ -1805,8 +1804,8 @@
             <div class="sticky-product-info">
                 <img src="images/Curcumin+Bottle_Transparent.png" alt="Liposomal Curcumin+" class="sticky-product-img">
                 <div class="sticky-product-text">
-                    <span class="sticky-product-name">Liposomal Curcumin+</span>
-                    <span class="sticky-product-price">$39.96/mo</span>
+                    <span class="sticky-product-name">(MANNA+)</span>
+                    <span class="sticky-product-subtitle">Liposomal Curcumin+</span>
                 </div>
             </div>
             <button class="sticky-cta-btn" onclick="document.getElementById('productSelector').scrollIntoView({ behavior: 'smooth', block: 'center' })">Start Now</button>
@@ -2260,6 +2259,7 @@
 
             // Ingredients Sidebar - Direct Handler
             var ingredientsOpenBtn = document.getElementById('openIngredientsSidebar');
+            var ingredientsOpenBtnMobile = document.getElementById('openIngredientsSidebarMobile');
             var ingredientsOpenBtnAlt = document.getElementById('openIngredientsSidebarAlt');
             var ingredientsSidebar = document.getElementById('ingredientsSidebar');
             var ingredientsOverlay = document.getElementById('ingredientsSidebarOverlay');
@@ -2281,6 +2281,9 @@
             if (ingredientsSidebar && ingredientsOverlay) {
                 if (ingredientsOpenBtn) {
                     ingredientsOpenBtn.addEventListener('click', openIngredientsSidebar);
+                }
+                if (ingredientsOpenBtnMobile) {
+                    ingredientsOpenBtnMobile.addEventListener('click', openIngredientsSidebar);
                 }
                 if (ingredientsOpenBtnAlt) {
                     ingredientsOpenBtnAlt.addEventListener('click', openIngredientsSidebar);
