@@ -721,7 +721,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /**
- * Option buttons toggle with price update
+ * Option buttons toggle with price and supply text update
  */
 document.querySelectorAll('.option-btn').forEach(btn => {
     btn.addEventListener('click', function() {
@@ -735,6 +735,15 @@ document.querySelectorAll('.option-btn').forEach(btn => {
             const priceElement = document.querySelector('.price-amount');
             if (priceElement) {
                 priceElement.textContent = newPrice;
+            }
+        }
+        
+        // Update supply text based on selected option
+        const supplyDays = this.getAttribute('data-supply');
+        if (supplyDays) {
+            const supplyTextElement = document.getElementById('supplyText');
+            if (supplyTextElement) {
+                supplyTextElement.innerHTML = supplyDays + ' supply delivered monthly.<br>Pause or cancel anytime.';
             }
         }
     });
