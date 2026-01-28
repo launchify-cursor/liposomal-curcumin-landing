@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W5Q3H82');</script>
+    <!-- Google Tag Manager - Deferred for Performance -->
+    <!-- GTM loads after user interaction or 3.5s timeout to prevent blocking LCP -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    (function() {
+        var gtmLoaded = false;
+        function loadGTM() {
+            if (gtmLoaded) return;
+            gtmLoaded = true;
+            dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = document.getElementsByTagName('script')[0],
+                j = document.createElement('script');
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-W5Q3H82';
+            f.parentNode.insertBefore(j, f);
+        }
+        // Load on user interaction (scroll, click, touch, mousemove)
+        ['scroll', 'click', 'touchstart', 'mousemove', 'keydown'].forEach(function(e) {
+            window.addEventListener(e, loadGTM, {once: true, passive: true});
+        });
+        // Fallback: load after 3.5 seconds regardless
+        setTimeout(loadGTM, 3500);
+    })();
+    </script>
     <!-- End Google Tag Manager -->
     
     <title>Liposomal Curcumin+ | 10x Absorption Anti-Inflammatory Support</title>
     <meta name="description" content="Liposomal Curcumin+ delivers 10x the absorption of standard turmeric. Reduce inflammation, support joint comfort, and promote heart and brain health with 500mg of 95% pure curcuminoids.">
+    
+    <!-- Preconnect to third-party origins for faster loading -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+    <link rel="preconnect" href="https://static.klaviyo.com" crossorigin>
+    <link rel="preconnect" href="https://scripts.clarity.ms" crossorigin>
     
     <!-- Fonts - Self-hosted Inter (inlined for performance) -->
     <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -50,7 +74,7 @@
             <nav class="main-nav">
                 <div class="nav-left">
                     <a href="#" class="logo">
-                        <img src="images/manna-logo-orange.webp" alt="Manna" width="75">
+                        <img src="images/manna-logo-orange.webp" alt="Manna" width="75" height="17">
                     </a>
                     <div class="nav-links">
                         <button class="nav-btn" type="button">Shop</button>

@@ -170,11 +170,14 @@ function initHeroAccordions() {
     const heroAccordionItems = document.querySelectorAll('.hero-accordion-item');
 
     // Initialize: expand the first item (Benefits) by default
-    heroAccordionItems.forEach(function(item, index) {
-        const content = item.querySelector('.hero-accordion-content');
-        if (item.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-        }
+    // Use requestAnimationFrame to avoid forced reflow during page load
+    requestAnimationFrame(function() {
+        heroAccordionItems.forEach(function(item, index) {
+            const content = item.querySelector('.hero-accordion-content');
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
     });
 
     heroAccordionItems.forEach(function(item) {
@@ -506,25 +509,32 @@ function initReviewsFilters() {
 function initStickyHeader() {
     const header = document.querySelector('.site-header');
     let lastScroll = 0;
+    let ticking = false;
 
     window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                const currentScroll = window.pageYOffset;
 
-        if (currentScroll > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Hide/show header on scroll direction
+                if (currentScroll > lastScroll && currentScroll > 300) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        // Hide/show header on scroll direction
-        if (currentScroll > lastScroll && currentScroll > 300) {
-            header.classList.add('hidden');
-        } else {
-            header.classList.remove('hidden');
-        }
-
-        lastScroll = currentScroll;
-    });
+    }, { passive: true });
 }
 
 /**
@@ -535,16 +545,36 @@ function initStickyCta() {
     const heroSection = document.querySelector('.hero-section');
 
     if (stickyCta && heroSection) {
+        // Cache hero dimensions to avoid repeated layout queries
+        let heroBottom = 0;
+        let ticking = false;
+        
+        function updateHeroBottom() {
+            heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        }
+        
+        // Measure after first paint
+        requestAnimationFrame(updateHeroBottom);
+        
+        // Recalculate on resize
+        window.addEventListener('resize', function() {
+            requestAnimationFrame(updateHeroBottom);
+        }, { passive: true });
+        
         window.addEventListener('scroll', function() {
-            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-            const scrollPosition = window.pageYOffset;
-
-            if (scrollPosition > heroBottom - 200) {
-                stickyCta.classList.add('visible');
-            } else {
-                stickyCta.classList.remove('visible');
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    const scrollPosition = window.pageYOffset;
+                    if (scrollPosition > heroBottom - 200) {
+                        stickyCta.classList.add('visible');
+                    } else {
+                        stickyCta.classList.remove('visible');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
-        });
+        }, { passive: true });
     }
 }
 
@@ -612,9 +642,16 @@ function initReviewsCarousel() {
     if (!track || cards.length === 0) return;
 
     let currentIndex = 0;
-    const cardWidth = cards[0].offsetWidth + 16; // Including gap
+    let cardWidth = 0;
+    
+    // Defer width measurement to avoid forced reflow during page load
+    requestAnimationFrame(function() {
+        cardWidth = cards[0].offsetWidth + 16; // Including gap
+    });
 
     function updateCarousel() {
+        // Ensure cardWidth is measured if not yet set
+        if (!cardWidth) cardWidth = cards[0].offsetWidth + 16;
         track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
 
