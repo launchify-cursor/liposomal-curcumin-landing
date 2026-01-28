@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="images/ProductImage_8017368864577864.webp" fetchpriority="high">
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=24">
+    <link rel="stylesheet" href="css/styles.min.css?v=1">
 </head>
 <body>
     <!-- Announcement Banner -->
@@ -61,21 +64,21 @@
                     <div class="hero-images-grid">
                         <!-- Main large hero image/video - dark green product shot -->
                         <div class="hero-main-image">
-                            <img src="images/ProductImage_8017368864577864.webp" alt="Manna Curcumin+ Product">
+                            <img src="images/ProductImage_8017368864577864.webp" alt="Manna Curcumin+ Product" fetchpriority="high" width="936" height="504">
                         </div>
                         <!-- 2x2 Thumbnail Grid -->
                         <div class="hero-thumbnails-row">
                             <div class="thumb-item">
-                                <img src="images/Pill Explosion Hero.webp" alt="Woman in bed with product">
+                                <img src="images/Pill Explosion Hero.webp" alt="Woman in bed with product" width="460" height="280">
                             </div>
                             <div class="thumb-item">
-                                <img src="images/hero_lifestyle_1.webp" alt="Curcumin supplements">
+                                <img src="images/hero_lifestyle_1.webp" alt="Curcumin supplements" width="460" height="280">
                             </div>
                             <div class="thumb-item">
-                                <img src="images/closeup glass with pill.webp" alt="Liposomal Curcumin+ Product with capsule">
+                                <img src="images/closeup glass with pill.webp" alt="Liposomal Curcumin+ Product with capsule" width="460" height="280">
                             </div>
                             <div class="thumb-item">
-                                <img src="images/supp facts.webp" alt="Supplement Facts">
+                                <img src="images/supp facts.webp" alt="Supplement Facts" width="460" height="280">
                             </div>
                         </div>
                     </div>
@@ -87,16 +90,16 @@
                                 <img src="images/ProductImage_8017368864577864.webp" alt="Manna Curcumin+ Product">
                             </div>
                             <div class="carousel-slide">
-                                <img src="images/closeup glass with pill.webp" alt="Product">
+                                <img src="images/closeup glass with pill.webp" alt="Product" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="images/Pill Explosion Hero.webp" alt="Woman">
+                                <img src="images/Pill Explosion Hero.webp" alt="Woman" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="images/hero-row2-left.png" alt="Lifestyle">
+                                <img src="images/lifestyle_man.webp" alt="Lifestyle" loading="lazy" decoding="async">
                             </div>
                             <div class="carousel-slide">
-                                <img src="images/hero_lifestyle_1.webp" alt="Curcumin supplements">
+                                <img src="images/hero_lifestyle_1.webp" alt="Curcumin supplements" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -116,7 +119,7 @@
                         </div>
                         <div class="product-rating">
                             <div class="stars">
-                                <img src="images/StarsContainer_05532408302473979.png" alt="4.9 stars" class="stars-img">
+                                <img src="images/StarsContainer_05532408302473979.webp" alt="4.9 stars" class="stars-img">
                             </div>
                             <span class="rating-text"><span class="rating-score">4.9</span> • 11,923 Reviews</span>
                         </div>
@@ -191,7 +194,7 @@
                     <!-- Cross-sell Product -->
                     <div class="cross-sell">
                         <div class="cross-sell-product">
-                            <img src="images/cross sell image small.webp" alt="Joint Support Bundle" class="cross-sell-img">
+                            <img src="images/cross sell image small.webp" alt="Joint Support Bundle" class="cross-sell-img" loading="lazy" decoding="async">
                             <div class="cross-sell-info">
                                 <span class="cross-sell-title">Bundle + Save 25%</span>
                                 <span class="cross-sell-name">Add Liposomal Multivitamin to your routine and save on your first order.</span>
@@ -220,28 +223,28 @@
                     <!-- Features Grid with Glassmorphism -->
                     <div class="features-grid">
                         <div class="feature-card">
-                            <img src="images/GutImmuneHealth_40941000741621136.png" alt="Pure Curcuminoids" class="feature-icon">
+                            <img src="images/GutImmuneHealth_40941000741621136.webp" alt="Pure Curcuminoids" class="feature-icon" loading="lazy" decoding="async">
                             <div class="feature-content">
                                 <h3 class="feature-title">95% Pure Curcuminoids</h3>
                                 <p class="feature-text">Premium extraction delivers maximum potency—10x more bioavailable than standard curcumin supplements.</p>
                             </div>
                         </div>
                         <div class="feature-card">
-                            <img src="images/ViaCap_6220418137893818.png" alt="Liposomal Technology" class="feature-icon">
+                            <img src="images/ViaCap_6220418137893818.webp" alt="Liposomal Technology" class="feature-icon" loading="lazy" decoding="async">
                             <div class="feature-content">
                                 <h3 class="feature-title">Liposomal Encapsulation</h3>
                                 <p class="feature-text">Cutting-edge phospholipid technology bypasses digestive barriers for direct cellular delivery.</p>
                             </div>
                         </div>
                         <div class="feature-card">
-                            <img src="images/BeneficialBacteria_5107727413304503.png" alt="Superior Absorption" class="feature-icon">
+                            <img src="images/BeneficialBacteria_5107727413304503.webp" alt="Superior Absorption" class="feature-icon" loading="lazy" decoding="async">
                             <div class="feature-content">
                                 <h3 class="feature-title">10x Superior Absorption</h3>
                                 <p class="feature-text">Clinical-grade bioavailability that standard turmeric supplements simply cannot match.</p>
                             </div>
                         </div>
                         <div class="feature-card">
-                            <img src="images/ClinicallyTested_11926256560900439.png" alt="Soft Gel Precision" class="feature-icon">
+                            <img src="images/ClinicallyTested_11926256560900439.webp" alt="Soft Gel Precision" class="feature-icon" loading="lazy" decoding="async">
                             <div class="feature-content">
                                 <h3 class="feature-title">Soft Gel Precision</h3>
                                 <p class="feature-text">Liquid liposomal curcumin in an easy-to-take soft gel—no powders, no mess, no waste.</p>
@@ -256,7 +259,7 @@
         <section class="lipocap-section">
             <div class="lipocap-container">
                 <div class="lipocap-product-image">
-                    <img src="images/bottle orange background.webp" alt="Manna Curcumin+ Product">
+                    <img src="images/bottle orange background.webp" alt="Manna Curcumin+ Product" loading="lazy" decoding="async">
                 </div>
                 <div class="lipocap-content">
                     <div class="lipocap-text">
@@ -264,7 +267,7 @@
                         <p class="lipocap-description">Our liposomal phospholipid technology protects curcumin through digestion and delivers it directly to your cells—where it can finally do its job.</p>
                         <a href="#" class="learn-more-link" id="openTechSidebar">
                             <span>Learn More</span>
-                            <img src="images/Icons_1661565512276879.svg" alt="" class="link-icon">
+                            <img src="images/Icons_1661565512276879.svg" alt="" class="link-icon" loading="lazy" decoding="async">
                         </a>
                     </div>
                     <div class="lipocap-visual-area">
@@ -279,7 +282,7 @@
                             <p>Protects curcumin through harsh stomach acid for complete survival.</p>
                         </div>
                         <div class="pill-visual">
-                            <img src="images/Pill Explosion Transparent.webp" alt="Curcumin Capsules">
+                            <img src="images/Pill Explosion Transparent.webp" alt="Curcumin Capsules" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -293,7 +296,7 @@
                     <h2 class="section-title">The Liposomal Curcumin+<sup>®</sup> difference: Benefits that build over time</h2>
                     <p class="section-subtitle">Results you can feel in as little as <strong>7 days.</strong><sup>*</sup></p>
                     <a href="#" class="evidence-link" id="openClinicalSidebarAlt">
-                        <img src="images/Icons_6139599470106576.png" alt="" class="link-icon">
+                        <img src="images/Icons_6139599470106576.webp" alt="" class="link-icon" loading="lazy" decoding="async">
                         <span>See Clinical Evidence</span>
                     </a>
                 </div>
@@ -368,7 +371,7 @@
                         <!-- How to Use - Outside timeline, aligned with timeline-steps -->
                         <div class="how-to-use">
                             <div class="how-to-use-icon">
-                                <img src="images/Manna_Twopilldose_transparent.webp" alt="Soft Gels">
+                                <img src="images/Manna_Twopilldose_transparent.webp" alt="Soft Gels" loading="lazy" decoding="async">
                             </div>
                             <div class="how-to-use-content">
                                 <h4>How to Use:</h4>
@@ -380,11 +383,11 @@
                     <!-- Right: Video and Images -->
                     <div class="benefits-media">
                         <div class="benefits-video">
-                            <img src="images/lifestyle laptop.webp" alt="Manna Curcumin+ lifestyle">
+                            <img src="images/lifestyle laptop.webp" alt="Manna Curcumin+ lifestyle" loading="lazy" decoding="async">
                         </div>
                         <div class="benefits-images">
-                            <img src="images/lifestyle_man.webp" alt="Curcumin benefits">
-                            <img src="images/pill_bite_square.webp" alt="Curcumin product">
+                            <img src="images/lifestyle_man.webp" alt="Curcumin benefits" loading="lazy" decoding="async">
+                            <img src="images/pill_bite_square.webp" alt="Curcumin product" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -398,7 +401,7 @@
                     <h2 class="strains-title">Premium ingredients for transformative health benefits.</h2>
                     <a href="#" class="strains-link strains-link-mobile" id="openIngredientsSidebarMobile">View Full Ingredient Breakdown →</a>
                     <div class="strains-image">
-                        <img src="images/Ingredient Dish Style.webp" alt="Liposomal Curcumin Soft Gel">
+                        <img src="images/Ingredient Dish Style.webp" alt="Liposomal Curcumin Soft Gel" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="strains-right">
@@ -469,51 +472,51 @@
                     
                     <div class="certifications-grid">
                         <div class="cert-item">
-                            <img src="images/Group1739331795_6583801130592067.png" alt="Non-GMO">
+                            <img src="images/Group1739331795_6583801130592067.webp" alt="Non-GMO" loading="lazy" decoding="async">
                             <span>Non-GMO</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331796_856830911405595.png" alt="Gluten-Free">
+                            <img src="images/Group1739331796_856830911405595.webp" alt="Gluten-Free" loading="lazy" decoding="async">
                             <span>Gluten-Free</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331797_02884256895587911.png" alt="Dairy-Free">
+                            <img src="images/Group1739331797_02884256895587911.webp" alt="Dairy-Free" loading="lazy" decoding="async">
                             <span>Dairy-Free</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331798_2492152183858577.png" alt="Soy-Free">
+                            <img src="images/Group1739331798_2492152183858577.webp" alt="Soy-Free" loading="lazy" decoding="async">
                             <span>Soy-Free</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331799_5358582136160982.png" alt="No Fillers">
+                            <img src="images/Group1739331799_5358582136160982.webp" alt="No Fillers" loading="lazy" decoding="async">
                             <span>No Fillers</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331800_2309776777388718.png" alt="No Artificial Colors">
+                            <img src="images/Group1739331800_2309776777388718.webp" alt="No Artificial Colors" loading="lazy" decoding="async">
                             <span>No Artificial Colors</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331801_22536482045935935.png" alt="Third-Party Tested">
+                            <img src="images/Group1739331801_22536482045935935.webp" alt="Third-Party Tested" loading="lazy" decoding="async">
                             <span>Third-Party Tested</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331802_24001446662742731.png" alt="Heavy Metal Tested">
+                            <img src="images/Group1739331802_24001446662742731.webp" alt="Heavy Metal Tested" loading="lazy" decoding="async">
                             <span>Heavy Metal Tested</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331803_44566740226866386.png" alt="Purity Verified">
+                            <img src="images/Group1739331803_44566740226866386.webp" alt="Purity Verified" loading="lazy" decoding="async">
                             <span>Purity Verified</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331804_7506952967287188.png" alt="No Binders">
+                            <img src="images/Group1739331804_7506952967287188.webp" alt="No Binders" loading="lazy" decoding="async">
                             <span>No Binders</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331808_21752182411919663.png" alt="No Preservatives">
+                            <img src="images/Group1739331808_21752182411919663.webp" alt="No Preservatives" loading="lazy" decoding="async">
                             <span>No Preservatives</span>
                         </div>
                         <div class="cert-item">
-                            <img src="images/Group1739331809_9421286347427003.png" alt="GMP Certified">
+                            <img src="images/Group1739331809_9421286347427003.webp" alt="GMP Certified" loading="lazy" decoding="async">
                             <span>GMP Certified</span>
                         </div>
                     </div>
@@ -574,28 +577,28 @@
                     <!-- Welcome Kit Card -->
                     <div class="delivery-card">
                         <div class="delivery-card-image">
-                            <img src="images/Welcome_Kit.webp" alt="Liposomal Curcumin+ Welcome Kit">
+                            <img src="images/Welcome_Kit.webp" alt="Liposomal Curcumin+ Welcome Kit" loading="lazy" decoding="async">
                         </div>
                         <div class="delivery-card-content">
                             <h3>Liposomal Curcumin+<sup>®</sup> Welcome Kit</h3>
                             <p class="delivery-subtitle">Complimentary with your first order.</p>
                             
                             <div class="delivery-item">
-                                <img src="images/free_gift_mixer.webp" alt="Manna Mini Mixer">
+                                <img src="images/free_gift_mixer.webp" alt="Manna Mini Mixer" loading="lazy" decoding="async">
                                 <div class="delivery-item-text">
                                     <span class="item-title">Manna Mini Mixer</span>
                                     <span class="item-subtitle">Bonus gift</span>
                                 </div>
                             </div>
                             <div class="delivery-item">
-                                <img src="images/free_gift_spoon.webp" alt="Measuring Spoon">
+                                <img src="images/free_gift_spoon.webp" alt="Measuring Spoon" loading="lazy" decoding="async">
                                 <div class="delivery-item-text">
                                     <span class="item-title">Measuring Spoon</span>
                                     <span class="item-subtitle">Bonus gift</span>
                                 </div>
                             </div>
                             <div class="delivery-item no-border">
-                                <img src="images/Manna_Twopilldose_transparent.webp" alt="Curcumin+">
+                                <img src="images/Manna_Twopilldose_transparent.webp" alt="Curcumin+" loading="lazy" decoding="async">
                                 <div class="delivery-item-text">
                                     <span class="item-title">Liposomal Curcumin+<sup>®</sup></span>
                                     <span class="item-subtitle">30-day supply • 60 soft gels</span>
@@ -607,29 +610,29 @@
                     <!-- Flexible Refills Card -->
                     <div class="delivery-card refills-card">
                         <div class="delivery-card-image">
-                            <img src="images/flex refills bottle.webp" alt="Flexible Refills" class="refills-img-desktop">
-                            <img src="images/Flexibile Refills.webp" alt="Flexible Refills" class="refills-img-mobile">
+                            <img src="images/flex refills bottle.webp" alt="Flexible Refills" class="refills-img-desktop" loading="lazy" decoding="async">
+                            <img src="images/Flexibile Refills.webp" alt="Flexible Refills" class="refills-img-mobile" loading="lazy" decoding="async">
                         </div>
                         <div class="delivery-card-content">
                             <h3>Flexible Refills</h3>
                             <p class="delivery-subtitle">Recurring orders, on your schedule.</p>
                             
                             <div class="delivery-item">
-                                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="1 Month">
+                                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="1 Month" loading="lazy" decoding="async">
                                 <div class="delivery-item-text">
                                     <span class="item-title">1 Month Delivery</span>
                                     <span class="item-subtitle">30-day supply • 60 soft gels</span>
                                 </div>
                             </div>
                             <div class="delivery-item">
-                                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="3 Month">
+                                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="3 Month" loading="lazy" decoding="async">
                                 <div class="delivery-item-text">
                                     <span class="item-title">3 Month Delivery</span>
                                     <span class="item-subtitle">90-day supply • 180 soft gels</span>
                                 </div>
                             </div>
                             <div class="delivery-item no-border">
-                                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="6 Month">
+                                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="6 Month" loading="lazy" decoding="async">
                                 <div class="delivery-item-text">
                                     <span class="item-title">6 Month Delivery</span>
                                     <span class="item-subtitle">180-day supply • 360 soft gels</span>
@@ -651,15 +654,15 @@
                 
                 <div class="testing-cards">
                     <div class="testing-card">
-                        <img src="images/ClinicallyTested_9127921444987761.png" alt="Purity Tested">
+                        <img src="images/ClinicallyTested_9127921444987761.webp" alt="Purity Tested" loading="lazy" decoding="async">
                         <p>Verified 95% curcuminoid purity with every batch tested</p>
                     </div>
                     <div class="testing-card">
-                        <img src="images/ScienceBacked_5257260533781933.png" alt="Science Backed">
+                        <img src="images/ScienceBacked_5257260533781933.webp" alt="Science Backed" loading="lazy" decoding="async">
                         <p>Third-party tested for heavy metals, contaminants, and potency</p>
                     </div>
                     <div class="testing-card">
-                        <img src="images/Well-Tolerated_07587342185462598.png" alt="Non-GMO Verified">
+                        <img src="images/Well-Tolerated_07587342185462598.webp" alt="Non-GMO Verified" loading="lazy" decoding="async">
                         <p>Non-GMO verified and made with no fillers, binders, or preservatives</p>
                     </div>
                 </div>
@@ -1762,7 +1765,7 @@
         <div class="footer-container">
             <div class="footer-main">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo"><img src="images/manna-logo-white.webp" alt="MANNA"></a>
+                    <a href="#" class="footer-logo"><img src="images/manna-logo-white.webp" alt="MANNA" loading="lazy" decoding="async"></a>
                     <p class="footer-tagline">Setting a new standard in curcumin supplementation.</p>
                 </div>
                 <div class="footer-links">
@@ -1806,7 +1809,7 @@
     <div class="sticky-cta" id="stickyCta">
         <div class="sticky-cta-container">
             <div class="sticky-product-info">
-                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="Liposomal Curcumin+" class="sticky-product-img">
+                <img src="images/Curcumin+Bottle_Transparent small.webp" alt="Liposomal Curcumin+" class="sticky-product-img" loading="lazy" decoding="async">
                 <div class="sticky-product-text">
                     <span class="sticky-product-name">(MANNA+)</span>
                     <span class="sticky-product-subtitle">Liposomal Curcumin+</span>
@@ -1962,7 +1965,7 @@
                 
                 <!-- Capsule Visual -->
                 <div class="tech-capsule-visual">
-                    <img src="images/Pill Explosion Transparent.webp" alt="Liposomal Soft Gel Structure">
+                    <img src="images/Pill Explosion Transparent.webp" alt="Liposomal Soft Gel Structure" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Feature List -->
@@ -2040,7 +2043,7 @@
             <div class="ingredients-section">
                 <h3 class="ingredients-section-title">Soft Gel</h3>
                 <div class="ingredients-product-image">
-                    <img src="images/Manna_Twopilldose_transparent.webp" alt="Liposomal Curcumin+ Soft Gels">
+                    <img src="images/Manna_Twopilldose_transparent.webp" alt="Liposomal Curcumin+ Soft Gels" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -2078,35 +2081,35 @@
                 
                 <div class="ingredients-certs-grid">
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331795_6583801130592067.png" alt="Non-GMO">
+                        <img src="images/Group1739331795_6583801130592067.webp" alt="Non-GMO" loading="lazy" decoding="async">
                         <span>Non-GMO</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331796_856830911405595.png" alt="Gluten-Free">
+                        <img src="images/Group1739331796_856830911405595.webp" alt="Gluten-Free" loading="lazy" decoding="async">
                         <span>Gluten-Free</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331797_02884256895587911.png" alt="Dairy-Free">
+                        <img src="images/Group1739331797_02884256895587911.webp" alt="Dairy-Free" loading="lazy" decoding="async">
                         <span>Dairy-Free</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331798_2492152183858577.png" alt="Soy-Free">
+                        <img src="images/Group1739331798_2492152183858577.webp" alt="Soy-Free" loading="lazy" decoding="async">
                         <span>Soy-Free</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331799_5358582136160982.png" alt="No Fillers">
+                        <img src="images/Group1739331799_5358582136160982.webp" alt="No Fillers" loading="lazy" decoding="async">
                         <span>No Fillers</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331800_2309776777388718.png" alt="No Artificial Colors">
+                        <img src="images/Group1739331800_2309776777388718.webp" alt="No Artificial Colors" loading="lazy" decoding="async">
                         <span>No Colors</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331801_22536482045935935.png" alt="Third-Party Tested">
+                        <img src="images/Group1739331801_22536482045935935.webp" alt="Third-Party Tested" loading="lazy" decoding="async">
                         <span>3rd Party Tested</span>
                     </div>
                     <div class="ingredients-cert-item">
-                        <img src="images/Group1739331802_24001446662742731.png" alt="Heavy Metal Tested">
+                        <img src="images/Group1739331802_24001446662742731.webp" alt="Heavy Metal Tested" loading="lazy" decoding="async">
                         <span>Heavy Metal Free</span>
                     </div>
                 </div>
@@ -2186,124 +2189,6 @@
         </div>
     </div>
 
-    <script src="js/main.js?v=5"></script>
-    <script>
-        // Clinical Research Sidebar - Direct Handler
-        document.addEventListener('DOMContentLoaded', function() {
-            var openBtn = document.getElementById('openClinicalSidebar');
-            var openBtnAlt = document.getElementById('openClinicalSidebarAlt');
-            var sidebar = document.getElementById('clinicalSidebar');
-            var overlay = document.getElementById('clinicalSidebarOverlay');
-            var closeBtn = document.getElementById('clinicalSidebarClose');
-
-            function openClinicalSidebar(e) {
-                e.preventDefault();
-                sidebar.classList.add('active');
-                overlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeClinicalSidebar() {
-                sidebar.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            if (sidebar && overlay) {
-                if (openBtn) {
-                    openBtn.addEventListener('click', openClinicalSidebar);
-                }
-                if (openBtnAlt) {
-                    openBtnAlt.addEventListener('click', openClinicalSidebar);
-                }
-                overlay.addEventListener('click', closeClinicalSidebar);
-                if (closeBtn) {
-                    closeBtn.addEventListener('click', closeClinicalSidebar);
-                }
-                // Close on Escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
-                        closeClinicalSidebar();
-                    }
-                });
-            }
-
-            // Technology Sidebar (Liposomal Absorption) - Direct Handler
-            var techOpenBtn = document.getElementById('openTechSidebar');
-            var techSidebar = document.getElementById('techSidebar');
-            var techOverlay = document.getElementById('techSidebarOverlay');
-            var techCloseBtn = document.getElementById('techSidebarClose');
-
-            function openTechSidebar(e) {
-                e.preventDefault();
-                techSidebar.classList.add('active');
-                techOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeTechSidebar() {
-                techSidebar.classList.remove('active');
-                techOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            if (techOpenBtn && techSidebar && techOverlay) {
-                techOpenBtn.addEventListener('click', openTechSidebar);
-                techOverlay.addEventListener('click', closeTechSidebar);
-                if (techCloseBtn) {
-                    techCloseBtn.addEventListener('click', closeTechSidebar);
-                }
-                // Close on Escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && techSidebar.classList.contains('active')) {
-                        closeTechSidebar();
-                    }
-                });
-            }
-
-            // Ingredients Sidebar - Direct Handler
-            var ingredientsOpenBtn = document.getElementById('openIngredientsSidebar');
-            var ingredientsOpenBtnMobile = document.getElementById('openIngredientsSidebarMobile');
-            var ingredientsOpenBtnAlt = document.getElementById('openIngredientsSidebarAlt');
-            var ingredientsSidebar = document.getElementById('ingredientsSidebar');
-            var ingredientsOverlay = document.getElementById('ingredientsSidebarOverlay');
-            var ingredientsCloseBtn = document.getElementById('ingredientsSidebarClose');
-
-            function openIngredientsSidebar(e) {
-                e.preventDefault();
-                ingredientsSidebar.classList.add('active');
-                ingredientsOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeIngredientsSidebar() {
-                ingredientsSidebar.classList.remove('active');
-                ingredientsOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            if (ingredientsSidebar && ingredientsOverlay) {
-                if (ingredientsOpenBtn) {
-                    ingredientsOpenBtn.addEventListener('click', openIngredientsSidebar);
-                }
-                if (ingredientsOpenBtnMobile) {
-                    ingredientsOpenBtnMobile.addEventListener('click', openIngredientsSidebar);
-                }
-                if (ingredientsOpenBtnAlt) {
-                    ingredientsOpenBtnAlt.addEventListener('click', openIngredientsSidebar);
-                }
-                ingredientsOverlay.addEventListener('click', closeIngredientsSidebar);
-                if (ingredientsCloseBtn) {
-                    ingredientsCloseBtn.addEventListener('click', closeIngredientsSidebar);
-                }
-                // Close on Escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && ingredientsSidebar.classList.contains('active')) {
-                        closeIngredientsSidebar();
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="js/main.min.js?v=1" defer></script>
 </body>
 </html>

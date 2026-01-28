@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileCarousel();
     initReviewsCarousel();
     initClinicalSidebar();
+    initTechSidebar();
+    initIngredientsSidebar();
     initBlendAccordions();
 });
 
@@ -692,6 +694,92 @@ function initClinicalSidebar() {
             }
         });
     }
+}
+
+/**
+ * Technology Sidebar (Liposomal Absorption)
+ */
+function initTechSidebar() {
+    var techOpenBtn = document.getElementById('openTechSidebar');
+    var techSidebar = document.getElementById('techSidebar');
+    var techOverlay = document.getElementById('techSidebarOverlay');
+    var techCloseBtn = document.getElementById('techSidebarClose');
+
+    if (!techSidebar || !techOverlay) return;
+
+    function openTechSidebar(e) {
+        e.preventDefault();
+        techSidebar.classList.add('active');
+        techOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeTechSidebar() {
+        techSidebar.classList.remove('active');
+        techOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (techOpenBtn) {
+        techOpenBtn.addEventListener('click', openTechSidebar);
+    }
+    techOverlay.addEventListener('click', closeTechSidebar);
+    if (techCloseBtn) {
+        techCloseBtn.addEventListener('click', closeTechSidebar);
+    }
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && techSidebar.classList.contains('active')) {
+            closeTechSidebar();
+        }
+    });
+}
+
+/**
+ * Ingredients Sidebar
+ */
+function initIngredientsSidebar() {
+    var ingredientsOpenBtn = document.getElementById('openIngredientsSidebar');
+    var ingredientsOpenBtnMobile = document.getElementById('openIngredientsSidebarMobile');
+    var ingredientsOpenBtnAlt = document.getElementById('openIngredientsSidebarAlt');
+    var ingredientsSidebar = document.getElementById('ingredientsSidebar');
+    var ingredientsOverlay = document.getElementById('ingredientsSidebarOverlay');
+    var ingredientsCloseBtn = document.getElementById('ingredientsSidebarClose');
+
+    if (!ingredientsSidebar || !ingredientsOverlay) return;
+
+    function openIngredientsSidebar(e) {
+        e.preventDefault();
+        ingredientsSidebar.classList.add('active');
+        ingredientsOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeIngredientsSidebar() {
+        ingredientsSidebar.classList.remove('active');
+        ingredientsOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (ingredientsOpenBtn) {
+        ingredientsOpenBtn.addEventListener('click', openIngredientsSidebar);
+    }
+    if (ingredientsOpenBtnMobile) {
+        ingredientsOpenBtnMobile.addEventListener('click', openIngredientsSidebar);
+    }
+    if (ingredientsOpenBtnAlt) {
+        ingredientsOpenBtnAlt.addEventListener('click', openIngredientsSidebar);
+    }
+    ingredientsOverlay.addEventListener('click', closeIngredientsSidebar);
+    if (ingredientsCloseBtn) {
+        ingredientsCloseBtn.addEventListener('click', closeIngredientsSidebar);
+    }
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && ingredientsSidebar.classList.contains('active')) {
+            closeIngredientsSidebar();
+        }
+    });
 }
 
 /**
