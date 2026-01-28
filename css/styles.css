@@ -434,8 +434,18 @@ ul, ol {
 .rating-text {
     font-size: 14px;
     color: var(--color-text);
+}
+
+.rating-link {
+    color: var(--color-text);
     text-decoration: underline;
     text-underline-offset: 2px;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.rating-link:hover {
+    opacity: 0.7;
 }
 
 .rating-score {
