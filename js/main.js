@@ -19,7 +19,92 @@ document.addEventListener('DOMContentLoaded', function() {
     initTechSidebar();
     initIngredientsSidebar();
     initBlendAccordions();
+    initUrlParameterForwarding();
 });
+
+/**
+ * URL Parameter Forwarding
+ * Captures URL parameters from the current page and appends them to CTA links
+ * Example: if page loads with ?affid=15, clicking CTA will pass affid=15 to next page
+ */
+function initUrlParameterForwarding() {
+    // Get current URL parameters
+    var currentParams = window.location.search;
+    
+    // Exit if no parameters to forward
+    if (!currentParams || currentParams === '?') return;
+    
+    /**
+     * Appends current URL parameters to a given URL
+     * @param {string} url - The target URL
+     * @returns {string} - URL with parameters appended
+     */
+    function appendParamsToUrl(url) {
+        if (!url || url === '#' || url.startsWith('javascript:')) return url;
+        
+        try {
+            // Handle relative and absolute URLs
+            var baseUrl = url.split('?')[0];
+            var existingParams = url.includes('?') ? url.split('?')[1] : '';
+            
+            // Parse current page params (remove leading ?)
+            var newParams = currentParams.substring(1);
+            
+            // Combine parameters (existing params take precedence to avoid duplicates)
+            var combinedParams;
+            if (existingParams && newParams) {
+                // Merge params, avoiding duplicates
+                var existingParamsObj = new URLSearchParams(existingParams);
+                var newParamsObj = new URLSearchParams(newParams);
+                
+                // Add new params only if they don't already exist
+                newParamsObj.forEach(function(value, key) {
+                    if (!existingParamsObj.has(key)) {
+                        existingParamsObj.append(key, value);
+                    }
+                });
+                combinedParams = existingParamsObj.toString();
+            } else {
+                combinedParams = existingParams || newParams;
+            }
+            
+            return baseUrl + (combinedParams ? '?' + combinedParams : '');
+        } catch (e) {
+            return url;
+        }
+    }
+    
+    /**
+     * Navigates to a URL with parameters appended
+     * @param {string} url - The target URL
+     */
+    window.navigateWithParams = function(url) {
+        window.location.href = appendParamsToUrl(url);
+    };
+    
+    // Update all anchor tags with href that are not just "#"
+    document.querySelectorAll('a[href]').forEach(function(link) {
+        var href = link.getAttribute('href');
+        
+        // Skip anchor links, javascript links, and empty hrefs
+        if (!href || href === '#' || href.startsWith('#') || href.startsWith('javascript:')) return;
+        
+        // Update the href with parameters
+        link.setAttribute('href', appendParamsToUrl(href));
+    });
+    
+    // Handle CTA buttons (they may use onclick or be converted to links later)
+    // Store params in a data attribute for easy access
+    document.querySelectorAll('.cta-button, .sticky-cta-btn').forEach(function(btn) {
+        btn.setAttribute('data-url-params', currentParams);
+    });
+    
+    // Expose utility function globally for dynamic content or manual use
+    window.appendUrlParams = appendParamsToUrl;
+    window.getUrlParams = function() {
+        return currentParams;
+    };
+}
 
 /**
  * Mobile Menu Toggle

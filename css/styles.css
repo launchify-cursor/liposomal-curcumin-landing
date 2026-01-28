@@ -2666,6 +2666,103 @@ ul, ol {
         flex: 0 0 432px;
         min-width: 400px;
     }
+    
+    /* Delivery Section - MacBook Pro 13.3" */
+    .delivery-section .section-title {
+        font-size: 40px;
+    }
+    
+    .delivery-cards {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 16px !important;
+        justify-content: center !important;
+    }
+    
+    .delivery-card {
+        flex: 0 0 609px !important;
+        max-width: 609px !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        position: relative !important;
+        min-height: 381px !important;
+        height: 381px !important;
+        width: 609px !important;
+        padding: 16px !important;
+    }
+    
+    .delivery-card-image {
+        flex: 0 0 282px !important;
+        width: 282px !important;
+        padding: 0 !important;
+        position: relative !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+    }
+    
+    .delivery-card-image img {
+        width: 282px !important;
+        height: 335px !important;
+        object-fit: cover !important;
+        position: relative !important;
+    }
+    
+    .delivery-card-content {
+        position: relative !important;
+        padding: 16px !important;
+        flex: 1 !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+    }
+    
+    .delivery-card-content h3 {
+        white-space: normal !important;
+        font-size: 22px !important;
+        line-height: 1.3 !important;
+        min-height: 57px !important;
+        display: block !important;
+    }
+    
+    .delivery-subtitle {
+        margin-bottom: 12px !important;
+    }
+    
+    .delivery-item img {
+        width: 37px !important;
+        height: 37px !important;
+        min-width: 37px !important;
+        min-height: 37px !important;
+    }
+    
+    .item-title {
+        font-size: 16px !important;
+    }
+    
+    .item-subtitle {
+        font-size: 14px !important;
+    }
+    
+    /* LipoCap Section - Phospholipid Outer Layer callout positioning */
+    .callout-inner {
+        top: 60px !important;
+        right: 0 !important;
+    }
+    
+    .callout-inner .callout-line {
+        width: 200px !important;
+    }
+    
+    .callout-inner .callout-line::after {
+        left: -10px !important;
+    }
 }
 
 /* Desktop Small (900px and below) */
@@ -2994,16 +3091,566 @@ ul, ol {
     }
 }
 
-/* Large Tablet (721px - 900px) - Galaxy Tab and similar */
+/* Large Tablet (721px - 900px) - Galaxy Tab 10 and similar */
 @media (max-width: 900px) and (min-width: 721px) {
-    /* Comparison Table - Fix alignment for narrow tablets */
+    
+    /* ========================================
+       Header - Galaxy Tab
+       ======================================== */
+    .header-container {
+        padding: 8px var(--spacing-md);
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-right {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* ========================================
+       Hero Section - Galaxy Tab
+       ======================================== */
+    .hero-section {
+        padding: var(--spacing-md);
+    }
+    
+    .hero-container {
+        flex-direction: column;
+    }
+    
+    .hero-images {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hero-images-grid {
+        display: none;
+    }
+    
+    .hero-mobile-carousel {
+        display: flex;
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+    
+    .carousel-slide {
+        width: 400px;
+        height: 300px;
+    }
+    
+    .hero-info {
+        flex: none;
+        width: 100%;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .product-title-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .product-title {
+        font-size: 26px;
+    }
+    
+    .product-meta-row {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .product-ranking {
+        border-right: 1px solid var(--color-border);
+        border-bottom: none;
+        padding-right: var(--spacing-lg);
+        padding-bottom: 0;
+        width: auto;
+    }
+    
+    .product-description {
+        font-size: 15px;
+    }
+    
+    /* ========================================
+       Features Section - Galaxy Tab (Swipeable Cards)
+       ======================================== */
+    .features-section {
+        padding: 0;
+    }
+    
+    .features-section-inner {
+        padding: var(--spacing-2xl) var(--spacing-md);
+        min-height: auto;
+        border-radius: var(--radius-xl);
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .features-section .section-title {
+        font-size: 24px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+    
+    .features-grid {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: var(--spacing-md);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .features-grid::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .feature-card {
+        flex: 0 0 280px;
+        width: 280px;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-start;
+        scroll-snap-align: start;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+    }
+    
+    .feature-icon {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+    
+    .feature-title {
+        font-size: 16px;
+    }
+    
+    .feature-text {
+        font-size: 14px;
+    }
+    
+    /* ========================================
+       LipoCap Section - Galaxy Tab (Show Callouts & Pill)
+       ======================================== */
+    .lipocap-section {
+        padding: var(--spacing-md);
+    }
+    
+    .lipocap-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .lipocap-content {
+        text-align: left;
+        align-items: flex-start;
+        padding: var(--spacing-xl);
+        height: auto;
+        min-height: auto;
+        max-height: none;
+        order: 1;
+    }
+    
+    .lipocap-text {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .lipocap-title {
+        font-size: 26px;
+        text-align: left;
+    }
+    
+    .lipocap-description {
+        text-align: left;
+        font-size: 15px;
+        max-width: 100%;
+    }
+    
+    .learn-more-link {
+        justify-content: flex-start;
+    }
+    
+    /* Show the pill visual and callouts for Galaxy Tab */
+    .lipocap-visual-area {
+        display: flex !important;
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+        margin-top: var(--spacing-lg);
+    }
+    
+    .pill-visual {
+        display: block !important;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 320px;
+        height: 320px;
+    }
+    
+    .pill-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .callout-outer,
+    .callout-inner {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        max-width: 280px;
+    }
+    
+    .callout-outer {
+        top: 60px;
+    }
+    
+    .callout-inner {
+        top: 200px;
+    }
+    
+    .callout-outer h4,
+    .callout-inner h4 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    
+    .callout-outer p,
+    .callout-inner p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .callout-line {
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: var(--color-primary);
+        margin-bottom: 8px;
+    }
+    
+    /* Bottle photo - full width under LipoCap section */
+    .lipocap-product-image {
+        display: block;
+        width: 100%;
+        height: 400px;
+        max-width: 100%;
+        min-width: auto;
+        order: 2;
+        margin-top: var(--spacing-lg);
+    }
+    
+    .lipocap-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+        transform: none;
+    }
+    
+    /* ========================================
+       Benefits Timeline Section - Galaxy Tab
+       ======================================== */
+    .benefits-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .benefits-header {
+        text-align: left;
+    }
+    
+    .benefits-section .section-title {
+        font-size: 26px;
+        text-align: left;
+    }
+    
+    .section-subtitle {
+        text-align: left;
+    }
+    
+    .evidence-link {
+        justify-content: flex-start;
+    }
+    
+    .benefits-content {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    /* Move lifestyle image ABOVE the timeline */
+    .benefits-media {
+        width: 100%;
+        order: -1;
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .benefits-left {
+        width: 100%;
+        order: 0;
+    }
+    
+    .benefits-video {
+        height: auto;
+        aspect-ratio: 16/9;
+        width: 100%;
+    }
+    
+    .benefits-video img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+    }
+    
+    /* Lifestyle images - more square */
+    .benefits-images {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+    
+    .benefits-images img {
+        height: 200px;
+        width: calc(50% - 8px);
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+    }
+    
+    /* Timeline with vertical line and centered dots */
+    .benefits-timeline {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .benefits-timeline::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 18px;
+        bottom: 18px;
+        width: 2px;
+        background-color: var(--color-border);
+        z-index: 1;
+    }
+    
+    .timeline-steps {
+        width: 100%;
+    }
+    
+    .timeline-step {
+        display: flex;
+        gap: var(--spacing-md);
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .step-dot {
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: 10px;
+        height: 10px;
+        min-width: 10px;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        margin-top: 8px;
+        margin-left: -23px;
+        z-index: 2;
+    }
+    
+    .step-content {
+        flex: 1;
+    }
+    
+    .step-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .step-badge {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+    
+    .step-title {
+        font-size: 14px;
+    }
+    
+    .step-benefits {
+        text-align: left;
+        padding-left: var(--spacing-md);
+    }
+    
+    .how-to-use {
+        margin-left: 0;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .how-to-use-icon img {
+        margin: 0;
+    }
+    
+    .how-to-use-content {
+        text-align: left;
+    }
+    
+    /* ========================================
+       Strains/Ingredients Section - Galaxy Tab (Left Aligned)
+       ======================================== */
+    .strains-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+        text-align: left;
+    }
+    
+    .strains-container {
+        flex-direction: column;
+    }
+    
+    .strains-left {
+        width: 100%;
+        align-items: flex-start;
+    }
+    
+    .strains-title {
+        font-size: 26px;
+        text-align: left;
+    }
+    
+    /* View Full Ingredient Breakdown - LEFT aligned above image */
+    .strains-link {
+        display: block;
+        text-align: left;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .strains-link-mobile {
+        display: block !important;
+        text-align: left;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .strains-right .strains-link {
+        display: none;
+    }
+    
+    .strains-image {
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+    
+    .strains-image img {
+        max-width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+    }
+    
+    .strains-right {
+        width: 100%;
+    }
+    
+    /* Ingredient accordions - left aligned */
+    .strains-blends {
+        text-align: left;
+    }
+    
+    .blend-item {
+        text-align: left;
+    }
+    
+    .blend-name {
+        text-align: left;
+    }
+    
+    .blend-value {
+        text-align: left;
+    }
+    
+    .blend-content {
+        text-align: left;
+    }
+    
+    /* Certifications - LEFT aligned */
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 20px;
+        justify-items: start;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .cert-item {
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .cert-item img {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+    
+    .cert-item span {
+        font-size: 12px;
+        text-align: left;
+    }
+    
+    /* ========================================
+       Comparison Section - Galaxy Tab (Consistent Font)
+       ======================================== */
+    .comparison-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+        margin: 0 var(--spacing-sm);
+    }
+    
     .comparison-container {
-        padding: 0 var(--spacing-md);
+        flex-direction: column;
+        padding: 0;
+        gap: var(--spacing-lg);
+    }
+    
+    .comparison-header {
+        flex: none;
+        width: 100%;
+        text-align: left;
+    }
+    
+    /* Match font size with other section titles */
+    .comparison-header .section-title {
+        font-size: 26px;
+        text-align: left;
     }
     
     .comparison-table {
         width: 100%;
         overflow-x: auto;
+        padding: var(--spacing-md);
     }
     
     .comparison-rows {
@@ -3026,88 +3673,153 @@ ul, ol {
         min-width: 100px;
     }
     
-    /* Timeline - Center align */
-    .benefits-timeline {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
+    /* ========================================
+       Delivery Section - Galaxy Tab (Full Width Cards)
+       ======================================== */
+    .delivery-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
     }
     
-    .timeline-steps {
-        width: 100%;
+    /* Match font size with other section titles */
+    .delivery-section .section-title {
+        font-size: 26px;
+        text-align: left;
     }
     
-    /* Features Grid - 2 columns centered */
-    .features-grid {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: var(--spacing-md);
-        padding: var(--spacing-md);
-    }
-    
-    .feature-card {
-        flex: 0 0 calc(50% - var(--spacing-md));
-        max-width: 300px;
-    }
-    
-    /* LipoCap/Pill Visual - Show simplified version */
-    .lipocap-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .lipocap-content {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .lipocap-text {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .lipocap-description {
-        text-align: center;
-    }
-    
-    .lipocap-visual {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* Certifications - Center the grid */
-    .strains-section {
-        text-align: center;
-    }
-    
-    .strains-left {
-        align-items: center;
-    }
-    
-    .strains-title {
-        text-align: center;
-    }
-    
-    .certifications-grid {
-        justify-items: center;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .cert-item {
-        justify-content: center;
-    }
-    
-    /* Delivery cards - Stack vertically */
     .delivery-cards {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: var(--spacing-md);
     }
     
     .delivery-card {
         width: 100%;
-        max-width: 600px;
+        max-width: 100%;
+        flex-direction: column;
+    }
+    
+    .delivery-card-image {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .delivery-card-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    
+    .delivery-card-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .refills-img-desktop {
+        display: block;
+    }
+    
+    .refills-img-mobile {
+        display: none;
+    }
+    
+    /* ========================================
+       Testing Section - Galaxy Tab (Consistent Font)
+       ======================================== */
+    .testing-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .testing-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .testing-content {
+        flex: none;
+        width: 100%;
+        text-align: left;
+    }
+    
+    /* Match font size with other section titles */
+    .testing-section .section-title {
+        font-size: 26px;
+        text-align: left;
+    }
+    
+    .testing-description {
+        text-align: left;
+    }
+    
+    .testing-cards {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .testing-card {
+        flex: none;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        text-align: left;
+        padding: var(--spacing-lg);
+    }
+    
+    .testing-card img {
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    .testing-card p {
+        text-align: left;
+    }
+    
+    /* ========================================
+       FAQ Section - Galaxy Tab
+       ======================================== */
+    .faq-section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .faq-title {
+        font-size: 32px;
+    }
+    
+    /* ========================================
+       Reviews Section - Galaxy Tab
+       ======================================== */
+    .reviews-title {
+        font-size: 32px;
+    }
+    
+    .reviews-summary {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .breakdown-bar {
+        width: 120px;
+    }
+    
+    /* ========================================
+       Footer - Galaxy Tab
+       ======================================== */
+    .footer-main {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        gap: var(--spacing-xl);
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
     }
 }
 
@@ -7074,5 +7786,395 @@ ul, ol {
     
     .ingredients-product-image img {
         max-width: 120px;
+    }
+}
+
+/* ========================================
+   Galaxy Tab 10 (800x1280) - Final Overrides
+   These must be at the end to override all other rules
+   ======================================== */
+@media (max-width: 900px) and (min-width: 721px) {
+    
+    /* LipoCap Section - Orange background with pill and callouts */
+    .lipocap-section {
+        padding: var(--spacing-md) !important;
+    }
+    
+    .lipocap-container {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    
+    .lipocap-content {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        background-color: var(--color-primary) !important;
+        border-radius: var(--radius-xl) !important;
+        padding: var(--spacing-xl) !important;
+        position: relative !important;
+        overflow: visible !important;
+        min-height: 500px !important;
+        order: 1 !important;
+    }
+    
+    .lipocap-text {
+        text-align: left !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 55% !important;
+        z-index: 10 !important;
+    }
+    
+    .lipocap-title {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+        color: var(--color-white) !important;
+    }
+    
+    .lipocap-description {
+        font-size: 14px !important;
+        color: var(--color-white) !important;
+        opacity: 0.9 !important;
+    }
+    
+    .learn-more-link {
+        color: var(--color-white) !important;
+    }
+    
+    /* Visual area containing pill and callouts */
+    .lipocap-visual-area {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: auto !important;
+        width: 50% !important;
+        height: 100% !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+    
+    /* Pill image positioned inside orange area */
+    .pill-visual {
+        display: block !important;
+        position: absolute !important;
+        right: -20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) scale(1) !important;
+        z-index: 5 !important;
+        width: auto !important;
+    }
+    
+    .pill-visual img {
+        height: 380px !important;
+        width: auto !important;
+        max-height: 380px !important;
+        object-fit: contain !important;
+    }
+    
+    /* Callouts positioned on left side of visual area */
+    .callout-outer,
+    .callout-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        position: absolute !important;
+        left: -60px !important;
+        max-width: 180px !important;
+        z-index: 10 !important;
+    }
+    
+    /* Pure Curcumin Core - positioned at bottom */
+    .callout-outer {
+        bottom: 80px !important;
+        top: auto !important;
+    }
+    
+    /* Phospholipid Outer Layer - positioned in middle, below headline area */
+    .callout-inner {
+        top: 180px !important;
+        bottom: auto !important;
+        right: auto !important;
+    }
+    
+    .callout-outer h4,
+    .callout-inner h4 {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 4px !important;
+        color: var(--color-white) !important;
+    }
+    
+    .callout-outer p,
+    .callout-inner p {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        color: var(--color-white) !important;
+        opacity: 0.85 !important;
+    }
+    
+    .callout-line {
+        display: block !important;
+        width: 80px !important;
+        height: 2px !important;
+        background-color: rgba(255, 255, 255, 0.6) !important;
+        margin-bottom: 8px !important;
+        position: relative !important;
+    }
+    
+    .callout-line::after {
+        content: '' !important;
+        position: absolute !important;
+        right: -8px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 8px !important;
+        height: 8px !important;
+        background-color: var(--color-white) !important;
+        border-radius: 50% !important;
+    }
+    
+    /* Bottle image - full width, centered, below orange section */
+    .lipocap-product-image {
+        display: block !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 100vw !important;
+        margin-left: calc(-1 * var(--spacing-md)) !important;
+        order: 2 !important;
+        margin-top: var(--spacing-lg) !important;
+        height: auto !important;
+        position: relative !important;
+    }
+    
+    .lipocap-product-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 500px !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        max-height: 450px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        border-radius: var(--radius-lg) !important;
+        transform: none !important;
+    }
+    
+    /* ========================================
+       Strains/Ingredients Section - Galaxy Tab Fixes
+       ======================================== */
+    
+    /* Turmeric powder image (strains-image) - prevent cutoff */
+    .strains-image {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    
+    .strains-image img {
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        width: 100% !important;
+    }
+    
+    /* Certification badges - two columns, left-aligned content, centered block */
+    .certifications-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        justify-content: center !important;
+        justify-items: start !important;
+        margin: 0 auto !important;
+        max-width: 450px !important;
+        gap: var(--spacing-sm) var(--spacing-xl) !important;
+    }
+    
+    .cert-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: var(--spacing-sm) !important;
+        width: 100% !important;
+    }
+    
+    .cert-item img {
+        width: 32px !important;
+        height: 32px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .cert-item span {
+        text-align: left !important;
+    }
+    
+    /* ========================================
+       Comparison Table - Galaxy Tab Fixes
+       ======================================== */
+    
+    /* Adjust column widths: larger gap before Curcumin+, smaller between Curcumin+ and Standard */
+    .comparison-table {
+        width: 100% !important;
+    }
+    
+    .comparison-row {
+        display: grid !important;
+        grid-template-columns: 1fr auto auto !important;
+        gap: 0 !important;
+    }
+    
+    .comparison-cell.label-cell {
+        text-align: left !important;
+        padding-right: var(--spacing-lg) !important;
+    }
+    
+    .comparison-cell.ds01-cell {
+        width: 100px !important;
+        min-width: 100px !important;
+        text-align: center !important;
+        padding: var(--spacing-sm) var(--spacing-sm) !important;
+    }
+    
+    .comparison-cell.other-cell {
+        width: 100px !important;
+        min-width: 100px !important;
+        text-align: center !important;
+        padding: var(--spacing-sm) var(--spacing-sm) !important;
+    }
+    
+    /* ========================================
+       Testing Section - Galaxy Tab Fixes
+       ======================================== */
+    
+    .testing-cards {
+        gap: var(--spacing-md) !important;
+    }
+    
+    .testing-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: var(--spacing-md) !important;
+        padding: var(--spacing-md) !important;
+    }
+    
+    .testing-card img {
+        width: 48px !important;
+        height: 48px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .testing-card p {
+        margin: 0 !important;
+        text-align: left !important;
+    }
+    
+    /* ========================================
+       Delivery Section - Galaxy Tab Fixes
+       SEED-style overlay with rounded edges and padding
+       ======================================== */
+    
+    .delivery-cards {
+        flex-direction: column !important;
+        gap: var(--spacing-lg) !important;
+    }
+    
+    .delivery-card {
+        flex-direction: column !important;
+        width: 100% !important;
+        border-radius: var(--radius-xl) !important;
+        overflow: hidden !important;
+        position: relative !important;
+        min-height: 550px !important;
+    }
+    
+    /* Image takes full card as background */
+    .delivery-card-image {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+    
+    .delivery-card-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 30% !important;
+        border-radius: var(--radius-xl) !important;
+    }
+    
+    /* Overlay content - Tan background with rounded corners and margin */
+    .delivery-card-content {
+        position: absolute !important;
+        bottom: var(--spacing-lg) !important;
+        left: var(--spacing-lg) !important;
+        right: var(--spacing-lg) !important;
+        padding: var(--spacing-lg) !important;
+        background-color: var(--color-background-alt) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-radius: var(--radius-lg) !important;
+        z-index: 5 !important;
+    }
+    
+    .delivery-card-content h3 {
+        font-size: 22px !important;
+        font-weight: 500 !important;
+        white-space: normal !important;
+        color: var(--color-text) !important;
+        margin-bottom: var(--spacing-xs) !important;
+    }
+    
+    .delivery-subtitle {
+        font-size: 14px !important;
+        color: var(--color-text-light) !important;
+        margin-bottom: var(--spacing-md) !important;
+    }
+    
+    .delivery-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: var(--spacing-sm) !important;
+        padding: var(--spacing-sm) 0 !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .delivery-item.no-border {
+        border-bottom: none !important;
+    }
+    
+    .delivery-item img {
+        width: 40px !important;
+        height: 40px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .item-title {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: var(--color-text) !important;
+    }
+    
+    .item-subtitle {
+        font-size: 12px !important;
+        color: var(--color-text-light) !important;
+    }
+    
+    /* Refills card - show mobile image */
+    .refills-img-desktop {
+        display: none !important;
+    }
+    
+    .refills-img-mobile {
+        display: block !important;
     }
 }
