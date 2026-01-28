@@ -3819,7 +3819,7 @@ ul, ol {
     
     /* Cross-sell Mobile */
     .cross-sell {
-        padding: 8px;
+        padding: 0;
         margin-bottom: var(--spacing-md);
         border-radius: var(--radius-md);
         background-color: var(--color-background-alt);
