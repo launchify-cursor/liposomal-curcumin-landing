@@ -1585,6 +1585,10 @@ ul, ol {
     display: none;
 }
 
+.welcome-kit-img-mobile {
+    display: none;
+}
+
 .delivery-card-content {
     flex: 1;
     padding: var(--spacing-lg);
@@ -5641,6 +5645,16 @@ ul, ol {
         object-position: center 22%;
     }
     
+    .welcome-kit-img-desktop {
+        display: none;
+    }
+    
+    .welcome-kit-img-mobile {
+        display: block;
+        object-fit: cover;
+        object-position: center 45%;
+    }
+    
     /* Overlay content - Seed style with reduced transparency */
     .delivery-card-content {
         position: absolute;
@@ -8175,6 +8189,15 @@ ul, ol {
     }
     
     .refills-img-mobile {
+        display: block !important;
+    }
+    
+    /* Welcome kit card - show mobile image */
+    .welcome-kit-img-desktop {
+        display: none !important;
+    }
+    
+    .welcome-kit-img-mobile {
         display: block !important;
     }
 }
