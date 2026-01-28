@@ -1627,8 +1627,9 @@ ul, ol {
     min-width: 64px;
     min-height: 64px;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: var(--radius-md);
+    margin-right: 8px;
 }
 
 .delivery-item-text {
@@ -2744,6 +2745,7 @@ ul, ol {
         height: 37px !important;
         min-width: 37px !important;
         min-height: 37px !important;
+        margin-right: 8px !important;
     }
     
     .item-title {
@@ -8170,6 +8172,7 @@ ul, ol {
         height: 40px !important;
         object-fit: contain !important;
         flex-shrink: 0 !important;
+        margin-right: 8px !important;
     }
     
     .item-title {

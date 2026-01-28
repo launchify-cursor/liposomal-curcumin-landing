@@ -1627,8 +1627,9 @@ ul, ol {
     min-width: 64px;
     min-height: 64px;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: var(--radius-md);
+    margin-right: 8px;
 }
 
 .delivery-item-text {
@@ -2744,6 +2745,7 @@ ul, ol {
         height: 37px !important;
         min-width: 37px !important;
         min-height: 37px !important;
+        margin-right: 8px !important;
     }
     
     .item-title {
@@ -8170,6 +8172,7 @@ ul, ol {
         height: 40px !important;
         object-fit: contain !important;
         flex-shrink: 0 !important;
+        margin-right: 8px !important;
     }
     
     .item-title {
@@ -8199,39 +8202,5 @@ ul, ol {
     
     .welcome-kit-img-mobile {
         display: block !important;
-    }
-}
-
-/* MacBook Pro 13.3" (1280x800) - Final Overrides */
-@media (max-width: 1280px) and (min-width: 901px) {
-    /* Phospholipid Outer Layer callout - move down and right */
-    .callout-inner {
-        top: 100px !important;
-        bottom: auto !important;
-        right: -20px !important;
-        left: auto !important;
-    }
-    
-    .callout-inner .callout-line {
-        width: 220px !important;
-    }
-    
-    .callout-inner .callout-line::after {
-        left: -15px !important;
-    }
-}
-
-/* Galaxy Tab 10 (800x1280) - Phospholipid Outer Layer line fix */
-@media (max-width: 900px) and (min-width: 721px) {
-    /* Phospholipid Outer Layer - line extends right toward pill, dot on right */
-    .lipocap-section .callout-inner .callout-line {
-        width: 280px !important;
-        margin-left: 0 !important;
-        background-color: rgba(255, 255, 255, 0.6) !important;
-    }
-    
-    .lipocap-section .callout-inner .callout-line::after {
-        right: -8px !important;
-        left: auto !important;
     }
 }
