@@ -150,7 +150,7 @@ ul, ol {
 .header-container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 14px 38px 14px 14px;
+    padding: 8px 38px 8px 14px;
 }
 
 .main-nav {
@@ -3108,7 +3108,7 @@ ul, ol {
 
     /* Header - Tablet */
     .header-container {
-        padding: 14px var(--spacing-md);
+        padding: 8px var(--spacing-md);
     }
 
     .nav-links {
