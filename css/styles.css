@@ -2983,6 +2983,123 @@ ul, ol {
     }
 }
 
+/* Large Tablet (721px - 900px) - Galaxy Tab and similar */
+@media (max-width: 900px) and (min-width: 721px) {
+    /* Comparison Table - Fix alignment for narrow tablets */
+    .comparison-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .comparison-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .comparison-rows {
+        min-width: 500px;
+    }
+    
+    .comparison-row {
+        gap: var(--spacing-md);
+    }
+    
+    .comparison-cell.label-cell {
+        min-width: 200px;
+        max-width: 200px;
+        font-size: 14px;
+    }
+    
+    .comparison-cell.ds01-cell,
+    .comparison-cell.other-cell {
+        width: 100px;
+        min-width: 100px;
+    }
+    
+    /* Timeline - Center align */
+    .benefits-timeline {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .timeline-steps {
+        width: 100%;
+    }
+    
+    /* Features Grid - 2 columns centered */
+    .features-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .feature-card {
+        flex: 0 0 calc(50% - var(--spacing-md));
+        max-width: 300px;
+    }
+    
+    /* LipoCap/Pill Visual - Show simplified version */
+    .lipocap-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lipocap-content {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .lipocap-text {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .lipocap-description {
+        text-align: center;
+    }
+    
+    .lipocap-visual {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Certifications - Center the grid */
+    .strains-section {
+        text-align: center;
+    }
+    
+    .strains-left {
+        align-items: center;
+    }
+    
+    .strains-title {
+        text-align: center;
+    }
+    
+    .certifications-grid {
+        justify-items: center;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .cert-item {
+        justify-content: center;
+    }
+    
+    /* Delivery cards - Stack vertically */
+    .delivery-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .delivery-card {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
 /* Tablet (720px and below) */
 @media (max-width: 720px) {
     :root {
@@ -3700,15 +3817,15 @@ ul, ol {
         font-size: 16px;
     }
     
-    /* Cross-sell Mobile - Match Seed design */
+    /* Cross-sell Mobile */
     .cross-sell {
         padding: 8px;
         margin-bottom: var(--spacing-md);
         border-radius: var(--radius-md);
-        background-color: #F6F7EF;
+        background-color: var(--color-background-alt);
         width: 366px;
         height: 129px;
-        font-family: "Seed Sans", Helvetica, sans-serif;
+        font-family: var(--font-primary);
         color: var(--color-text);
         font-size: 16px;
         box-sizing: border-box;
